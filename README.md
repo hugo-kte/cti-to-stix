@@ -369,3 +369,9 @@ The code is [MIT](LICENSE)-licensed. `models/gazetteer-rules.json` is an adaptat
 licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (attribution in
 [`models/README.md`](models/README.md)); `models/attack-catalog.json` keeps MITRE's copyright
 notice and the ATT&CK Terms of Use; the technique model is learned from TRAM (Apache-2.0).
+
+<!-- portfolio-footer -->
+
+---
+
+<sub>Part of a cybersecurity & AI engineering portfolio: [FlowGuard](https://github.com/hugo-kte/flowguard-nids) (network IDS) · [Detection-as-code](https://github.com/hugo-kte/detection-as-code) (Sigma rules) · [Insider-threat UEBA](https://github.com/hugo-kte/insider-threat-ueba) · [AlertLens](https://github.com/hugo-kte/alertlens) (SOC triage) · [PromptWall](https://github.com/hugo-kte/promptwall) (LLM firewall) · [MLSeal](https://github.com/hugo-kte/secure-mlops-pipeline) (secure MLOps) · **Gleaner (CTI to STIX)**.</sub>
