@@ -1,4 +1,8 @@
-"""Markdown summary of an extraction (indicators are shown defanged)."""
+"""Markdown summary of an extraction.
+
+Indicators are shown defanged, and so are any live URLs, domains or addresses in the title and
+the evidence sentences: Markdown viewers turn them into clickable links.
+"""
 
 from __future__ import annotations
 
@@ -6,7 +10,7 @@ from collections import Counter
 
 from gleaner import __version__
 from gleaner.attack import Catalog
-from gleaner.iocs import IOC_TYPES, defang
+from gleaner.iocs import IOC_TYPES, defang, defang_text
 from gleaner.pipeline import Extraction
 
 _STATUS_ORDER = ("indicator", "artifact", "vulnerability")
@@ -18,7 +22,7 @@ def _cell(text: str, limit: int = 140) -> str:
 
 
 def markdown(extraction: Extraction, catalog: Catalog) -> str:
-    lines = [f"# {extraction.title}", ""]
+    lines = [f"# {defang_text(extraction.title)}", ""]
     source = f"`{extraction.source}` · " if extraction.source else ""
     lines += [
         f"_{source}sha256 `{extraction.sha256[:12]}…` · {len(extraction.sentences)} sentences · "
@@ -62,7 +66,7 @@ def markdown(extraction: Extraction, catalog: Catalog) -> str:
             name = f"[{t.attack_id}]({obj.url}) {t.name}" if obj else f"{t.attack_id} {t.name}"
             lines.append(
                 f"| {name} | {', '.join(t.tactics)} | {t.score:.2f} | {', '.join(t.sources)} | "
-                f"{_cell(t.evidence, 110)} |"
+                f"{_cell(defang_text(t.evidence), 110)} |"
             )
     lines.append("")
     return "\n".join(lines)

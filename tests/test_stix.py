@@ -142,6 +142,20 @@ def test_markdown_summary(extraction, catalog: Catalog):
     assert "Not exported" in text
 
 
+def test_markdown_defangs_live_values_in_title_and_evidence(
+    catalog: Catalog, gazetteer, technique_model
+):
+    text = (
+        "# Payloads served from https://cdn.example.com/x\n\n"
+        "The loader downloads additional payloads over HTTPS from https://cdn.example.com/x.\n"
+    )
+    result = Extractor(catalog, gazetteer, techniques=technique_model).extract(text)
+    assert any(t.attack_id == "T1105" for t in result.techniques)
+    text = markdown(result, catalog)
+    assert "https://cdn.example.com" not in text
+    assert text.startswith("# Payloads served from hxxps://cdn[.]example[.]com/x")
+
+
 def test_cited_attack_ids_become_techniques(catalog: Catalog, gazetteer):
     text = "Mapping: | T1059.001 | PowerShell |\nThe actor later used T1574.002 again."
     result = Extractor(catalog, gazetteer).extract(text)

@@ -443,19 +443,11 @@ def _find_cves(text: str) -> list[_Hit]:
 # --------------------------------------------------------------------------- extraction
 
 
-def extract_iocs(text: str, *, defang_consistency: bool = True) -> list[IOC]:
-    """Extract unique indicators from a report (raw or defanged text).
+def _claimed_hits(ref: Refanged) -> list[_Hit]:
+    """URLs, e-mails, host artifacts, addresses and domains, in that priority order.
 
-    Finders run in priority order and a span claimed by one (a URL) is not re-used by the
-    next (the domain inside it). Digests and CVE identifiers are searched everywhere: a sandbox
-    or NVD link still carries a valid digest or CVE.
-
-    ``defang_consistency``: when a report defangs at least one network indicator, its
-    non-defanged URLs and e-mail addresses are treated as references (vendor links, contact
-    addresses). Bare domains are exempt: on the development split they were as often attacker
-    infrastructure listed in a table as citations.
+    A span claimed by one finder (a URL) is not re-used by the next (the domain inside it).
     """
-    ref = refang(text)
     clean = ref.text
     hits: list[_Hit] = []
     claimed: list[tuple[int, int]] = []
@@ -470,6 +462,42 @@ def extract_iocs(text: str, *, defang_consistency: bool = True) -> list[IOC]:
             if not any(hit.start < end and start < hit.end for start, end in claimed):
                 hits.append(hit)
                 claimed.append((hit.start, hit.end))
+    return hits
+
+
+def defang_text(text: str) -> str:
+    """``text`` with every live URL, domain, address and e-mail defanged, for display.
+
+    Values the text already defangs are left as written.
+    """
+    ref = refang(text)
+    out: list[str] = []
+    pos = 0
+    for hit in sorted(_claimed_hits(ref), key=lambda h: h.start):
+        already_defanged = any(i in ref.replaced for i in range(hit.start, hit.end))
+        if hit.type not in NETWORK_TYPES or already_defanged:
+            continue
+        start, end = ref.source_offsets[hit.start], ref.source_offsets[hit.end]
+        out += [text[pos:start], defang(text[start:end])]
+        pos = end
+    return "".join(out) + text[pos:]
+
+
+def extract_iocs(text: str, *, defang_consistency: bool = True) -> list[IOC]:
+    """Extract unique indicators from a report (raw or defanged text).
+
+    Finders run in priority order and a span claimed by one (a URL) is not re-used by the
+    next (the domain inside it). Digests and CVE identifiers are searched everywhere: a sandbox
+    or NVD link still carries a valid digest or CVE.
+
+    ``defang_consistency``: when a report defangs at least one network indicator, its
+    non-defanged URLs and e-mail addresses are treated as references (vendor links, contact
+    addresses). Bare domains are exempt: on the development split they were as often attacker
+    infrastructure listed in a table as citations.
+    """
+    ref = refang(text)
+    clean = ref.text
+    hits = _claimed_hits(ref)
     hits += _find_hashes(clean, [h for h in hits if h.type == "url"]) + _find_cves(clean)
 
     def is_defanged(hit: _Hit) -> bool:

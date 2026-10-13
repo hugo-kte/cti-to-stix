@@ -7,7 +7,15 @@ import hashlib
 
 import pytest
 
-from gleaner.iocs import defang, domain_status, extract_iocs, ip_scope, refang, registrable_domain
+from gleaner.iocs import (
+    defang,
+    defang_text,
+    domain_status,
+    extract_iocs,
+    ip_scope,
+    refang,
+    registrable_domain,
+)
 
 MD5 = hashlib.md5(b"gleaner test sample").hexdigest()
 SHA1 = hashlib.sha1(b"gleaner test sample").hexdigest()
@@ -56,6 +64,18 @@ def test_defang_for_display():
     assert defang("198.51.100.7") == "198[.]51[.]100[.]7"
     assert defang("user@example.org") == "user[@]example[.]org"
     assert defang("example.com/path/x.php") == "example[.]com/path/x.php"
+
+
+def test_defang_text_neutralises_live_values_only():
+    text = (
+        r"Beacons to https://cdn.example.com/a and 198.51.100.7 from ops@example.org, "
+        r"drops C:\ProgramData\x.dll; already safe: hxxp://bad[.]example[.]net/b."
+    )
+    assert defang_text(text) == (
+        r"Beacons to hxxps://cdn[.]example[.]com/a and 198[.]51[.]100[.]7 from "
+        r"ops[@]example[.]org, drops C:\ProgramData\x.dll; already safe: "
+        r"hxxp://bad[.]example[.]net/b."
+    )
 
 
 def test_network_indicators_and_scopes():
