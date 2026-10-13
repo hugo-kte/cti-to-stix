@@ -256,7 +256,8 @@ class Extractor:
                 hit.sentences.extend(ks)
                 if hit.score < 1.0:
                     hit.score, hit.evidence = 1.0, sentences[ks[0]].text
-                hit.sources.append(source)
+                if source not in hit.sources:  # a revoked ID and its replacement both cited
+                    hit.sources.append(source)
         for hit in hits.values():
             hit.sentences = sorted(set(hit.sentences))
         return sorted(hits.values(), key=lambda h: (-h.score, h.attack_id))

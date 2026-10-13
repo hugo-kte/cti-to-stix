@@ -168,8 +168,12 @@ def test_markdown_defangs_live_values_in_title_and_evidence(
 
 
 def test_cited_attack_ids_become_techniques(catalog: Catalog, gazetteer):
-    text = "Mapping: | T1059.001 | PowerShell |\nThe actor later used T1574.002 again."
+    text = (
+        "Mapping: | T1059.001 | PowerShell |\nThe actor later used T1574.002 again.\n"
+        "Newer reports file the same behaviour under T1574.001."
+    )
     result = Extractor(catalog, gazetteer).extract(text)
     found = {t.attack_id: t for t in result.techniques}
     assert found["T1059.001"].sources == ["attack-id"] and found["T1059.001"].score == 1.0
     assert found["T1574.001"].original_ids == ["T1574.002"]  # revoked ID resolved
+    assert found["T1574.001"].sources == ["attack-id"]  # once, although cited under two IDs
