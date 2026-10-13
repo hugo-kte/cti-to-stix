@@ -5,8 +5,10 @@ from __future__ import annotations
 from pathlib import Path
 
 import numpy as np
+import pytest
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+from gleaner import techniques
 from gleaner.metrics import best_threshold, multilabel_scores, prf, wilson
 from gleaner.techniques import (
     TOKEN_PATTERN,
@@ -51,6 +53,34 @@ def test_model_predicts_and_round_trips(technique_model: TechniqueModel, tmp_pat
         loaded.predict_proba(texts), technique_model.predict_proba(texts), atol=5e-3
     )
     assert technique_model.predict_proba([]).shape == (0, len(technique_model.labels))
+
+
+def test_shipped_model_passes_the_loader_checks():
+    model = TechniqueModel.load(Path(__file__).parents[1] / "models" / "techniques")
+    assert len(model.labels) == 50 and 0 < model.threshold < 1
+
+
+@pytest.mark.parametrize(
+    "corruption", ["index out of bounds", "shape mismatch", "unexpected array", "too large"]
+)
+def test_loader_rejects_corrupt_models(
+    technique_model: TechniqueModel, tmp_path: Path, monkeypatch: pytest.MonkeyPatch, corruption
+):
+    directory = technique_model.save(tmp_path / "model")
+    with np.load(directory / "weights.npz") as w:
+        arrays = {name: w[name] for name in w.files}
+    if corruption == "index out of bounds":  # would be read out of bounds by scipy
+        arrays["coef_indices"] = arrays["coef_indices"].copy()
+        arrays["coef_indices"][0] = 10**6
+    elif corruption == "shape mismatch":
+        arrays["intercept"] = arrays["intercept"][:-1]
+    elif corruption == "unexpected array":
+        arrays["extra"] = np.zeros(3)
+    else:
+        monkeypatch.setattr(techniques, "MAX_ARRAY_BYTES", 1_000)
+    np.savez_compressed(directory / "weights.npz", **arrays)
+    with pytest.raises(ValueError, match="invalid technique model"):
+        TechniqueModel.load(directory)
 
 
 def test_weights_are_pruned(technique_data):

@@ -2,13 +2,16 @@
 
 The model is multi-label (a sentence can describe several techniques, or none) and is saved
 without pickle: vocabularies and settings in JSON, IDF vectors and the (pruned, sparse) weight
-matrix in a NumPy ``.npz`` read with ``allow_pickle=False``.
+matrix in a NumPy ``.npz`` read with ``allow_pickle=False``. Loading caps file and array sizes
+and checks shapes and sparse indices before any array is used.
 """
 
 from __future__ import annotations
 
 import json
+import math
 import re
+import zipfile
 from collections.abc import Sequence
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
@@ -22,6 +25,14 @@ from sklearn.preprocessing import normalize
 
 TOKEN_PATTERN = r"(?u)\b\w[\w.-]*\w\b|\b\w\b"
 _BLOCKS = {"word": ("word", (1, 2)), "char": ("char_wb", (3, 5))}
+# Limits applied when loading a saved model (the shipped one: 1.3 MB on disk, 3 MB of arrays).
+MAX_FILE_BYTES = 64 << 20  # model.json or weights.npz on disk
+MAX_ARRAY_BYTES = 256 << 20  # all arrays of weights.npz once decompressed
+_WEIGHT_ARRAYS = ("coef_data", "coef_indices", "coef_indptr", "coef_shape", "intercept")
+_NPY_HEADERS = {
+    (1, 0): np.lib.format.read_array_header_1_0,
+    (2, 0): np.lib.format.read_array_header_2_0,
+}
 
 
 @dataclass(frozen=True, slots=True)
@@ -136,12 +147,25 @@ class TechniqueModel:
 
     @classmethod
     def load(cls, directory: Path) -> TechniqueModel:
+        """Load a model written by :meth:`save`; a corrupt or crafted one raises ValueError.
+
+        Nothing is unpickled, sizes are capped before anything is decompressed, and the model
+        is checked (shapes, vocabularies, sparse indices, finite weights) before first use:
+        scipy's sparse products do not bounds-check indices.
+        """
         directory = Path(directory)
-        meta = json.loads((directory / "model.json").read_text(encoding="utf-8"))
-        with np.load(directory / "weights.npz", allow_pickle=False) as w:
+        meta_path, weights_path = directory / "model.json", directory / "weights.npz"
+        for path in (meta_path, weights_path):
+            if path.stat().st_size > MAX_FILE_BYTES:
+                raise ValueError(f"{path}: larger than {MAX_FILE_BYTES >> 20} MB")
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            n_blocks = len(meta["blocks"])
+            per_block = [f"{kind}_{i}" for i in range(n_blocks) for kind in ("vocab", "idf")]
+            w = _read_arrays(weights_path, [*_WEIGHT_ARRAYS, *per_block])
             coef = sparse.csr_matrix(
                 (w["coef_data"].astype(np.float32), w["coef_indices"], w["coef_indptr"]),
-                shape=tuple(w["coef_shape"]),
+                shape=tuple(int(n) for n in w["coef_shape"]),
             )
             blocks = []
             for i, b in enumerate(meta["blocks"]):
@@ -149,9 +173,65 @@ class TechniqueModel:
                 vocabulary = {t: j for j, t in enumerate(terms)}
                 idf = w[f"idf_{i}"].astype(np.float32)
                 blocks.append(TfidfBlock(b["analyzer"], tuple(b["ngram_range"]), vocabulary, idf))
-            intercept = w["intercept"].astype(np.float32)
-        config = ModelConfig(**meta["config"])
-        return cls(meta["labels"], blocks, coef, intercept, meta["threshold"], config)
+            config = ModelConfig(**meta["config"])
+            model = cls(
+                list(meta["labels"]),
+                blocks,
+                coef,
+                w["intercept"].astype(np.float32),
+                float(meta["threshold"]),
+                config,
+            )
+            model._check()
+        except (KeyError, TypeError, ValueError) as exc:  # UnicodeDecodeError is a ValueError
+            raise ValueError(f"{directory}: invalid technique model ({exc})") from exc
+        return model
+
+    def _check(self) -> None:
+        n_labels = len(self.labels)
+        n_features = sum(len(b.vocabulary) for b in self.blocks)
+        if not all(isinstance(lab, str) for lab in self.labels):
+            raise ValueError("labels must be strings")
+        if self.coef.shape != (n_labels, n_features) or self.intercept.shape != (n_labels,):
+            raise ValueError("weights do not match the labels and vocabularies")
+        for b in self.blocks:
+            if (b.analyzer, b.ngram_range) not in _BLOCKS.values():
+                raise ValueError(f"unsupported features {b.analyzer} {b.ngram_range}")
+            if b.idf.shape != (len(b.vocabulary),):
+                raise ValueError("vocabulary and IDF vector differ in length (duplicate terms?)")
+        self.coef.check_format(full_check=True)  # indices within bounds, indptr monotonic
+        arrays = (self.coef.data, self.intercept, *(b.idf for b in self.blocks))
+        if not all(np.isfinite(a).all() for a in arrays):
+            raise ValueError("non-finite weights")
+        if not 0.0 < self.threshold < 1.0:
+            raise ValueError(f"threshold {self.threshold} outside (0, 1)")
+
+
+def _read_arrays(path: Path, names: Sequence[str]) -> dict[str, np.ndarray]:
+    """The named arrays of an ``.npz``, after checking that every declared size is bounded.
+
+    The zip directory gives each member's uncompressed size; each ``.npy`` header gives the
+    array's shape and dtype. Both are checked before numpy allocates anything.
+    """
+    try:
+        with zipfile.ZipFile(path) as archive:
+            members = {m.filename: m for m in archive.infolist()}
+            if sorted(members) != sorted(f"{name}.npy" for name in names):
+                raise ValueError(f"{path}: unexpected arrays {sorted(members)}")
+            if sum(m.file_size for m in members.values()) > MAX_ARRAY_BYTES:
+                raise ValueError(f"{path}: arrays larger than {MAX_ARRAY_BYTES >> 20} MB")
+            for member in members.values():
+                with archive.open(member) as fh:
+                    version = np.lib.format.read_magic(fh)
+                    if version not in _NPY_HEADERS:
+                        raise ValueError(f"{member.filename}: unsupported .npy version {version}")
+                    shape, _, dtype = _NPY_HEADERS[version](fh)
+                if dtype.hasobject or math.prod(shape) * dtype.itemsize > member.file_size:
+                    raise ValueError(f"{member.filename}: header does not match its data")
+    except zipfile.BadZipFile as exc:
+        raise ValueError(f"{path}: not an .npz archive") from exc
+    with np.load(path, allow_pickle=False) as w:
+        return {name: w[name] for name in names}
 
 
 # --------------------------------------------------------------------------- training
