@@ -27,6 +27,8 @@ def found(text: str, **kw) -> dict[tuple[str, str], str]:
         ("example[dot]com", "example.com"),
         ("billing[@]example[.]org", "billing@example.org"),
         ("hxxps[:]//example[.]com", "https://example.com"),
+        ("hxxps[://]cdn[.]example[.]com/a", "https://cdn.example.com/a"),
+        ("hXXp(://)198.51.100[.]7/x", "http://198.51.100.7/x"),
         ("fxp://203.0.113.5/file", "ftp://203.0.113.5/file"),
         ("evil.example [.] com", "evil.example.com"),
         ("host64\\_sh.bin", "host64_sh.bin"),
@@ -34,6 +36,11 @@ def found(text: str, **kw) -> dict[tuple[str, str], str]:
 )
 def test_refang(defanged, expected):
     assert refang(defanged).text == expected
+
+
+def test_bracketed_scheme_separator_is_extracted():
+    statuses = found("C2: hxxps[://]update[.]example[.]com/gate.php")
+    assert statuses == {("url", "https://update.example.com/gate.php"): "indicator"}
 
 
 def test_refang_keeps_offsets():

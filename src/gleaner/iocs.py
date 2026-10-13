@@ -90,7 +90,7 @@ ROUTABLE_SCOPES = frozenset({"public", "documentation"})
 
 _DEFANG_RE = re.compile(
     r"""
-    (?P<scheme>\b(?:h[x*]{2}p|h[x*]tp|ht[x*]p|f[x*]p)(?P<s>s?)(?=\s*(?:\[:\]|\(:\)|:)))
+    (?P<scheme>\b(?:h[x*]{2}p|h[x*]tp|ht[x*]p|f[x*]p)(?P<s>s?)(?=\s*[\[({]?:))
   | (?P<sep>\[://\]|\(://\))
   | (?P<colon>\[:\]|\(:\)|\{:\})
   | (?P<slash>\[/\])
@@ -113,7 +113,7 @@ class Refanged:
 
 
 def refang(text: str) -> Refanged:
-    """Undo common defanging (``hxxp``, ``[.]``, ``(dot)``, ``[:]``, ``[@]``, ``\\.``)."""
+    """Undo common defanging (``hxxp``, ``[.]``, ``(dot)``, ``[://]``, ``[@]``, ``\\.``...)."""
     out: list[str] = []
     offsets: list[int] = []
     replaced: set[int] = set()
