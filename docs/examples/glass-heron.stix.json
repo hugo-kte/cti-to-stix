@@ -1,6 +1,6 @@
 {
     "type": "bundle",
-    "id": "bundle--146e3207-e950-4a03-af7d-eec5bdb32a88",
+    "id": "bundle--9c3ea451-fd46-4aca-87b9-85dcc4a41beb",
     "objects": [
         {
             "type": "identity",
@@ -28,14 +28,14 @@
             "spec_version": "2.1",
             "id": "report--62c75901-229a-497a-ab2d-03f40edda281",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "GLASS HERON: from invoice lures to domain-wide staging",
             "description": "Extracted by Gleaner 0.1.0 (iocs, gazetteer, crf, technique-classifier): 9 indicator(s), 5 named entit(ies), 10 ATT&CK technique(s). Machine-generated; review before use.",
             "report_types": [
                 "threat-report"
             ],
-            "published": "2026-10-13T13:24:16.167054Z",
+            "published": "2026-01-01T00:00:00Z",
             "object_refs": [
                 "malware--ac6c1fe5-8653-4240-8a2e-730a5e05dbca",
                 "malware--63d48f1f-658c-41b2-8508-fc8c7719fe68",
@@ -84,8 +84,8 @@
             "spec_version": "2.1",
             "id": "malware--ac6c1fe5-8653-4240-8a2e-730a5e05dbca",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "QakBot",
             "is_family": true,
             "aliases": [
@@ -109,8 +109,8 @@
             "spec_version": "2.1",
             "id": "malware--63d48f1f-658c-41b2-8508-fc8c7719fe68",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Cobalt Strike",
             "is_family": true,
             "external_references": [
@@ -129,8 +129,8 @@
             "spec_version": "2.1",
             "id": "tool--d33f3d4a-dcd3-4984-af10-aead1458e5b3",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "AdFind",
             "external_references": [
                 {
@@ -148,8 +148,8 @@
             "spec_version": "2.1",
             "id": "tool--3ada94b6-94fe-4eb9-9057-219a0f620e9a",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Mimikatz",
             "external_references": [
                 {
@@ -167,8 +167,8 @@
             "spec_version": "2.1",
             "id": "tool--4579348a-1f3c-424c-a794-9bad80317abd",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "PsExec",
             "external_references": [
                 {
@@ -186,8 +186,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--e15abb62-9277-4a0e-8689-1d5ba520881b",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "LSASS Memory",
             "kill_chain_phases": [
                 {
@@ -211,8 +211,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--feeefc2a-58bf-4728-a893-7570e36f0ca8",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Windows Service",
             "kill_chain_phases": [
                 {
@@ -240,8 +240,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--d5aebe99-d918-445f-a072-b6d4beb2eb5a",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Registry Run Keys / Startup Folder",
             "kill_chain_phases": [
                 {
@@ -269,8 +269,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--dd5453ef-6c75-4cc7-846e-538450b5d767",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Exploit Public-Facing Application",
             "kill_chain_phases": [
                 {
@@ -294,8 +294,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--e98ee345-ca3e-4ce7-b5ff-1d392de0921b",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Rundll32",
             "kill_chain_phases": [
                 {
@@ -319,8 +319,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--8b177877-6f36-4cf6-8b48-88dbbded0678",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Spearphishing Attachment",
             "kill_chain_phases": [
                 {
@@ -344,8 +344,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--5e704337-3104-43e4-a0b3-16b8bc28cd9f",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Malicious File",
             "kill_chain_phases": [
                 {
@@ -369,8 +369,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--b992a0bd-b9f3-46ba-8d87-8e050052319a",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Scheduled Task",
             "kill_chain_phases": [
                 {
@@ -402,8 +402,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--4b663a61-4c70-4732-a09e-38e0f00a8800",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Ingress Tool Transfer",
             "kill_chain_phases": [
                 {
@@ -427,8 +427,8 @@
             "spec_version": "2.1",
             "id": "attack-pattern--e440f611-39a3-429e-8138-5794d644279a",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "Service Execution",
             "kill_chain_phases": [
                 {
@@ -452,8 +452,8 @@
             "spec_version": "2.1",
             "id": "indicator--dc636cb0-c7d9-47f2-a802-966a2edc4fc7",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "billing@example.org",
             "description": "email-addr extracted from the report (2 mention(s)).",
             "indicator_types": [
@@ -462,7 +462,7 @@
             "pattern": "[email-addr:value = 'billing@example.org']",
             "pattern_type": "stix",
             "pattern_version": "2.1",
-            "valid_from": "2026-10-13T13:24:16.167054Z",
+            "valid_from": "2026-01-01T00:00:00Z",
             "object_marking_refs": [
                 "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
             ]
@@ -472,8 +472,8 @@
             "spec_version": "2.1",
             "id": "indicator--e1631ed7-fcc5-4cd4-b494-c5a361dd1c61",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "C:\\ProgramData\\Updates\\svcupdate.dll",
             "description": "Host artifact mentioned in the report; review before use.",
             "indicator_types": [
@@ -482,7 +482,7 @@
             "pattern": "[file:name = 'svcupdate.dll' AND file:parent_directory_ref.path = 'C:\\\\ProgramData\\\\Updates']",
             "pattern_type": "stix",
             "pattern_version": "2.1",
-            "valid_from": "2026-10-13T13:24:16.167054Z",
+            "valid_from": "2026-01-01T00:00:00Z",
             "object_marking_refs": [
                 "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
             ]
@@ -492,8 +492,8 @@
             "spec_version": "2.1",
             "id": "indicator--c2de7703-a2b0-4b3c-9b32-5d32b3ddcc40",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "https://cdn-update.example.net/gate.php",
             "description": "url extracted from the report (2 mention(s)).",
             "indicator_types": [
@@ -502,7 +502,7 @@
             "pattern": "[url:value = 'https://cdn-update.example.net/gate.php']",
             "pattern_type": "stix",
             "pattern_version": "2.1",
-            "valid_from": "2026-10-13T13:24:16.167054Z",
+            "valid_from": "2026-01-01T00:00:00Z",
             "object_marking_refs": [
                 "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
             ]
@@ -512,8 +512,8 @@
             "spec_version": "2.1",
             "id": "indicator--316e5889-4731-4a9e-960d-ca71cb0017d2",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "198.51.100.23",
             "description": "ipv4-addr extracted from the report (2 mention(s)).",
             "indicator_types": [
@@ -522,7 +522,7 @@
             "pattern": "[ipv4-addr:value = '198.51.100.23']",
             "pattern_type": "stix",
             "pattern_version": "2.1",
-            "valid_from": "2026-10-13T13:24:16.167054Z",
+            "valid_from": "2026-01-01T00:00:00Z",
             "object_marking_refs": [
                 "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
             ]
@@ -532,8 +532,8 @@
             "spec_version": "2.1",
             "id": "indicator--1ce28e4d-94b1-4a94-a5bf-7c042ef97fe3",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\OneDriveSync",
             "description": "Host artifact mentioned in the report; review before use.",
             "indicator_types": [
@@ -542,7 +542,7 @@
             "pattern": "[windows-registry-key:key = 'HKEY_CURRENT_USER\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\\\\OneDriveSync']",
             "pattern_type": "stix",
             "pattern_version": "2.1",
-            "valid_from": "2026-10-13T13:24:16.167054Z",
+            "valid_from": "2026-01-01T00:00:00Z",
             "object_marking_refs": [
                 "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
             ]
@@ -552,8 +552,8 @@
             "spec_version": "2.1",
             "id": "vulnerability--1419c27a-dcfe-491e-b79a-20e22fa42be3",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "CVE-2021-44228",
             "external_references": [
                 {
@@ -570,8 +570,8 @@
             "spec_version": "2.1",
             "id": "indicator--45652cd3-9201-48cb-8a83-ab2b128e8ac5",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "203.0.113.77",
             "description": "ipv4-addr extracted from the report (2 mention(s)).",
             "indicator_types": [
@@ -580,7 +580,7 @@
             "pattern": "[ipv4-addr:value = '203.0.113.77']",
             "pattern_type": "stix",
             "pattern_version": "2.1",
-            "valid_from": "2026-10-13T13:24:16.167054Z",
+            "valid_from": "2026-01-01T00:00:00Z",
             "object_marking_refs": [
                 "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
             ]
@@ -590,8 +590,8 @@
             "spec_version": "2.1",
             "id": "indicator--53bb43d9-b5ba-421e-b8e4-e4b01e48360b",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "1d7b812b382823167c94c15aa73d62905889d8341fc1d2f892fa40f9051b3eec",
             "description": "sha256 extracted from the report (1 mention(s)).",
             "indicator_types": [
@@ -600,7 +600,7 @@
             "pattern": "[file:hashes.'SHA-256' = '1d7b812b382823167c94c15aa73d62905889d8341fc1d2f892fa40f9051b3eec']",
             "pattern_type": "stix",
             "pattern_version": "2.1",
-            "valid_from": "2026-10-13T13:24:16.167054Z",
+            "valid_from": "2026-01-01T00:00:00Z",
             "object_marking_refs": [
                 "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
             ]
@@ -610,8 +610,8 @@
             "spec_version": "2.1",
             "id": "indicator--3f29d44e-8b67-4ff3-9856-b33acde72f41",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "74ffa40e9a870c0aad199d386c0081924ea570c89b70c398974c613a2ab49c82",
             "description": "sha256 extracted from the report (1 mention(s)).",
             "indicator_types": [
@@ -620,7 +620,7 @@
             "pattern": "[file:hashes.'SHA-256' = '74ffa40e9a870c0aad199d386c0081924ea570c89b70c398974c613a2ab49c82']",
             "pattern_type": "stix",
             "pattern_version": "2.1",
-            "valid_from": "2026-10-13T13:24:16.167054Z",
+            "valid_from": "2026-01-01T00:00:00Z",
             "object_marking_refs": [
                 "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
             ]
@@ -630,8 +630,8 @@
             "spec_version": "2.1",
             "id": "indicator--825f3e3f-d952-4915-8502-eb767e187318",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "name": "0e89c5158f2be2617031b91a940c1a84",
             "description": "md5 extracted from the report (1 mention(s)).",
             "indicator_types": [
@@ -640,7 +640,7 @@
             "pattern": "[file:hashes.MD5 = '0e89c5158f2be2617031b91a940c1a84']",
             "pattern_type": "stix",
             "pattern_version": "2.1",
-            "valid_from": "2026-10-13T13:24:16.167054Z",
+            "valid_from": "2026-01-01T00:00:00Z",
             "object_marking_refs": [
                 "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
             ]
@@ -650,8 +650,8 @@
             "spec_version": "2.1",
             "id": "relationship--826473b1-72ff-443b-94b4-56d00ee1c031",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "relationship_type": "indicates",
             "description": "Inferred from co-occurrence in the source report.",
             "source_ref": "indicator--c2de7703-a2b0-4b3c-9b32-5d32b3ddcc40",
@@ -665,8 +665,8 @@
             "spec_version": "2.1",
             "id": "relationship--40c43de3-9904-4005-94a8-691242b7cdd7",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "relationship_type": "indicates",
             "description": "Inferred from co-occurrence in the source report.",
             "source_ref": "indicator--c2de7703-a2b0-4b3c-9b32-5d32b3ddcc40",
@@ -680,8 +680,8 @@
             "spec_version": "2.1",
             "id": "relationship--ceaffbb5-45a7-4bec-847b-14fef682558d",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "relationship_type": "indicates",
             "description": "Inferred from co-occurrence in the source report.",
             "source_ref": "indicator--316e5889-4731-4a9e-960d-ca71cb0017d2",
@@ -695,8 +695,8 @@
             "spec_version": "2.1",
             "id": "relationship--fd7c192c-b0a7-4fd3-92fb-ef5853f3a69b",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "relationship_type": "indicates",
             "description": "Inferred from co-occurrence in the source report.",
             "source_ref": "indicator--316e5889-4731-4a9e-960d-ca71cb0017d2",
@@ -710,8 +710,8 @@
             "spec_version": "2.1",
             "id": "relationship--ef2dacaa-68b5-409e-b6eb-5f217665e0e1",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "relationship_type": "indicates",
             "description": "Inferred from co-occurrence in the source report.",
             "source_ref": "indicator--53bb43d9-b5ba-421e-b8e4-e4b01e48360b",
@@ -725,8 +725,8 @@
             "spec_version": "2.1",
             "id": "relationship--1e7fc152-4738-4d8b-a823-99ff7cfc1e05",
             "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
-            "created": "2026-10-13T13:24:16.167054Z",
-            "modified": "2026-10-13T13:24:16.167054Z",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
             "relationship_type": "indicates",
             "description": "Inferred from co-occurrence in the source report.",
             "source_ref": "indicator--3f29d44e-8b67-4ff3-9856-b33acde72f41",

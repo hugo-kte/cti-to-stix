@@ -55,6 +55,23 @@ def test_extract_json_and_markdown(models_dir: Path):
     assert md.exit_code == 0 and md.stdout.startswith("# GLASS HERON")
 
 
+def test_fixed_created_gives_identical_bundles(tmp_path: Path, models_dir: Path):
+    command = ["extract", str(EXAMPLE), "-f", "stix", "--models", str(models_dir)]
+    bundles = []
+    for name in ("first.json", "second.json"):
+        out = tmp_path / name
+        result = runner.invoke(app, [*command, "-o", str(out), "--created", "2026-01-01T00:00Z"])
+        assert result.exit_code == 0, result.output
+        bundles.append(out.read_bytes())
+    assert bundles[0] == bundles[1]
+    objects = json.loads(bundles[0])["objects"]
+    report = next(o for o in objects if o["type"] == "report")
+    assert report["created"] == "2026-01-01T00:00:00.000Z"  # STIX: millisecond precision
+    assert report["published"].startswith("2026-01-01T00:00:00")
+    result = runner.invoke(app, [*command, "--created", "last tuesday"])
+    assert result.exit_code == 1 and "not an ISO 8601 timestamp" in result.output
+
+
 def test_validate_rejects_a_broken_bundle(tmp_path: Path):
     broken = tmp_path / "broken.json"
     broken.write_text(

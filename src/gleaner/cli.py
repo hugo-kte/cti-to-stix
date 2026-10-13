@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import logging
 import sys
+from datetime import UTC, datetime
 from enum import StrEnum
 from pathlib import Path
 from typing import Annotated, NoReturn
@@ -42,6 +43,17 @@ def _read(path: Path) -> str:
         _fail(f"{path} is not UTF-8 text (invalid byte at offset {exc.start})")
 
 
+def _timestamp(value: str | None) -> datetime | None:
+    """An ISO 8601 timestamp in UTC (a value without time zone is taken as UTC)."""
+    if value is None:
+        return None
+    try:
+        stamp = datetime.fromisoformat(value)
+    except ValueError:
+        _fail(f"--created {value!r} is not an ISO 8601 timestamp (e.g. 2026-01-01T00:00:00Z)")
+    return stamp.replace(tzinfo=UTC) if stamp.tzinfo is None else stamp.astimezone(UTC)
+
+
 class Format(StrEnum):
     stix = "stix"
     json = "json"
@@ -76,6 +88,14 @@ def extract(
     tlp: Annotated[
         Tlp, typer.Option(help="TLP marking of the STIX objects (clear is exported as TLP:WHITE).")
     ] = Tlp.amber,
+    created: Annotated[
+        str | None,
+        typer.Option(
+            help="Timestamp of the STIX objects (created, modified, valid_from, published), "
+            "ISO 8601 such as 2026-01-01T00:00:00Z; fixing it makes re-runs byte-identical. "
+            "Default: now."
+        ),
+    ] = None,
     models: ModelsOpt = Path("models"),
 ) -> None:
     """Extract indicators, entities and ATT&CK techniques from a report."""
@@ -83,6 +103,7 @@ def extract(
     from gleaner.render import markdown
     from gleaner.stix import to_bundle, validate
 
+    stamp = _timestamp(created)
     text_in = _read(report)
     try:
         extractor = Extractor.from_dir(models)
@@ -92,7 +113,7 @@ def extract(
         _fail(str(exc))
     result = extractor.extract(text_in, str(report))
     if fmt is Format.stix:
-        bundle = to_bundle(result, extractor.catalog, tlp=tlp.value)
+        bundle = to_bundle(result, extractor.catalog, tlp=tlp.value, now=stamp)
         text = bundle.serialize(pretty=True)
         valid, errors, _ = validate(text)
         if not valid:  # pragma: no cover - would be a bug in the exporter

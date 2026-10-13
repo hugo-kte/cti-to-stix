@@ -76,7 +76,9 @@ More tables, the per-technique scores and the CRF selection grid are in
 actor, documentation-range indicators), with the locally trained CRF; from a fresh clone the
 same five entities are found by the gazetteer instead. Full outputs:
 [`docs/examples/glass-heron.summary.md`](docs/examples/glass-heron.summary.md) and the STIX
-bundle [`docs/examples/glass-heron.stix.json`](docs/examples/glass-heron.stix.json).
+bundle [`docs/examples/glass-heron.stix.json`](docs/examples/glass-heron.stix.json), exported
+with `-f stix --created 2026-01-01T00:00:00Z`: with the same models, that command reproduces it
+byte for byte.
 
 ```text
 Indicators (10): 1 URL, 2 IPv4, 1 e-mail, 3 digests, 1 file path, 1 registry key, 1 CVE
@@ -191,7 +193,8 @@ flowchart LR
   tools and techniques; one malware family `uses` the techniques and is `indicated` by the
   indicators; with several families an indicator only `indicates` those named in its sentence.
   Identifiers are derived from content (UUIDv4 layout), so re-running on the same report gives
-  the same object IDs; only the timestamps and the bundle ID change.
+  the same object IDs. Timestamps default to the current time; `--created` (ISO 8601) fixes
+  them, and the bundle is then byte-identical from one run to the next.
 
 ## Evaluation protocol
 
@@ -283,11 +286,11 @@ of AnnoCTR, like the gazetteer rules):
 make download    # TRAM, ATT&CK v19.2, AnnoCTR at pinned commits, 88 MB, SHA-256 verified
 make train       # CRF selection on AnnoCTR dev + technique model selection on TRAM (~25 min)
 make evaluate    # every protocol above -> reports/metrics.json, REPORT.md, figures (~1 h)
-make test        # 100 tests on fixtures, no dataset or network needed
+make test        # 102 tests on fixtures, no dataset or network needed
 ```
 
 ```text
-gleaner extract REPORT [-f md|json|stix] [-o OUT] [--tlp clear|green|amber|red] [--models DIR]
+gleaner extract REPORT [-f md|json|stix] [-o OUT] [--tlp clear|green|amber|red] [--created ISO-8601] [--models DIR]
 gleaner iocs REPORT [--all] [--raw]
 gleaner validate BUNDLE
 gleaner download | train [--only ner|techniques] | evaluate [--only iocs,entities,techniques,cross,stix]
@@ -315,7 +318,7 @@ models/              ATT&CK catalog, gazetteer rules, technique model (CRF: loca
 reports/             metrics.json, REPORT.md, ioc_audit.csv, figures/
 examples/            two synthetic reports; docs/examples/ holds their outputs
 datasets.toml        dataset sources pinned to commits; checksums.sha256 lists every file
-tests/               100 tests on a miniature ATT&CK bundle and toy corpora
+tests/               102 tests on a miniature ATT&CK bundle and toy corpora
 ```
 
 ## Data sources and licences

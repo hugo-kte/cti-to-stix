@@ -124,8 +124,11 @@ def test_bundle_names_the_source_file_without_its_directory(catalog: Catalog, ga
 
 def test_bundle_is_deterministic(extraction, catalog: Catalog):
     first = to_bundle(extraction, catalog, now=NOW).serialize()
-    second = to_bundle(extraction, catalog, now=NOW).serialize()
-    assert json.loads(first)["objects"] == json.loads(second)["objects"]
+    assert to_bundle(extraction, catalog, now=NOW).serialize() == first  # bundle id included
+    later = to_bundle(extraction, catalog, now=datetime(2026, 2, 1, tzinfo=UTC)).serialize()
+    assert json.loads(later)["id"] != json.loads(first)["id"]
+    ids = [{o["id"] for o in json.loads(b)["objects"]} for b in (first, later)]
+    assert ids[0] == ids[1]  # same objects, new timestamps
 
 
 @pytest.mark.parametrize("tlp", ["clear", "green", "amber", "red"])

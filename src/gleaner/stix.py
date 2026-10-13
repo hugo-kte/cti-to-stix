@@ -14,9 +14,10 @@ when it names exactly one malware family, the family ``uses`` the techniques, ``
 CVEs and every indicator ``indicates`` it. With several families, an indicator only
 indicates a family named in the same sentence.
 
-Identifiers are derived from the objects' content, so the same report gives the same object
-identifiers (only the timestamps and the bundle id change). The source document is referenced by
-its file name only: a shared bundle should not reveal the analyst's directory layout.
+Identifiers, the bundle's included, are derived from content, so the same report gives the same
+object identifiers; with a fixed timestamp (``now``, or ``gleaner extract --created``) it gives a
+byte-identical bundle. The source document is referenced by its file name only: a shared bundle
+should not reveal the analyst's directory layout.
 """
 
 from __future__ import annotations
@@ -104,6 +105,11 @@ def to_bundle(
     tlp: str = "amber",
     now: datetime | None = None,
 ) -> stix2.Bundle:
+    """STIX 2.1 bundle of an extraction.
+
+    ``now`` sets ``created``, ``modified``, ``valid_from`` and ``published`` (default: the
+    current time); fixing it makes the whole bundle reproducible.
+    """
     now = now or datetime.now(UTC)
     identity = producer_identity()
     marking = TLP[tlp]
@@ -252,7 +258,9 @@ def to_bundle(
         else None,
         **common,
     )
-    return stix2.Bundle(objects=[identity, marking, report, *objects], allow_custom=False)
+    everything = [identity, marking, report, *objects]
+    bundle_id = _id("bundle", *(o.serialize(sort_keys=True) for o in everything))
+    return stix2.Bundle(objects=everything, id=bundle_id, allow_custom=False)
 
 
 def _summary(extraction: Extraction) -> str:
