@@ -274,8 +274,9 @@ gleaner iocs examples/glass-heron.md                          # indicators only,
 ```
 
 This works out of the box with the committed ATT&CK catalog, gazetteer rules and technique
-model (entities then come from the gazetteer alone). The CRF is trained locally, because
-AnnoCTR is a share-alike corpus and its derived weights are not redistributed here:
+model (entities then come from the gazetteer alone). The two CRF taggers are not committed:
+`make train` rebuilds them from the pinned data (shared, they would be CC BY-SA 4.0 adaptations
+of AnnoCTR, like the gazetteer rules):
 
 ```bash
 make download    # TRAM, ATT&CK v19.2, AnnoCTR at pinned commits, 88 MB, SHA-256 verified
@@ -316,9 +317,9 @@ datasets.toml        dataset sources pinned to commits; checksums.sha256 lists e
 tests/               100 tests on a miniature ATT&CK bundle and toy corpora
 ```
 
-## Data sources and licenses
+## Data sources and licences
 
-| Dataset | Pinned version | License | Used for |
+| Dataset | Pinned version | Licence | Used for |
 |---|---|---|---|
 | [MITRE CTID TRAM](https://github.com/center-for-threat-informed-defense/tram) (`data/tram2-data`) | commit `f29793d` | Apache-2.0 | technique classifier, nested CV |
 | [MITRE ATT&CK Enterprise](https://github.com/mitre-attack/attack-stix-data) | v19.2, commit `6cda5ad` | [ATT&CK Terms of Use](https://attack.mitre.org/resources/legal-and-branding/terms-of-use/) | catalog, gazetteer, attack-patterns, ID normalisation |
@@ -329,16 +330,18 @@ from the commits in [`datasets.toml`](datasets.toml) and verifies them; the corp
 committed. Files derived from the data and committed here:
 
 * `models/attack-catalog.json`: ATT&CK names, aliases, tactics and revocations, with MITRE's
-  copyright designation and license embedded. © 2026 The MITRE Corporation. This work is
+  copyright designation and licence embedded. © 2026 The MITRE Corporation. This work is
   reproduced and distributed with the permission of The MITRE Corporation. ATT&CK® is a
   registered trademark of The MITRE Corporation.
 * `models/gazetteer-rules.json`: lower-case word statistics from TRAM and AnnoCTR train+dev and
-  the ATT&CK alias decisions learned on AnnoCTR train+dev (no corpus text).
+  the ATT&CK alias decisions learned on AnnoCTR train+dev (no corpus text). It is an adaptation
+  of AnnoCTR, licensed CC BY-SA 4.0; attribution in [`models/README.md`](models/README.md).
 * `models/techniques/`: logistic-regression weights learned from TRAM (Apache-2.0).
 * `reports/ioc_audit.csv`: audit labels keyed by AnnoCTR document name and hashed value.
 
-The CRF weights, learned from the share-alike AnnoCTR corpus, are not redistributed; `make
-train` rebuilds them. The two example reports are written for this project.
+The CRF weights (two 3 MB crfsuite files) are not committed: `make train` rebuilds them from
+the pinned data, and if shared they would be CC BY-SA 4.0 adaptations of AnnoCTR too. The two
+example reports are written for this project.
 
 > MITRE Center for Threat-Informed Defense. *Threat Report ATT&CK Mapper (TRAM)*.
 > https://github.com/center-for-threat-informed-defense/tram
@@ -350,6 +353,9 @@ train` rebuilds them. The two example reports are written for this project.
 > Tactics, and Techniques in Cyber Threat Reports.* LREC-COLING 2024.
 > [arXiv:2404.07765](https://arxiv.org/abs/2404.07765)
 
-## License
+## Licences
 
-Code: [MIT](LICENSE). Data and derived files keep the terms of their sources (see above).
+The code is [MIT](LICENSE)-licensed. `models/gazetteer-rules.json` is an adaptation of AnnoCTR
+licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (attribution in
+[`models/README.md`](models/README.md)); `models/attack-catalog.json` keeps MITRE's copyright
+notice and the ATT&CK Terms of Use; the technique model is learned from TRAM (Apache-2.0).
