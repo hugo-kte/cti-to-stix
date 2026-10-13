@@ -1,6 +1,7 @@
 PY     ?= .venv/bin/python
 REPORT ?= examples/glass-heron.md
 JOBS   ?= 8
+OUT     = runtime/$(basename $(notdir $(REPORT)))
 export PYTHONPATH := src
 
 .DEFAULT_GOAL := help
@@ -24,10 +25,10 @@ evaluate: ## Run every evaluation protocol -> reports/ (~1 h on a laptop CPU)
 	$(PY) -m gleaner evaluate --n-jobs $(JOBS)
 
 extract: ## Extract a report (REPORT=...) to Markdown, JSON and a validated STIX bundle in runtime/
-	$(PY) -m gleaner extract $(REPORT) -f md -o runtime/$(notdir $(REPORT)).md
-	$(PY) -m gleaner extract $(REPORT) -f json -o runtime/$(notdir $(REPORT)).json
-	$(PY) -m gleaner extract $(REPORT) -f stix -o runtime/$(notdir $(REPORT)).stix.json
-	$(PY) -m gleaner validate runtime/$(notdir $(REPORT)).stix.json
+	$(PY) -m gleaner extract $(REPORT) -f md -o $(OUT).summary.md
+	$(PY) -m gleaner extract $(REPORT) -f json -o $(OUT).json
+	$(PY) -m gleaner extract $(REPORT) -f stix -o $(OUT).stix.json
+	$(PY) -m gleaner validate $(OUT).stix.json
 
 test: ## Run the test suite (fixtures only: no dataset or network needed)
 	$(PY) -m pytest --cov --cov-report=term-missing
