@@ -292,11 +292,16 @@ def render(m: dict[str, Any]) -> str:
             lines += section(m)
     if "training" in m and "ner" in m["training"]:
         ner = m["training"]["ner"]
+        kept = {(b["variant"], b["c1"], b["c2"]) for b in ner.get("best", {}).values()}
         lines += [
             "## Model selection (AnnoCTR dev)",
             "",
-            "| Variant | c1 | c2 | Dev micro F1, all types | Dev micro F1, CTI types |",
-            "|---|---:|---:|---:|---:|",
+            "Each variant keeps the `c1`/`c2` pair with the best dev micro-F1 over all AnnoCTR "
+            "types (✓); the pipeline uses the variant whose kept pair scores higher on the five "
+            "CTI types. Both final taggers are then refit on train+dev.",
+            "",
+            "| Variant | c1 | c2 | Dev micro F1, all types | Dev micro F1, CTI types | Kept |",
+            "|---|---:|---:|---:|---:|:---:|",
             *[
                 _row(
                     r["variant"],
@@ -304,6 +309,7 @@ def render(m: dict[str, Any]) -> str:
                     r["c2"],
                     _f(r["dev_micro_f1_all"]),
                     _f(r["dev_micro_f1_cti"]),
+                    "✓" if (r["variant"], r["c1"], r["c2"]) in kept else "",
                 )
                 for r in ner["grid"]
             ],

@@ -176,15 +176,17 @@ Objects per report: indicator 10.9, relationship 8.8, attack-pattern 8.1, malwar
 
 ## Model selection (AnnoCTR dev)
 
-| Variant | c1 | c2 | Dev micro F1, all types | Dev micro F1, CTI types |
-|---|---:|---:|---:|---:|
-| crf | 0.05 | 0.01 | 0.588 | 0.577 |
-| crf | 0.05 | 0.1 | 0.599 | 0.589 |
-| crf | 0.2 | 0.01 | 0.579 | 0.576 |
-| crf | 0.2 | 0.1 | 0.584 | 0.560 |
-| crf+gazetteer | 0.05 | 0.01 | 0.578 | 0.590 |
-| crf+gazetteer | 0.05 | 0.1 | 0.596 | 0.612 |
-| crf+gazetteer | 0.2 | 0.01 | 0.586 | 0.601 |
-| crf+gazetteer | 0.2 | 0.1 | 0.594 | 0.622 |
+Each variant keeps the `c1`/`c2` pair with the best dev micro-F1 over all AnnoCTR types (✓); the pipeline uses the variant whose kept pair scores higher on the five CTI types. Both final taggers are then refit on train+dev.
+
+| Variant | c1 | c2 | Dev micro F1, all types | Dev micro F1, CTI types | Kept |
+|---|---:|---:|---:|---:|:---:|
+| crf | 0.05 | 0.01 | 0.588 | 0.577 |  |
+| crf | 0.05 | 0.1 | 0.599 | 0.589 | ✓ |
+| crf | 0.2 | 0.01 | 0.579 | 0.576 |  |
+| crf | 0.2 | 0.1 | 0.584 | 0.560 |  |
+| crf+gazetteer | 0.05 | 0.01 | 0.578 | 0.590 |  |
+| crf+gazetteer | 0.05 | 0.1 | 0.596 | 0.612 | ✓ |
+| crf+gazetteer | 0.2 | 0.01 | 0.586 | 0.601 |  |
+| crf+gazetteer | 0.2 | 0.1 | 0.594 | 0.622 |  |
 
 Pipeline tagger: **crf+gazetteer**.
