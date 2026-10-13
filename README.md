@@ -261,6 +261,12 @@ were used once, after the code, rules and hyper-parameters were frozen.
   escapes after a slash (`/\_notes`), broken defangs such as `example.]com`, and generic
   Windows paths (`C:\Windows\System32\cmd.exe`) exported as artifacts. Bare file names are out
   of scope.
+* **Two IOC gaps are documented rather than fixed.** URL hosts keep the case they are written
+  in, so `hxxps://Example[.]com/x` and `hxxps://example[.]com/x` give two indicators;
+  lower-casing them would change an audited test value and therefore the published figures. A
+  Windows path followed within four words by a backslash path (`C:\x\a.exe and adds
+  HKCU\Software\…`) is glued into a single value; none of the 120 AnnoCTR reports contains the
+  pattern.
 * **Relationships are co-occurrence heuristics,** not extracted relations: a report naming two
   families and one C2 address in the same sentence links the address to both.
 * **No pretrained language model**, by design (nothing is downloaded but the three datasets). A
