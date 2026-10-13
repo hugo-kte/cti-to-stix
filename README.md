@@ -16,7 +16,7 @@ AnnoCTR) with leakage-aware protocols, and the results below include what does n
 
 | Step | Evaluated on | Result |
 |---|---|---|
-| IOC extraction | 34 real vendor reports (AnnoCTR test split), 389 audit labels from one AI annotator | precision **92.8%** on network indicators and digests (87.9% with host artifacts), estimated recall **94.2%** |
+| IOC extraction | 34 real vendor reports (AnnoCTR test split), 389 audit labels from one AI annotator | precision **92.8%** on network indicators and digests (87.9% with host artifacts), estimated recall **94.2%** (optimistic, see protocol) |
 | Entities: group, malware, tool, technique, tactic | AnnoCTR test split, 1,234 gold mentions | micro-F1 **0.625** for CRF + gazetteer, vs. 0.416 for the ATT&CK gazetteer alone |
 | ATT&CK linking | AnnoCTR malware mentions the annotators linked to ATT&CK | **90.4%** resolved to the right ID, none to a wrong one |
 | Technique classification, 50 techniques | TRAM, nested document-grouped cross-validation | micro-F1 **0.557**, macro-F1 **0.481** (a random sentence split would report 0.591 / 0.546) |
@@ -60,9 +60,9 @@ More tables, the per-technique scores and the CRF selection grid are in
 4. **The long tail is the hard part.** Per-technique F1 follows the amount of training data
    (correlation with the log number of labelled sentences: 0.60, see
    [`technique_long_tail.png`](reports/figures/technique_long_tail.png)). The ten most frequent
-   techniques average F1 0.56, the ten rarest 0.24, and T1557.001 and T1072 (7, 10 sentences)
-   are never found. When a sentence does describe a technique, the top-scoring one is right
-   77.1% of the time.
+   techniques average F1 0.56, the nine with fewer than 25 labelled sentences 0.23, and
+   T1557.001 and T1072 (7 and 10 sentences) are never found. When a sentence does describe a
+   technique, the top-scoring one is right 77.1% of the time.
 5. **Models trained on one corpus see a different world in another.** AnnoCTR's 3,348 technique
    mentions cover 149 techniques; only 28 of them, 26.7% of the mentions, are among TRAM's 50,
    so the classifier cannot name the rest. On the mentions it could name, top-1 accuracy is
@@ -73,7 +73,8 @@ More tables, the per-technique scores and the CRF selection grid are in
 ## Example
 
 `gleaner extract examples/glass-heron.md --format md` on a short synthetic report (fictional
-actor, documentation-range indicators). Full outputs:
+actor, documentation-range indicators), with the locally trained CRF; from a fresh clone the
+same five entities are found by the gazetteer instead. Full outputs:
 [`docs/examples/glass-heron.summary.md`](docs/examples/glass-heron.summary.md) and the STIX
 bundle [`docs/examples/glass-heron.stix.json`](docs/examples/glass-heron.stix.json).
 
@@ -183,11 +184,13 @@ flowchart LR
   from older ATT&CK versions follow the revocation chain (`T1574.002` → `T1574.001`).
 * **STIX** ([`stix.py`](src/gleaner/stix.py)). `stix2` objects: `indicator` with escaped STIX
   patterns, `malware`/`tool`/`intrusion-set` with ATT&CK external references, `attack-pattern`
-  with kill-chain phases, `vulnerability`, a `report`, a `system` identity and a TLP marking.
+  with kill-chain phases, `vulnerability`, a `report`, a `system` identity and a TLP marking
+  (STIX 2.1 predefines the TLP 1.0 markings, so `--tlp clear` is exported as TLP:WHITE).
   Relationships are inferred conservatively: one intrusion set in a report `uses` its malware,
   tools and techniques; one malware family `uses` the techniques and is `indicated` by the
   indicators; with several families an indicator only `indicates` those named in its sentence.
-  Identifiers are derived from content (UUIDv4 layout), so re-running gives the same bundle.
+  Identifiers are derived from content (UUIDv4 layout), so re-running on the same report gives
+  the same object IDs; only the timestamps and the bundle ID change.
 
 ## Evaluation protocol
 
@@ -206,7 +209,7 @@ were used once, after the code, rules and hyper-parameters were frozen.
   SHA-256 of the value, and `make evaluate` recomputes every figure from it.
 * **Entities.** AnnoCTR's official document-level splits (70 / 16 / 34 reports). Gazetteer rules
   come from train; CRF `c1`/`c2` are chosen on dev (grid in
-  [`reports/REPORT.md`](reports/REPORT.md)); the shipped models are refit on train+dev and
+  [`reports/REPORT.md`](reports/REPORT.md)); the final models are refit on train+dev and
   scored once on test. Scores are entity-level, strict (same span and type), micro-averaged over
   the five CTI types; a lenient (overlap) score is reported too.
 * **Techniques.** TRAM's 19,178 sentences from 151 reports, unlabelled sentences included as
@@ -240,8 +243,8 @@ were used once, after the code, rules and hyper-parameters were frozen.
   (outside `make evaluate`), 23 of 24 multi-word technique-name matches were not annotated, 15
   of them rows of such tables.
 * **TRAM covers 50 of ATT&CK's ~700 techniques and sub-techniques.** Rare techniques are learned
-  poorly (average F1 0.24 for the ten rarest), and the other ~650 cannot be predicted at all;
-  cited IDs and exact names are the only route to them in Gleaner.
+  poorly (average F1 0.23 below 25 labelled sentences), and the other ~650 cannot be predicted
+  at all; cited IDs and exact names are the only route to them in Gleaner.
 * **Domain shift.** Only 26.7% of AnnoCTR's technique mentions fall within TRAM's label set, and
   accuracy drops on implicit descriptions. TRAM's labels also predate ATT&CK v19: two of its
   techniques were revoked since (`T1562.001` → `T1685`, `T1574.002` → `T1574.001`) and are
@@ -264,7 +267,7 @@ were used once, after the code, rules and hyper-parameters were frozen.
 
 ```bash
 git clone https://github.com/hugo-kte/cti-to-stix.git && cd cti-to-stix
-make install
+make install && source .venv/bin/activate                     # needs Python 3.11+
 gleaner extract examples/glass-heron.md                       # Markdown summary
 gleaner extract examples/glass-heron.md -f stix -o bundle.json && gleaner validate bundle.json
 gleaner iocs examples/glass-heron.md                          # indicators only, TSV
@@ -277,8 +280,8 @@ AnnoCTR is a share-alike corpus and its derived weights are not redistributed he
 ```bash
 make download    # TRAM, ATT&CK v19.2, AnnoCTR at pinned commits, 88 MB, SHA-256 verified
 make train       # CRF selection on AnnoCTR dev + technique model selection on TRAM (~25 min)
-make evaluate    # every protocol below -> reports/metrics.json, REPORT.md, figures (~1 h)
-make test        # 85 tests on fixtures, no dataset or network needed
+make evaluate    # every protocol above -> reports/metrics.json, REPORT.md, figures (~1 h)
+make test        # 100 tests on fixtures, no dataset or network needed
 ```
 
 ```text
@@ -310,7 +313,7 @@ models/              ATT&CK catalog, gazetteer rules, technique model (CRF: loca
 reports/             metrics.json, REPORT.md, ioc_audit.csv, figures/
 examples/            two synthetic reports; docs/examples/ holds their outputs
 datasets.toml        dataset sources pinned to commits; checksums.sha256 lists every file
-tests/               85 tests on a miniature ATT&CK bundle and toy corpora
+tests/               100 tests on a miniature ATT&CK bundle and toy corpora
 ```
 
 ## Data sources and licenses
