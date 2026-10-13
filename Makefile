@@ -41,6 +41,8 @@ format: ## Auto-format the code
 	$(PY) -m ruff check --fix src tests
 	$(PY) -m ruff format src tests
 
-clean: ## Remove caches and runtime output (keeps data/, models/ and reports/)
-	rm -rf .pytest_cache .ruff_cache .coverage htmlcov runtime
+clean: ## Remove caches and runtime output (keeps data/, models/, reports/ and the audit sample)
+	rm -rf .pytest_cache .ruff_cache .coverage htmlcov
+	# runtime/ioc_audit_sample.csv is the only copy of the raw audit sample: never delete it
+	[ ! -d runtime ] || find runtime -mindepth 1 ! -name ioc_audit_sample.csv -delete
 	find . -name __pycache__ -type d -prune -exec rm -rf {} +
