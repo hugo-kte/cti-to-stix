@@ -8,6 +8,7 @@ path component selects the source: ``annoctr/ner_json/test.json`` is fetched fro
 
 from __future__ import annotations
 
+import errno
 import hashlib
 import json
 import logging
@@ -159,7 +160,10 @@ def load_annoctr_links(split: str, raw: Path = RAW) -> list[dict]:
 def annoctr_texts(split: str, raw: Path = RAW) -> dict[str, str]:
     """Plain text of every AnnoCTR report in ``split`` (document id -> text)."""
     folder = raw / "annoctr" / "text" / split
-    return {p.stem: p.read_text(encoding="utf-8") for p in sorted(folder.glob("*.txt"))}
+    paths = sorted(folder.glob("*.txt"))
+    if not paths:  # an empty dict would silently produce zero-document metrics
+        raise FileNotFoundError(errno.ENOENT, "no AnnoCTR report texts", str(folder))
+    return {p.stem: p.read_text(encoding="utf-8") for p in paths}
 
 
 def _jsonl(path: Path) -> Iterator[dict]:

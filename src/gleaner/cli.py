@@ -7,7 +7,7 @@ import logging
 import sys
 from enum import StrEnum
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, NoReturn
 
 import typer
 from rich.console import Console
@@ -22,6 +22,24 @@ console = Console(stderr=True)
 
 ModelsOpt = Annotated[Path, typer.Option("--models", help="Directory with trained models.")]
 RawOpt = Annotated[Path, typer.Option("--raw", help="Directory with the downloaded datasets.")]
+NEEDS_DATA = "run `gleaner download` first (and `gleaner train` before evaluating the CRF)"
+
+
+def _fail(message: str) -> NoReturn:
+    console.print(f"[red]error:[/red] {message}", highlight=False, soft_wrap=True)
+    raise typer.Exit(1)
+
+
+def _missing(exc: FileNotFoundError, hint: str) -> NoReturn:
+    _fail(f"{exc.filename or exc} not found: {hint}")
+
+
+def _read(path: Path) -> str:
+    """A report or bundle as text: UTF-8, with or without a byte-order mark."""
+    try:
+        return path.read_text(encoding="utf-8-sig")
+    except UnicodeDecodeError as exc:
+        _fail(f"{path} is not UTF-8 text (invalid byte at offset {exc.start})")
 
 
 class Format(StrEnum):
@@ -55,7 +73,9 @@ def extract(
     out: Annotated[
         Path | None, typer.Option("--out", "-o", help="Write here instead of stdout.")
     ] = None,
-    tlp: Annotated[Tlp, typer.Option(help="TLP marking of the STIX objects.")] = Tlp.amber,
+    tlp: Annotated[
+        Tlp, typer.Option(help="TLP marking of the STIX objects (clear is exported as TLP:WHITE).")
+    ] = Tlp.amber,
     models: ModelsOpt = Path("models"),
 ) -> None:
     """Extract indicators, entities and ATT&CK techniques from a report."""
@@ -63,8 +83,14 @@ def extract(
     from gleaner.render import markdown
     from gleaner.stix import to_bundle, validate
 
-    extractor = Extractor.from_dir(models)
-    result = extractor.extract(report.read_text(encoding="utf-8"), str(report))
+    text_in = _read(report)
+    try:
+        extractor = Extractor.from_dir(models)
+    except FileNotFoundError as exc:
+        _missing(exc, "run from the repository root or pass --models DIR")
+    except ValueError as exc:
+        _fail(str(exc))
+    result = extractor.extract(text_in, str(report))
     if fmt is Format.stix:
         bundle = to_bundle(result, extractor.catalog, tlp=tlp.value)
         text = bundle.serialize(pretty=True)
@@ -99,8 +125,9 @@ def iocs(
     """List the indicators of a report as tab-separated lines (no models needed)."""
     from gleaner.iocs import NETWORK_TYPES, defang, extract_iocs
 
+    text = _read(report)
     sys.stdout.write("type\tvalue\tstatus\tscope\tmentions\n")
-    for ioc in extract_iocs(report.read_text(encoding="utf-8")):
+    for ioc in extract_iocs(text):
         if show_all or ioc.exported:
             value = defang(ioc.value) if safe and ioc.type in NETWORK_TYPES else ioc.value
             sys.stdout.write(f"{ioc.type}\t{value}\t{ioc.status}\t{ioc.scope}\t{ioc.count}\n")
@@ -109,9 +136,16 @@ def iocs(
 @app.command()
 def validate(bundle: Annotated[Path, typer.Argument(exists=True, dir_okay=False)]) -> None:
     """Validate a STIX 2.1 bundle with the OASIS validator (strict mode)."""
+    from stix2validator import ValidationError
+
     from gleaner.stix import validate as run
 
-    valid, errors, warnings = run(bundle.read_text(encoding="utf-8"))
+    try:
+        valid, errors, warnings = run(_read(bundle))
+    except json.JSONDecodeError as exc:
+        _fail(f"{bundle} is not JSON ({exc})")
+    except ValidationError as exc:
+        _fail(f"{bundle}: {exc}")
     for message in errors + warnings:
         console.print(f"  {message}")
     console.print(
@@ -139,13 +173,18 @@ def train(
     only: Annotated[str | None, typer.Option(help="ner or techniques")] = None,
     n_jobs: Annotated[int, typer.Option(help="Parallel jobs.")] = 8,
 ) -> None:
-    """Select hyper-parameters (AnnoCTR dev, TRAM grouped CV) and train the shipped models."""
+    """Select hyper-parameters (AnnoCTR dev, TRAM grouped CV) and train the models."""
     from gleaner.train import train_all
 
+    if only not in (None, "ner", "techniques"):
+        _fail(f"--only must be ner or techniques, not {only!r}")
     parts = (only,) if only else ("ner", "techniques")
-    summary = train_all(raw, models, n_jobs, parts)
+    try:
+        summary = train_all(raw, models, n_jobs, parts)
+    except FileNotFoundError as exc:
+        _missing(exc, NEEDS_DATA)
     console.print_json(
-        json.dumps({k: v for k, v in summary.items() if k != "trained_at"}, default=str)[:4000]
+        json.dumps({k: v for k, v in summary.items() if k != "trained_at"}, default=str)
     )
 
 
@@ -163,8 +202,13 @@ def evaluate(
     from gleaner import plots, report
     from gleaner.evaluate import SECTIONS, run
 
-    sections = tuple(only.split(",")) if only else SECTIONS
-    metrics = run(raw, models, out_dir, sections, n_jobs)
+    sections = tuple(s.strip() for s in only.split(",")) if only else SECTIONS
+    if unknown := sorted(set(sections) - set(SECTIONS)):
+        _fail(f"unknown section(s) {', '.join(unknown)}; choose from {', '.join(SECTIONS)}")
+    try:
+        metrics = run(raw, models, out_dir, sections, n_jobs)
+    except FileNotFoundError as exc:
+        _missing(exc, NEEDS_DATA)
     plots.all_figures(metrics, out_dir / "figures")
     (out_dir / "REPORT.md").write_text(report.render(metrics), encoding="utf-8")
     console.print(f"Report: [bold]{out_dir / 'REPORT.md'}[/bold]")
@@ -179,7 +223,10 @@ def audit_sample(
     """Sample AnnoCTR test extractions (with context) for the manual IOC audit."""
     from gleaner.audit import write_sample
 
-    n = write_sample(raw, out, seed)
+    try:
+        n = write_sample(raw, out, seed)
+    except FileNotFoundError as exc:
+        _missing(exc, NEEDS_DATA)
     console.print(f"{n} rows -> {out} (contains raw indicators and corpus text: do not commit)")
 
 

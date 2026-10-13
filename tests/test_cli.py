@@ -63,6 +63,31 @@ def test_validate_rejects_a_broken_bundle(tmp_path: Path):
     assert runner.invoke(app, ["validate", str(broken)]).exit_code == 1
 
 
+def test_bad_inputs_give_one_line_errors(tmp_path: Path):
+    binary = tmp_path / "report.txt"
+    binary.write_bytes(b"\xff\xfe\x00 not text")
+    result = runner.invoke(app, ["iocs", str(binary)])
+    assert result.exit_code == 1 and "not UTF-8 text" in result.output
+    assert "type\tvalue" not in result.output  # nothing written before the error
+    result = runner.invoke(app, ["extract", str(EXAMPLE), "--models", str(tmp_path / "none")])
+    assert result.exit_code == 1 and "run from the repository root" in result.output
+    not_json = tmp_path / "bundle.json"
+    not_json.write_text("{not json")
+    result = runner.invoke(app, ["validate", str(not_json)])
+    assert result.exit_code == 1 and "is not JSON" in result.output
+    result = runner.invoke(app, ["evaluate", "--only", "iocs,bogus", "--raw", str(tmp_path)])
+    assert result.exit_code == 1 and "unknown section(s) bogus" in result.output
+    result = runner.invoke(app, ["evaluate", "--only", "iocs", "--raw", str(tmp_path)])
+    assert result.exit_code == 1 and "gleaner download" in result.output
+
+
+def test_byte_order_mark_is_ignored(tmp_path: Path, models_dir: Path):
+    report = tmp_path / "bom.md"
+    report.write_text("﻿# Synthetic advisory\n\nNothing to see.\n", encoding="utf-8")
+    result = runner.invoke(app, ["extract", str(report), "-f", "json", "--models", str(models_dir)])
+    assert result.exit_code == 0 and json.loads(result.stdout)["title"] == "Synthetic advisory"
+
+
 def test_module_entry_point():
     result = subprocess.run(
         [sys.executable, "-m", "gleaner", "--help"],
