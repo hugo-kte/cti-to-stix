@@ -15,7 +15,7 @@ install: ## Create .venv and install Gleaner with dev tools
 	$(PY) -m pip install --upgrade pip
 	$(PY) -m pip install -e ".[dev]"
 
-download: ## Fetch TRAM, ATT&CK v19.2 and AnnoCTR at pinned commits (88 MB), verify SHA-256
+download: ## Fetch TRAM, ATT&CK v19.2 and AnnoCTR at pinned commits (87 MB), verify SHA-256
 	$(PY) -m gleaner download
 
 train: ## Select hyper-parameters and train the CRF taggers and technique classifier (~25 min)

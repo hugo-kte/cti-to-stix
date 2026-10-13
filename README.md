@@ -283,7 +283,7 @@ model (entities then come from the gazetteer alone). The two CRF taggers are not
 of AnnoCTR, like the gazetteer rules):
 
 ```bash
-make download    # TRAM, ATT&CK v19.2, AnnoCTR at pinned commits, 88 MB, SHA-256 verified
+make download    # TRAM, ATT&CK v19.2, AnnoCTR at pinned commits, 87 MB, SHA-256 verified
 make train       # CRF selection on AnnoCTR dev + technique model selection on TRAM (~25 min)
 make evaluate    # every protocol above -> reports/metrics.json, REPORT.md, figures (~1 h)
 make test        # 102 tests on fixtures, no dataset or network needed
@@ -325,7 +325,7 @@ tests/               102 tests on a miniature ATT&CK bundle and toy corpora
 
 | Dataset | Pinned version | Licence | Used for |
 |---|---|---|---|
-| [MITRE CTID TRAM](https://github.com/center-for-threat-informed-defense/tram) (`data/tram2-data`) | commit `f29793d` | Apache-2.0 | technique classifier, nested CV |
+| [MITRE CTID TRAM](https://github.com/center-for-threat-informed-defense/tram) (`multi_label.json` in `data/tram2-data`) | commit `f29793d` | Apache-2.0 | technique classifier, nested CV |
 | [MITRE ATT&CK Enterprise](https://github.com/mitre-attack/attack-stix-data) | v19.2, commit `6cda5ad` | [ATT&CK Terms of Use](https://attack.mitre.org/resources/legal-and-branding/terms-of-use/) | catalog, gazetteer, attack-patterns, ID normalisation |
 | [AnnoCTR](https://github.com/boschresearch/anno-ctr-lrec-coling-2024) (`text`, `ner_json`, `linking_mitre_only`) | commit `d510b69` | CC BY-SA 4.0 | CRF training (train+dev), entity evaluation (test), cross-dataset check, IOC audit |
 
