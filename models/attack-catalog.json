@@ -1,0 +1,12256 @@
+{
+"attack_version": "19.2",
+"notice": "Derived from MITRE ATT&CK Enterprise. © 2026 The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation. License: The MITRE Corporation (MITRE) hereby grants you a non-exclusive, royalty-free license to use ATT&CK® for research, development, and commercial purposes. Any copy you make for such purposes is authorized provided that you reproduce MITRE's copyright designation and this license in any such copy. Terms of use: https://attack.mitre.org/resources/legal-and-branding/terms-of-use/",
+"objects": [
+{
+"id": "G0001",
+"name": "Axiom",
+"kind": "group",
+"aliases": [
+"Group 72"
+]
+},
+{
+"id": "G0002",
+"name": "Moafee",
+"kind": "group"
+},
+{
+"id": "G0003",
+"name": "Cleaver",
+"kind": "group",
+"aliases": [
+"Threat Group 2889",
+"TG-2889"
+]
+},
+{
+"id": "G0004",
+"name": "Ke3chang",
+"kind": "group",
+"aliases": [
+"APT15",
+"Mirage",
+"Vixen Panda",
+"GREF",
+"Playful Dragon",
+"RoyalAPT",
+"NICKEL",
+"Nylon Typhoon"
+]
+},
+{
+"id": "G0005",
+"name": "APT12",
+"kind": "group",
+"aliases": [
+"IXESHE",
+"DynCalc",
+"Numbered Panda",
+"DNSCALC"
+]
+},
+{
+"id": "G0006",
+"name": "APT1",
+"kind": "group",
+"aliases": [
+"Comment Crew",
+"Comment Group",
+"Comment Panda"
+]
+},
+{
+"id": "G0007",
+"name": "APT28",
+"kind": "group",
+"aliases": [
+"IRON TWILIGHT",
+"SNAKEMACKEREL",
+"Swallowtail",
+"Group 74",
+"Sednit",
+"Sofacy",
+"Pawn Storm",
+"Fancy Bear",
+"STRONTIUM",
+"Tsar Team",
+"Threat Group-4127",
+"TG-4127",
+"Forest Blizzard",
+"FROZENLAKE",
+"GruesomeLarch"
+]
+},
+{
+"id": "G0008",
+"name": "Carbanak",
+"kind": "group",
+"aliases": [
+"Anunak"
+]
+},
+{
+"id": "G0009",
+"name": "Deep Panda",
+"kind": "group",
+"aliases": [
+"Shell Crew",
+"WebMasters",
+"KungFu Kittens",
+"PinkPanther",
+"Black Vine"
+]
+},
+{
+"id": "G0010",
+"name": "Turla",
+"kind": "group",
+"aliases": [
+"IRON HUNTER",
+"Group 88",
+"Waterbug",
+"WhiteBear",
+"Snake",
+"Krypton",
+"Venomous Bear",
+"Secret Blizzard",
+"BELUGASTURGEON"
+]
+},
+{
+"id": "G0011",
+"name": "PittyTiger",
+"kind": "group"
+},
+{
+"id": "G0012",
+"name": "Darkhotel",
+"kind": "group",
+"aliases": [
+"DUBNIUM",
+"Zigzag Hail"
+]
+},
+{
+"id": "G0013",
+"name": "APT30",
+"kind": "group"
+},
+{
+"id": "G0016",
+"name": "APT29",
+"kind": "group",
+"aliases": [
+"IRON RITUAL",
+"IRON HEMLOCK",
+"NobleBaron",
+"Dark Halo",
+"NOBELIUM",
+"UNC2452",
+"YTTRIUM",
+"The Dukes",
+"Cozy Bear",
+"CozyDuke",
+"SolarStorm",
+"Blue Kitsune",
+"UNC3524",
+"Midnight Blizzard"
+]
+},
+{
+"id": "G0017",
+"name": "DragonOK",
+"kind": "group"
+},
+{
+"id": "G0018",
+"name": "admin@338",
+"kind": "group"
+},
+{
+"id": "G0019",
+"name": "Naikon",
+"kind": "group"
+},
+{
+"id": "G0020",
+"name": "Equation",
+"kind": "group"
+},
+{
+"id": "G0021",
+"name": "Molerats",
+"kind": "group",
+"aliases": [
+"Operation Molerats",
+"Gaza Cybergang"
+]
+},
+{
+"id": "G0022",
+"name": "APT3",
+"kind": "group",
+"aliases": [
+"Gothic Panda",
+"Pirpi",
+"UPS Team",
+"Buckeye",
+"Threat Group-0110",
+"TG-0110"
+]
+},
+{
+"id": "G0023",
+"name": "APT16",
+"kind": "group"
+},
+{
+"id": "G0024",
+"name": "Putter Panda",
+"kind": "group",
+"aliases": [
+"APT2",
+"MSUpdater"
+]
+},
+{
+"id": "G0025",
+"name": "APT17",
+"kind": "group",
+"aliases": [
+"Deputy Dog"
+]
+},
+{
+"id": "G0026",
+"name": "APT18",
+"kind": "group",
+"aliases": [
+"TG-0416",
+"Dynamite Panda",
+"Threat Group-0416"
+]
+},
+{
+"id": "G0027",
+"name": "Threat Group-3390",
+"kind": "group",
+"aliases": [
+"Earth Smilodon",
+"TG-3390",
+"Emissary Panda",
+"BRONZE UNION",
+"APT27",
+"Iron Tiger",
+"LuckyMouse",
+"Linen Typhoon"
+]
+},
+{
+"id": "G0028",
+"name": "Threat Group-1314",
+"kind": "group",
+"aliases": [
+"TG-1314"
+]
+},
+{
+"id": "G0029",
+"name": "Scarlet Mimic",
+"kind": "group"
+},
+{
+"id": "G0030",
+"name": "Lotus Blossom",
+"kind": "group",
+"aliases": [
+"DRAGONFISH",
+"Spring Dragon",
+"RADIUM",
+"Raspberry Typhoon",
+"Bilbug",
+"Thrip"
+]
+},
+{
+"id": "G0032",
+"name": "Lazarus Group",
+"kind": "group",
+"aliases": [
+"Labyrinth Chollima",
+"HIDDEN COBRA",
+"Guardians of Peace",
+"ZINC",
+"NICKEL ACADEMY",
+"Diamond Sleet"
+]
+},
+{
+"id": "G0033",
+"name": "Poseidon Group",
+"kind": "group"
+},
+{
+"id": "G0034",
+"name": "Sandworm Team",
+"kind": "group",
+"aliases": [
+"ELECTRUM",
+"Telebots",
+"IRON VIKING",
+"BlackEnergy (Group)",
+"Quedagh",
+"Voodoo Bear",
+"IRIDIUM",
+"Seashell Blizzard",
+"FROZENBARENTS",
+"APT44"
+]
+},
+{
+"id": "G0035",
+"name": "Dragonfly",
+"kind": "group",
+"aliases": [
+"TEMP.Isotope",
+"DYMALLOY",
+"Berserk Bear",
+"TG-4192",
+"Crouching Yeti",
+"IRON LIBERTY",
+"Energetic Bear",
+"Ghost Blizzard",
+"BROMINE"
+]
+},
+{
+"id": "G0036",
+"name": "GCMAN",
+"kind": "group"
+},
+{
+"id": "G0037",
+"name": "FIN6",
+"kind": "group",
+"aliases": [
+"Magecart Group 6",
+"ITG08",
+"Skeleton Spider",
+"TAAL",
+"Camouflage Tempest"
+]
+},
+{
+"id": "G0038",
+"name": "Stealth Falcon",
+"kind": "group"
+},
+{
+"id": "G0039",
+"name": "Suckfly",
+"kind": "group"
+},
+{
+"id": "G0040",
+"name": "Patchwork",
+"kind": "group",
+"aliases": [
+"Hangover Group",
+"Dropping Elephant",
+"Chinastrats",
+"MONSOON",
+"Operation Hangover"
+]
+},
+{
+"id": "G0041",
+"name": "Strider",
+"kind": "group",
+"aliases": [
+"ProjectSauron"
+]
+},
+{
+"id": "G0043",
+"name": "Group5",
+"kind": "group"
+},
+{
+"id": "G0044",
+"name": "Winnti Group",
+"kind": "group",
+"aliases": [
+"Blackfly"
+]
+},
+{
+"id": "G0045",
+"name": "menuPass",
+"kind": "group",
+"aliases": [
+"Cicada",
+"POTASSIUM",
+"Stone Panda",
+"APT10",
+"Red Apollo",
+"CVNX",
+"HOGFISH",
+"BRONZE RIVERSIDE"
+]
+},
+{
+"id": "G0046",
+"name": "FIN7",
+"kind": "group",
+"aliases": [
+"GOLD NIAGARA",
+"ITG14",
+"Carbon Spider",
+"ELBRUS",
+"Sangria Tempest"
+]
+},
+{
+"id": "G0047",
+"name": "Gamaredon Group",
+"kind": "group",
+"aliases": [
+"IRON TILDEN",
+"Primitive Bear",
+"ACTINIUM",
+"Armageddon",
+"Shuckworm",
+"DEV-0157",
+"Aqua Blizzard",
+"NastyShrew"
+]
+},
+{
+"id": "G0048",
+"name": "RTM",
+"kind": "group"
+},
+{
+"id": "G0049",
+"name": "OilRig",
+"kind": "group",
+"aliases": [
+"COBALT GYPSY",
+"IRN2",
+"APT34",
+"Helix Kitten",
+"Evasive Serpens",
+"Hazel Sandstorm",
+"EUROPIUM",
+"ITG13",
+"Earth Simnavaz",
+"Crambus",
+"TA452"
+]
+},
+{
+"id": "G0050",
+"name": "APT32",
+"kind": "group",
+"aliases": [
+"SeaLotus",
+"OceanLotus",
+"APT-C-00",
+"Canvas Cyclone",
+"BISMUTH"
+]
+},
+{
+"id": "G0051",
+"name": "FIN10",
+"kind": "group"
+},
+{
+"id": "G0052",
+"name": "CopyKittens",
+"kind": "group"
+},
+{
+"id": "G0053",
+"name": "FIN5",
+"kind": "group"
+},
+{
+"id": "G0054",
+"name": "Sowbug",
+"kind": "group"
+},
+{
+"id": "G0055",
+"name": "NEODYMIUM",
+"kind": "group"
+},
+{
+"id": "G0056",
+"name": "PROMETHIUM",
+"kind": "group",
+"aliases": [
+"StrongPity"
+]
+},
+{
+"id": "G0059",
+"name": "Magic Hound",
+"kind": "group",
+"aliases": [
+"TA453",
+"COBALT ILLUSION",
+"Charming Kitten",
+"ITG18",
+"Phosphorus",
+"Newscaster",
+"APT35",
+"Mint Sandstorm"
+]
+},
+{
+"id": "G0060",
+"name": "BRONZE BUTLER",
+"kind": "group",
+"aliases": [
+"REDBALDKNIGHT",
+"Tick"
+]
+},
+{
+"id": "G0061",
+"name": "FIN8",
+"kind": "group",
+"aliases": [
+"Syssphinx"
+]
+},
+{
+"id": "G0062",
+"name": "TA459",
+"kind": "group"
+},
+{
+"id": "G0063",
+"name": "BlackOasis",
+"kind": "group"
+},
+{
+"id": "G0064",
+"name": "APT33",
+"kind": "group",
+"aliases": [
+"HOLMIUM",
+"Elfin",
+"Peach Sandstorm"
+]
+},
+{
+"id": "G0065",
+"name": "Leviathan",
+"kind": "group",
+"aliases": [
+"MUDCARP",
+"Kryptonite Panda",
+"Gadolinium",
+"BRONZE MOHAWK",
+"TEMP.Jumper",
+"APT40",
+"TEMP.Periscope",
+"Gingham Typhoon"
+]
+},
+{
+"id": "G0066",
+"name": "Elderwood",
+"kind": "group",
+"aliases": [
+"Elderwood Gang",
+"Beijing Group",
+"Sneaky Panda"
+]
+},
+{
+"id": "G0067",
+"name": "APT37",
+"kind": "group",
+"aliases": [
+"InkySquid",
+"ScarCruft",
+"Reaper",
+"Group123",
+"TEMP.Reaper",
+"Ricochet Chollima"
+]
+},
+{
+"id": "G0068",
+"name": "PLATINUM",
+"kind": "group"
+},
+{
+"id": "G0069",
+"name": "MuddyWater",
+"kind": "group",
+"aliases": [
+"Earth Vetala",
+"MERCURY",
+"Static Kitten",
+"Seedworm",
+"TEMP.Zagros",
+"Mango Sandstorm",
+"TA450",
+"MuddyKrill"
+]
+},
+{
+"id": "G0070",
+"name": "Dark Caracal",
+"kind": "group"
+},
+{
+"id": "G0071",
+"name": "Orangeworm",
+"kind": "group"
+},
+{
+"id": "G0073",
+"name": "APT19",
+"kind": "group",
+"aliases": [
+"Codoso",
+"C0d0so0",
+"Codoso Team",
+"Sunshop Group"
+]
+},
+{
+"id": "G0075",
+"name": "Rancor",
+"kind": "group"
+},
+{
+"id": "G0076",
+"name": "Thrip",
+"kind": "group"
+},
+{
+"id": "G0077",
+"name": "Leafminer",
+"kind": "group",
+"aliases": [
+"Raspite"
+]
+},
+{
+"id": "G0078",
+"name": "Gorgon Group",
+"kind": "group"
+},
+{
+"id": "G0079",
+"name": "DarkHydrus",
+"kind": "group"
+},
+{
+"id": "G0080",
+"name": "Cobalt Group",
+"kind": "group",
+"aliases": [
+"GOLD KINGSWOOD",
+"Cobalt Gang",
+"Cobalt Spider"
+]
+},
+{
+"id": "G0081",
+"name": "Tropic Trooper",
+"kind": "group",
+"aliases": [
+"Pirate Panda",
+"KeyBoy"
+]
+},
+{
+"id": "G0082",
+"name": "APT38",
+"kind": "group",
+"aliases": [
+"NICKEL GLADSTONE",
+"BeagleBoyz",
+"Bluenoroff",
+"Stardust Chollima",
+"Sapphire Sleet",
+"COPERNICIUM"
+]
+},
+{
+"id": "G0083",
+"name": "SilverTerrier",
+"kind": "group"
+},
+{
+"id": "G0084",
+"name": "Gallmaker",
+"kind": "group"
+},
+{
+"id": "G0085",
+"name": "FIN4",
+"kind": "group"
+},
+{
+"id": "G0087",
+"name": "APT39",
+"kind": "group",
+"aliases": [
+"ITG07",
+"Chafer",
+"Remix Kitten"
+]
+},
+{
+"id": "G0088",
+"name": "TEMP.Veles",
+"kind": "group",
+"aliases": [
+"XENOTIME"
+]
+},
+{
+"id": "G0089",
+"name": "The White Company",
+"kind": "group"
+},
+{
+"id": "G0090",
+"name": "WIRTE",
+"kind": "group",
+"aliases": [
+"Ashen Lepus"
+]
+},
+{
+"id": "G0091",
+"name": "Silence",
+"kind": "group",
+"aliases": [
+"Whisper Spider"
+]
+},
+{
+"id": "G0092",
+"name": "TA505",
+"kind": "group",
+"aliases": [
+"Hive0065",
+"Spandex Tempest",
+"CHIMBORAZO"
+]
+},
+{
+"id": "G0093",
+"name": "GALLIUM",
+"kind": "group",
+"aliases": [
+"Granite Typhoon"
+]
+},
+{
+"id": "G0094",
+"name": "Kimsuky",
+"kind": "group",
+"aliases": [
+"Black Banshee",
+"Velvet Chollima",
+"Emerald Sleet",
+"THALLIUM",
+"APT43",
+"TA427",
+"Springtail",
+"Earth Kumiho",
+"PatheticSlug"
+]
+},
+{
+"id": "G0095",
+"name": "Machete",
+"kind": "group",
+"aliases": [
+"APT-C-43",
+"El Machete"
+]
+},
+{
+"id": "G0096",
+"name": "APT41",
+"kind": "group",
+"aliases": [
+"Wicked Panda",
+"Brass Typhoon",
+"BARIUM"
+]
+},
+{
+"id": "G0098",
+"name": "BlackTech",
+"kind": "group",
+"aliases": [
+"Palmerworm"
+]
+},
+{
+"id": "G0099",
+"name": "APT-C-36",
+"kind": "group",
+"aliases": [
+"Blind Eagle",
+"TAG-144",
+"AguilaCiega",
+"APT-Q-98"
+]
+},
+{
+"id": "G0100",
+"name": "Inception",
+"kind": "group",
+"aliases": [
+"Inception Framework",
+"Cloud Atlas"
+]
+},
+{
+"id": "G0102",
+"name": "Wizard Spider",
+"kind": "group",
+"aliases": [
+"UNC1878",
+"TEMP.MixMaster",
+"Grim Spider",
+"FIN12",
+"GOLD BLACKBURN",
+"ITG23",
+"Periwinkle Tempest",
+"DEV-0193",
+"Pistachio Tempest",
+"DEV-0237"
+]
+},
+{
+"id": "G0103",
+"name": "Mofang",
+"kind": "group"
+},
+{
+"id": "G0105",
+"name": "DarkVishnya",
+"kind": "group"
+},
+{
+"id": "G0106",
+"name": "Rocke",
+"kind": "group"
+},
+{
+"id": "G0107",
+"name": "Whitefly",
+"kind": "group"
+},
+{
+"id": "G0108",
+"name": "Blue Mockingbird",
+"kind": "group"
+},
+{
+"id": "G0112",
+"name": "Windshift",
+"kind": "group",
+"aliases": [
+"Bahamut"
+]
+},
+{
+"id": "G0114",
+"name": "Chimera",
+"kind": "group"
+},
+{
+"id": "G0115",
+"name": "GOLD SOUTHFIELD",
+"kind": "group",
+"aliases": [
+"Pinchy Spider"
+]
+},
+{
+"id": "G0117",
+"name": "Fox Kitten",
+"kind": "group",
+"aliases": [
+"UNC757",
+"Parisite",
+"Pioneer Kitten",
+"RUBIDIUM",
+"Lemon Sandstorm"
+]
+},
+{
+"id": "G0119",
+"name": "Indrik Spider",
+"kind": "group",
+"aliases": [
+"Evil Corp",
+"Manatee Tempest",
+"DEV-0243",
+"UNC2165"
+]
+},
+{
+"id": "G0120",
+"name": "Evilnum",
+"kind": "group"
+},
+{
+"id": "G0121",
+"name": "Sidewinder",
+"kind": "group",
+"aliases": [
+"T-APT-04",
+"Rattlesnake"
+]
+},
+{
+"id": "G0122",
+"name": "Silent Librarian",
+"kind": "group",
+"aliases": [
+"TA407",
+"COBALT DICKENS"
+]
+},
+{
+"id": "G0123",
+"name": "Volatile Cedar",
+"kind": "group",
+"aliases": [
+"Lebanese Cedar"
+]
+},
+{
+"id": "G0124",
+"name": "Windigo",
+"kind": "group"
+},
+{
+"id": "G0125",
+"name": "HAFNIUM",
+"kind": "group",
+"aliases": [
+"Operation Exchange Marauder",
+"Silk Typhoon"
+]
+},
+{
+"id": "G0126",
+"name": "Higaisa",
+"kind": "group"
+},
+{
+"id": "G0127",
+"name": "TA551",
+"kind": "group",
+"aliases": [
+"GOLD CABIN",
+"Shathak"
+]
+},
+{
+"id": "G0128",
+"name": "ZIRCONIUM",
+"kind": "group",
+"aliases": [
+"APT31",
+"Violet Typhoon"
+]
+},
+{
+"id": "G0129",
+"name": "Mustang Panda",
+"kind": "group",
+"aliases": [
+"TA416",
+"RedDelta",
+"BRONZE PRESIDENT",
+"STATELY TAURUS",
+"FIREANT",
+"CAMARO DRAGON",
+"EARTH PRETA",
+"HIVE0154",
+"TWILL TYPHOON",
+"TANTALUM",
+"LUMINOUS MOTH",
+"UNC6384",
+"TEMP.Hex",
+"Red Lich",
+"ClumsyToad"
+]
+},
+{
+"id": "G0130",
+"name": "Ajax Security Team",
+"kind": "group",
+"aliases": [
+"Operation Woolen-Goldfish",
+"AjaxTM",
+"Rocket Kitten",
+"Flying Kitten",
+"Operation Saffron Rose"
+]
+},
+{
+"id": "G0131",
+"name": "Tonto Team",
+"kind": "group",
+"aliases": [
+"Earth Akhlut",
+"BRONZE HUNTLEY",
+"CactusPete",
+"Karma Panda"
+]
+},
+{
+"id": "G0133",
+"name": "Nomadic Octopus",
+"kind": "group",
+"aliases": [
+"DustSquad"
+]
+},
+{
+"id": "G0134",
+"name": "Transparent Tribe",
+"kind": "group",
+"aliases": [
+"COPPER FIELDSTONE",
+"APT36",
+"Mythic Leopard",
+"ProjectM"
+]
+},
+{
+"id": "G0135",
+"name": "BackdoorDiplomacy",
+"kind": "group"
+},
+{
+"id": "G0136",
+"name": "IndigoZebra",
+"kind": "group"
+},
+{
+"id": "G0137",
+"name": "Ferocious Kitten",
+"kind": "group"
+},
+{
+"id": "G0138",
+"name": "Andariel",
+"kind": "group",
+"aliases": [
+"Silent Chollima",
+"PLUTONIUM",
+"Onyx Sleet"
+]
+},
+{
+"id": "G0139",
+"name": "TeamTNT",
+"kind": "group"
+},
+{
+"id": "G0140",
+"name": "LazyScripter",
+"kind": "group"
+},
+{
+"id": "G0142",
+"name": "Confucius",
+"kind": "group",
+"aliases": [
+"Confucius APT"
+]
+},
+{
+"id": "G0143",
+"name": "Aquatic Panda",
+"kind": "group"
+},
+{
+"id": "G1001",
+"name": "HEXANE",
+"kind": "group",
+"aliases": [
+"Lyceum",
+"Siamesekitten",
+"Spirlin"
+]
+},
+{
+"id": "G1002",
+"name": "BITTER",
+"kind": "group",
+"aliases": [
+"T-APT-17"
+]
+},
+{
+"id": "G1003",
+"name": "Ember Bear",
+"kind": "group",
+"aliases": [
+"UNC2589",
+"Bleeding Bear",
+"DEV-0586",
+"Cadet Blizzard",
+"Frozenvista",
+"UAC-0056"
+]
+},
+{
+"id": "G1004",
+"name": "LAPSUS$",
+"kind": "group",
+"aliases": [
+"DEV-0537",
+"Strawberry Tempest"
+]
+},
+{
+"id": "G1005",
+"name": "POLONIUM",
+"kind": "group",
+"aliases": [
+"Plaid Rain"
+]
+},
+{
+"id": "G1006",
+"name": "Earth Lusca",
+"kind": "group",
+"aliases": [
+"TAG-22",
+"Charcoal Typhoon",
+"CHROMIUM",
+"ControlX"
+]
+},
+{
+"id": "G1007",
+"name": "Aoqin Dragon",
+"kind": "group"
+},
+{
+"id": "G1008",
+"name": "SideCopy",
+"kind": "group"
+},
+{
+"id": "G1009",
+"name": "Moses Staff",
+"kind": "group",
+"aliases": [
+"DEV-0500",
+"Marigold Sandstorm"
+]
+},
+{
+"id": "G1011",
+"name": "EXOTIC LILY",
+"kind": "group"
+},
+{
+"id": "G1012",
+"name": "CURIUM",
+"kind": "group",
+"aliases": [
+"Crimson Sandstorm",
+"TA456",
+"Tortoise Shell",
+"Yellow Liderc"
+]
+},
+{
+"id": "G1013",
+"name": "Metador",
+"kind": "group"
+},
+{
+"id": "G1014",
+"name": "LuminousMoth",
+"kind": "group"
+},
+{
+"id": "G1015",
+"name": "Scattered Spider",
+"kind": "group",
+"aliases": [
+"Roasted 0ktapus",
+"Octo Tempest",
+"Storm-0875",
+"UNC3944"
+]
+},
+{
+"id": "G1016",
+"name": "FIN13",
+"kind": "group",
+"aliases": [
+"Elephant Beetle"
+]
+},
+{
+"id": "G1017",
+"name": "Volt Typhoon",
+"kind": "group",
+"aliases": [
+"BRONZE SILHOUETTE",
+"Vanguard Panda",
+"DEV-0391",
+"UNC3236",
+"Voltzite",
+"Insidious Taurus",
+"DazedToad"
+]
+},
+{
+"id": "G1018",
+"name": "TA2541",
+"kind": "group"
+},
+{
+"id": "G1019",
+"name": "MoustachedBouncer",
+"kind": "group"
+},
+{
+"id": "G1020",
+"name": "Mustard Tempest",
+"kind": "group",
+"aliases": [
+"DEV-0206",
+"TA569",
+"GOLD PRELUDE",
+"UNC1543"
+]
+},
+{
+"id": "G1021",
+"name": "Cinnamon Tempest",
+"kind": "group",
+"aliases": [
+"DEV-0401",
+"Emperor Dragonfly",
+"BRONZE STARLIGHT"
+]
+},
+{
+"id": "G1022",
+"name": "ToddyCat",
+"kind": "group"
+},
+{
+"id": "G1023",
+"name": "APT5",
+"kind": "group",
+"aliases": [
+"Mulberry Typhoon",
+"MANGANESE",
+"BRONZE FLEETWOOD",
+"Keyhole Panda",
+"UNC2630"
+]
+},
+{
+"id": "G1024",
+"name": "Akira",
+"kind": "group",
+"aliases": [
+"GOLD SAHARA",
+"PUNK SPIDER",
+"Howling Scorpius"
+]
+},
+{
+"id": "G1026",
+"name": "Malteiro",
+"kind": "group"
+},
+{
+"id": "G1028",
+"name": "APT-C-23",
+"kind": "group",
+"aliases": [
+"Mantis",
+"Arid Viper",
+"Desert Falcon",
+"TAG-63",
+"Grey Karkadann",
+"Big Bang APT",
+"Two-tailed Scorpion"
+]
+},
+{
+"id": "G1030",
+"name": "Agrius",
+"kind": "group",
+"aliases": [
+"Pink Sandstorm",
+"AMERICIUM",
+"Agonizing Serpens",
+"BlackShadow"
+]
+},
+{
+"id": "G1031",
+"name": "Saint Bear",
+"kind": "group",
+"aliases": [
+"Storm-0587",
+"TA471",
+"UAC-0056",
+"Lorec53"
+]
+},
+{
+"id": "G1032",
+"name": "INC Ransom",
+"kind": "group",
+"aliases": [
+"GOLD IONIC"
+]
+},
+{
+"id": "G1033",
+"name": "Star Blizzard",
+"kind": "group",
+"aliases": [
+"SEABORGIUM",
+"Callisto Group",
+"TA446",
+"COLDRIVER"
+]
+},
+{
+"id": "G1034",
+"name": "Daggerfly",
+"kind": "group",
+"aliases": [
+"Evasive Panda",
+"BRONZE HIGHLAND"
+]
+},
+{
+"id": "G1035",
+"name": "Winter Vivern",
+"kind": "group",
+"aliases": [
+"TA473",
+"UAC-0114"
+]
+},
+{
+"id": "G1036",
+"name": "Moonstone Sleet",
+"kind": "group",
+"aliases": [
+"Storm-1789"
+]
+},
+{
+"id": "G1037",
+"name": "TA577",
+"kind": "group"
+},
+{
+"id": "G1038",
+"name": "TA578",
+"kind": "group"
+},
+{
+"id": "G1039",
+"name": "RedCurl",
+"kind": "group"
+},
+{
+"id": "G1040",
+"name": "Play",
+"kind": "group"
+},
+{
+"id": "G1041",
+"name": "Sea Turtle",
+"kind": "group",
+"aliases": [
+"Teal Kurma",
+"Marbled Dust",
+"Cosmic Wolf",
+"SILICON"
+]
+},
+{
+"id": "G1042",
+"name": "RedEcho",
+"kind": "group"
+},
+{
+"id": "G1043",
+"name": "BlackByte",
+"kind": "group",
+"aliases": [
+"Hecamede"
+]
+},
+{
+"id": "G1044",
+"name": "APT42",
+"kind": "group"
+},
+{
+"id": "G1045",
+"name": "Salt Typhoon",
+"kind": "group"
+},
+{
+"id": "G1046",
+"name": "Storm-1811",
+"kind": "group"
+},
+{
+"id": "G1047",
+"name": "Velvet Ant",
+"kind": "group"
+},
+{
+"id": "G1048",
+"name": "UNC3886",
+"kind": "group"
+},
+{
+"id": "G1049",
+"name": "AppleJeus",
+"kind": "group",
+"aliases": [
+"Gleaming Pisces",
+"Citrine Sleet",
+"UNC1720",
+"UNC4736"
+]
+},
+{
+"id": "G1050",
+"name": "Water Galura",
+"kind": "group",
+"aliases": [
+"GOLD FEATHER"
+]
+},
+{
+"id": "G1051",
+"name": "Medusa Group",
+"kind": "group"
+},
+{
+"id": "G1052",
+"name": "Contagious Interview",
+"kind": "group",
+"aliases": [
+"DeceptiveDevelopment",
+"Gwisin Gang",
+"Tenacious Pungsan",
+"DEV#POPPER",
+"PurpleBravo",
+"TAG-121"
+]
+},
+{
+"id": "G1053",
+"name": "Storm-0501",
+"kind": "group"
+},
+{
+"id": "G1054",
+"name": "MirrorFace",
+"kind": "group",
+"aliases": [
+"Earth Kasha"
+]
+},
+{
+"id": "G1055",
+"name": "VOID MANTICORE",
+"kind": "group",
+"aliases": [
+"COBALT MYSTIQUE",
+"Handala Hack",
+"Homeland Justice",
+"Karma",
+"Karmabelow80",
+"BANISHED KITTEN",
+"Red Sandstorm"
+]
+},
+{
+"id": "G1056",
+"name": "TeamPCP",
+"kind": "group",
+"aliases": [
+"PCPCat",
+"ShellForce",
+"DeadCatx3",
+"SHADOW-WATER-058",
+"UNC6780"
+]
+},
+{
+"id": "G1057",
+"name": "ShinyHunters",
+"kind": "group",
+"aliases": [
+"UNC6240",
+"Bling Libra"
+]
+},
+{
+"id": "S0001",
+"name": "Trojan.Mebromi",
+"kind": "malware"
+},
+{
+"id": "S0003",
+"name": "RIPTIDE",
+"kind": "malware"
+},
+{
+"id": "S0004",
+"name": "TinyZBot",
+"kind": "malware"
+},
+{
+"id": "S0007",
+"name": "Skeleton Key",
+"kind": "malware"
+},
+{
+"id": "S0009",
+"name": "Hikit",
+"kind": "malware"
+},
+{
+"id": "S0010",
+"name": "Lurid",
+"kind": "malware",
+"aliases": [
+"Enfal"
+]
+},
+{
+"id": "S0011",
+"name": "Taidoor",
+"kind": "malware"
+},
+{
+"id": "S0012",
+"name": "PoisonIvy",
+"kind": "malware",
+"aliases": [
+"Breut",
+"Poison Ivy",
+"Darkmoon"
+]
+},
+{
+"id": "S0013",
+"name": "PlugX",
+"kind": "malware",
+"aliases": [
+"Thoper",
+"TVT",
+"DestroyRAT",
+"Sogu",
+"Kaba",
+"Korplug"
+]
+},
+{
+"id": "S0014",
+"name": "BS2005",
+"kind": "malware"
+},
+{
+"id": "S0015",
+"name": "Ixeshe",
+"kind": "malware"
+},
+{
+"id": "S0016",
+"name": "P2P ZeuS",
+"kind": "malware",
+"aliases": [
+"Peer-to-Peer ZeuS",
+"Gameover ZeuS"
+]
+},
+{
+"id": "S0017",
+"name": "BISCUIT",
+"kind": "malware"
+},
+{
+"id": "S0018",
+"name": "Sykipot",
+"kind": "malware"
+},
+{
+"id": "S0019",
+"name": "Regin",
+"kind": "malware"
+},
+{
+"id": "S0020",
+"name": "China Chopper",
+"kind": "malware"
+},
+{
+"id": "S0021",
+"name": "Derusbi",
+"kind": "malware",
+"aliases": [
+"PHOTO"
+]
+},
+{
+"id": "S0022",
+"name": "Uroburos",
+"kind": "malware",
+"aliases": [
+"Snake"
+]
+},
+{
+"id": "S0023",
+"name": "CHOPSTICK",
+"kind": "malware",
+"aliases": [
+"Backdoor.SofacyX",
+"SPLM",
+"Xagent",
+"X-Agent",
+"webhp"
+]
+},
+{
+"id": "S0024",
+"name": "Dyre",
+"kind": "malware",
+"aliases": [
+"Dyzap",
+"Dyreza"
+]
+},
+{
+"id": "S0025",
+"name": "CALENDAR",
+"kind": "malware"
+},
+{
+"id": "S0026",
+"name": "GLOOXMAIL",
+"kind": "malware",
+"aliases": [
+"Trojan.GTALK"
+]
+},
+{
+"id": "S0027",
+"name": "Zeroaccess",
+"kind": "malware"
+},
+{
+"id": "S0028",
+"name": "SHIPSHAPE",
+"kind": "malware"
+},
+{
+"id": "S0030",
+"name": "Carbanak",
+"kind": "malware",
+"aliases": [
+"Anunak"
+]
+},
+{
+"id": "S0031",
+"name": "BACKSPACE",
+"kind": "malware",
+"aliases": [
+"Lecna"
+]
+},
+{
+"id": "S0032",
+"name": "gh0st RAT",
+"kind": "malware",
+"aliases": [
+"Mydoor",
+"Moudoor"
+]
+},
+{
+"id": "S0033",
+"name": "NetTraveler",
+"kind": "malware"
+},
+{
+"id": "S0034",
+"name": "NETEAGLE",
+"kind": "malware"
+},
+{
+"id": "S0035",
+"name": "SPACESHIP",
+"kind": "malware"
+},
+{
+"id": "S0036",
+"name": "FLASHFLOOD",
+"kind": "malware"
+},
+{
+"id": "S0037",
+"name": "HAMMERTOSS",
+"kind": "malware",
+"aliases": [
+"HammerDuke",
+"NetDuke"
+]
+},
+{
+"id": "S0038",
+"name": "Duqu",
+"kind": "malware"
+},
+{
+"id": "S0041",
+"name": "Wiper",
+"kind": "malware"
+},
+{
+"id": "S0042",
+"name": "LOWBALL",
+"kind": "malware"
+},
+{
+"id": "S0043",
+"name": "BUBBLEWRAP",
+"kind": "malware",
+"aliases": [
+"Backdoor.APT.FakeWinHTTPHelper"
+]
+},
+{
+"id": "S0044",
+"name": "JHUHUGIT",
+"kind": "malware",
+"aliases": [
+"Trojan.Sofacy",
+"Seduploader",
+"JKEYSKW",
+"Sednit",
+"GAMEFISH",
+"SofacyCarberp"
+]
+},
+{
+"id": "S0045",
+"name": "ADVSTORESHELL",
+"kind": "malware",
+"aliases": [
+"AZZY",
+"EVILTOSS",
+"NETUI",
+"Sedreco"
+]
+},
+{
+"id": "S0046",
+"name": "CozyCar",
+"kind": "malware",
+"aliases": [
+"CozyDuke",
+"CozyBear",
+"Cozer",
+"EuroAPT"
+]
+},
+{
+"id": "S0047",
+"name": "Hacking Team UEFI Rootkit",
+"kind": "malware"
+},
+{
+"id": "S0048",
+"name": "PinchDuke",
+"kind": "malware"
+},
+{
+"id": "S0049",
+"name": "GeminiDuke",
+"kind": "malware"
+},
+{
+"id": "S0050",
+"name": "CosmicDuke",
+"kind": "malware",
+"aliases": [
+"TinyBaron",
+"BotgenStudios",
+"NemesisGemina"
+]
+},
+{
+"id": "S0051",
+"name": "MiniDuke",
+"kind": "malware"
+},
+{
+"id": "S0052",
+"name": "OnionDuke",
+"kind": "malware"
+},
+{
+"id": "S0053",
+"name": "SeaDuke",
+"kind": "malware",
+"aliases": [
+"SeaDaddy",
+"SeaDesk"
+]
+},
+{
+"id": "S0054",
+"name": "CloudDuke",
+"kind": "malware",
+"aliases": [
+"MiniDionis",
+"CloudLook"
+]
+},
+{
+"id": "S0055",
+"name": "RARSTONE",
+"kind": "malware"
+},
+{
+"id": "S0056",
+"name": "Net Crawler",
+"kind": "malware",
+"aliases": [
+"NetC"
+]
+},
+{
+"id": "S0058",
+"name": "SslMM",
+"kind": "malware"
+},
+{
+"id": "S0059",
+"name": "WinMM",
+"kind": "malware"
+},
+{
+"id": "S0060",
+"name": "Sys10",
+"kind": "malware"
+},
+{
+"id": "S0061",
+"name": "HDoor",
+"kind": "malware",
+"aliases": [
+"Custom HDoor"
+]
+},
+{
+"id": "S0062",
+"name": "DustySky",
+"kind": "malware",
+"aliases": [
+"NeD Worm"
+]
+},
+{
+"id": "S0063",
+"name": "SHOTPUT",
+"kind": "malware",
+"aliases": [
+"Backdoor.APT.CookieCutter",
+"Pirpi"
+]
+},
+{
+"id": "S0064",
+"name": "ELMER",
+"kind": "malware"
+},
+{
+"id": "S0065",
+"name": "4H RAT",
+"kind": "malware"
+},
+{
+"id": "S0066",
+"name": "3PARA RAT",
+"kind": "malware"
+},
+{
+"id": "S0067",
+"name": "pngdowner",
+"kind": "malware"
+},
+{
+"id": "S0068",
+"name": "httpclient",
+"kind": "malware"
+},
+{
+"id": "S0069",
+"name": "BLACKCOFFEE",
+"kind": "malware"
+},
+{
+"id": "S0070",
+"name": "HTTPBrowser",
+"kind": "malware",
+"aliases": [
+"Token Control",
+"HttpDump"
+]
+},
+{
+"id": "S0071",
+"name": "hcdLoader",
+"kind": "malware"
+},
+{
+"id": "S0072",
+"name": "OwaAuth",
+"kind": "malware"
+},
+{
+"id": "S0073",
+"name": "ASPXSpy",
+"kind": "malware",
+"aliases": [
+"ASPXTool"
+]
+},
+{
+"id": "S0074",
+"name": "Sakula",
+"kind": "malware",
+"aliases": [
+"Sakurel",
+"VIPER"
+]
+},
+{
+"id": "S0076",
+"name": "FakeM",
+"kind": "malware"
+},
+{
+"id": "S0077",
+"name": "CallMe",
+"kind": "malware"
+},
+{
+"id": "S0078",
+"name": "Psylo",
+"kind": "malware"
+},
+{
+"id": "S0079",
+"name": "MobileOrder",
+"kind": "malware"
+},
+{
+"id": "S0080",
+"name": "Mivast",
+"kind": "malware"
+},
+{
+"id": "S0081",
+"name": "Elise",
+"kind": "malware",
+"aliases": [
+"BKDR_ESILE",
+"Page"
+]
+},
+{
+"id": "S0082",
+"name": "Emissary",
+"kind": "malware"
+},
+{
+"id": "S0083",
+"name": "Misdat",
+"kind": "malware"
+},
+{
+"id": "S0084",
+"name": "Mis-Type",
+"kind": "malware"
+},
+{
+"id": "S0085",
+"name": "S-Type",
+"kind": "malware"
+},
+{
+"id": "S0086",
+"name": "ZLib",
+"kind": "malware"
+},
+{
+"id": "S0087",
+"name": "Hi-Zor",
+"kind": "malware"
+},
+{
+"id": "S0088",
+"name": "Kasidet",
+"kind": "malware"
+},
+{
+"id": "S0089",
+"name": "BlackEnergy",
+"kind": "malware",
+"aliases": [
+"Black Energy"
+]
+},
+{
+"id": "S0090",
+"name": "Rover",
+"kind": "malware"
+},
+{
+"id": "S0091",
+"name": "Epic",
+"kind": "malware",
+"aliases": [
+"Tavdig",
+"Wipbot",
+"WorldCupSec",
+"TadjMakhal"
+]
+},
+{
+"id": "S0092",
+"name": "Agent.btz",
+"kind": "malware"
+},
+{
+"id": "S0093",
+"name": "Backdoor.Oldrea",
+"kind": "malware",
+"aliases": [
+"Havex"
+]
+},
+{
+"id": "S0094",
+"name": "Trojan.Karagany",
+"kind": "malware",
+"aliases": [
+"xFrost",
+"Karagany"
+]
+},
+{
+"id": "S0098",
+"name": "T9000",
+"kind": "malware"
+},
+{
+"id": "S0107",
+"name": "Cherry Picker",
+"kind": "malware"
+},
+{
+"id": "S0109",
+"name": "WEBC2",
+"kind": "malware"
+},
+{
+"id": "S0112",
+"name": "ROCKBOOT",
+"kind": "malware"
+},
+{
+"id": "S0113",
+"name": "Prikormka",
+"kind": "malware"
+},
+{
+"id": "S0114",
+"name": "BOOTRASH",
+"kind": "malware"
+},
+{
+"id": "S0115",
+"name": "Crimson",
+"kind": "malware",
+"aliases": [
+"MSIL/Crimson"
+]
+},
+{
+"id": "S0117",
+"name": "XTunnel",
+"kind": "malware",
+"aliases": [
+"Trojan.Shunnael",
+"X-Tunnel",
+"XAPS"
+]
+},
+{
+"id": "S0118",
+"name": "Nidiran",
+"kind": "malware",
+"aliases": [
+"Backdoor.Nidiran"
+]
+},
+{
+"id": "S0124",
+"name": "Pisloader",
+"kind": "malware"
+},
+{
+"id": "S0125",
+"name": "Remsec",
+"kind": "malware",
+"aliases": [
+"Backdoor.Remsec",
+"ProjectSauron"
+]
+},
+{
+"id": "S0126",
+"name": "ComRAT",
+"kind": "malware"
+},
+{
+"id": "S0127",
+"name": "BBSRAT",
+"kind": "malware"
+},
+{
+"id": "S0128",
+"name": "BADNEWS",
+"kind": "malware"
+},
+{
+"id": "S0129",
+"name": "AutoIt backdoor",
+"kind": "malware"
+},
+{
+"id": "S0130",
+"name": "Unknown Logger",
+"kind": "malware"
+},
+{
+"id": "S0131",
+"name": "TINYTYPHON",
+"kind": "malware"
+},
+{
+"id": "S0132",
+"name": "H1N1",
+"kind": "malware"
+},
+{
+"id": "S0133",
+"name": "Miner-C",
+"kind": "malware"
+},
+{
+"id": "S0134",
+"name": "Downdelph",
+"kind": "malware",
+"aliases": [
+"Delphacy"
+]
+},
+{
+"id": "S0135",
+"name": "HIDEDRV",
+"kind": "malware"
+},
+{
+"id": "S0136",
+"name": "USBStealer",
+"kind": "malware",
+"aliases": [
+"USB Stealer",
+"Win32/USBStealer"
+]
+},
+{
+"id": "S0137",
+"name": "CORESHELL",
+"kind": "malware",
+"aliases": [
+"Sofacy",
+"SOURFACE"
+]
+},
+{
+"id": "S0138",
+"name": "OLDBAIT",
+"kind": "malware",
+"aliases": [
+"Sasfis"
+]
+},
+{
+"id": "S0139",
+"name": "PowerDuke",
+"kind": "malware"
+},
+{
+"id": "S0140",
+"name": "Shamoon",
+"kind": "malware",
+"aliases": [
+"Disttrack"
+]
+},
+{
+"id": "S0141",
+"name": "Winnti for Windows",
+"kind": "malware"
+},
+{
+"id": "S0142",
+"name": "StreamEx",
+"kind": "malware"
+},
+{
+"id": "S0143",
+"name": "Flame",
+"kind": "malware",
+"aliases": [
+"Flamer",
+"sKyWIper"
+]
+},
+{
+"id": "S0144",
+"name": "ChChes",
+"kind": "malware",
+"aliases": [
+"Scorpion",
+"HAYMAKER"
+]
+},
+{
+"id": "S0145",
+"name": "POWERSOURCE",
+"kind": "malware",
+"aliases": [
+"DNSMessenger"
+]
+},
+{
+"id": "S0146",
+"name": "TEXTMATE",
+"kind": "malware",
+"aliases": [
+"DNSMessenger"
+]
+},
+{
+"id": "S0147",
+"name": "Pteranodon",
+"kind": "malware",
+"aliases": [
+"Pterodo"
+]
+},
+{
+"id": "S0148",
+"name": "RTM",
+"kind": "malware",
+"aliases": [
+"Redaman"
+]
+},
+{
+"id": "S0149",
+"name": "MoonWind",
+"kind": "malware"
+},
+{
+"id": "S0150",
+"name": "POSHSPY",
+"kind": "malware"
+},
+{
+"id": "S0151",
+"name": "HALFBAKED",
+"kind": "malware"
+},
+{
+"id": "S0152",
+"name": "EvilGrab",
+"kind": "malware"
+},
+{
+"id": "S0153",
+"name": "RedLeaves",
+"kind": "malware",
+"aliases": [
+"BUGJUICE"
+]
+},
+{
+"id": "S0154",
+"name": "Cobalt Strike",
+"kind": "malware"
+},
+{
+"id": "S0155",
+"name": "WINDSHIELD",
+"kind": "malware"
+},
+{
+"id": "S0156",
+"name": "KOMPROGO",
+"kind": "malware"
+},
+{
+"id": "S0157",
+"name": "SOUNDBITE",
+"kind": "malware"
+},
+{
+"id": "S0158",
+"name": "PHOREAL",
+"kind": "malware"
+},
+{
+"id": "S0159",
+"name": "SNUGRIDE",
+"kind": "malware"
+},
+{
+"id": "S0161",
+"name": "XAgentOSX",
+"kind": "malware",
+"aliases": [
+"OSX.Sofacy"
+]
+},
+{
+"id": "S0162",
+"name": "Komplex",
+"kind": "malware"
+},
+{
+"id": "S0163",
+"name": "Janicab",
+"kind": "malware"
+},
+{
+"id": "S0164",
+"name": "TDTESS",
+"kind": "malware"
+},
+{
+"id": "S0165",
+"name": "OSInfo",
+"kind": "malware"
+},
+{
+"id": "S0166",
+"name": "RemoteCMD",
+"kind": "malware"
+},
+{
+"id": "S0167",
+"name": "Matryoshka",
+"kind": "malware"
+},
+{
+"id": "S0168",
+"name": "Gazer",
+"kind": "malware",
+"aliases": [
+"WhiteBear"
+]
+},
+{
+"id": "S0169",
+"name": "RawPOS",
+"kind": "malware",
+"aliases": [
+"FIENDCRY",
+"DUEBREW",
+"DRIFTWOOD"
+]
+},
+{
+"id": "S0170",
+"name": "Helminth",
+"kind": "malware"
+},
+{
+"id": "S0171",
+"name": "Felismus",
+"kind": "malware"
+},
+{
+"id": "S0172",
+"name": "Reaver",
+"kind": "malware"
+},
+{
+"id": "S0173",
+"name": "FLIPSIDE",
+"kind": "malware"
+},
+{
+"id": "S0176",
+"name": "Wingbird",
+"kind": "malware"
+},
+{
+"id": "S0177",
+"name": "Power Loader",
+"kind": "malware"
+},
+{
+"id": "S0178",
+"name": "Truvasys",
+"kind": "malware"
+},
+{
+"id": "S0180",
+"name": "Volgmer",
+"kind": "malware"
+},
+{
+"id": "S0181",
+"name": "FALLCHILL",
+"kind": "malware"
+},
+{
+"id": "S0182",
+"name": "FinFisher",
+"kind": "malware",
+"aliases": [
+"FinSpy"
+]
+},
+{
+"id": "S0184",
+"name": "POWRUNER",
+"kind": "malware"
+},
+{
+"id": "S0185",
+"name": "SEASHARPEE",
+"kind": "malware"
+},
+{
+"id": "S0186",
+"name": "DownPaper",
+"kind": "malware"
+},
+{
+"id": "S0187",
+"name": "Daserf",
+"kind": "malware",
+"aliases": [
+"Muirim",
+"Nioupale"
+]
+},
+{
+"id": "S0188",
+"name": "Starloader",
+"kind": "malware"
+},
+{
+"id": "S0189",
+"name": "ISMInjector",
+"kind": "malware"
+},
+{
+"id": "S0196",
+"name": "PUNCHBUGGY",
+"kind": "malware",
+"aliases": [
+"ShellTea"
+]
+},
+{
+"id": "S0197",
+"name": "PUNCHTRACK",
+"kind": "malware",
+"aliases": [
+"PSVC"
+]
+},
+{
+"id": "S0198",
+"name": "NETWIRE",
+"kind": "malware"
+},
+{
+"id": "S0199",
+"name": "TURNEDUP",
+"kind": "malware"
+},
+{
+"id": "S0200",
+"name": "Dipsind",
+"kind": "malware"
+},
+{
+"id": "S0201",
+"name": "JPIN",
+"kind": "malware"
+},
+{
+"id": "S0202",
+"name": "adbupd",
+"kind": "malware"
+},
+{
+"id": "S0203",
+"name": "Hydraq",
+"kind": "malware",
+"aliases": [
+"Roarur",
+"MdmBot",
+"HomeUnix",
+"Homux",
+"HidraQ",
+"HydraQ",
+"McRat",
+"Aurora",
+"9002 RAT"
+]
+},
+{
+"id": "S0204",
+"name": "Briba",
+"kind": "malware"
+},
+{
+"id": "S0205",
+"name": "Naid",
+"kind": "malware"
+},
+{
+"id": "S0206",
+"name": "Wiarp",
+"kind": "malware"
+},
+{
+"id": "S0207",
+"name": "Vasport",
+"kind": "malware"
+},
+{
+"id": "S0208",
+"name": "Pasam",
+"kind": "malware"
+},
+{
+"id": "S0210",
+"name": "Nerex",
+"kind": "malware"
+},
+{
+"id": "S0211",
+"name": "Linfo",
+"kind": "malware"
+},
+{
+"id": "S0212",
+"name": "CORALDECK",
+"kind": "malware"
+},
+{
+"id": "S0213",
+"name": "DOGCALL",
+"kind": "malware"
+},
+{
+"id": "S0214",
+"name": "HAPPYWORK",
+"kind": "malware"
+},
+{
+"id": "S0215",
+"name": "KARAE",
+"kind": "malware"
+},
+{
+"id": "S0216",
+"name": "POORAIM",
+"kind": "malware"
+},
+{
+"id": "S0217",
+"name": "SHUTTERSPEED",
+"kind": "malware"
+},
+{
+"id": "S0218",
+"name": "SLOWDRIFT",
+"kind": "malware"
+},
+{
+"id": "S0219",
+"name": "WINERACK",
+"kind": "malware"
+},
+{
+"id": "S0220",
+"name": "Chaos",
+"kind": "malware"
+},
+{
+"id": "S0221",
+"name": "Umbreon",
+"kind": "malware"
+},
+{
+"id": "S0222",
+"name": "CCBkdr",
+"kind": "malware"
+},
+{
+"id": "S0223",
+"name": "POWERSTATS",
+"kind": "malware",
+"aliases": [
+"Powermud"
+]
+},
+{
+"id": "S0226",
+"name": "Smoke Loader",
+"kind": "malware",
+"aliases": [
+"Dofoil"
+]
+},
+{
+"id": "S0228",
+"name": "NanHaiShu",
+"kind": "malware"
+},
+{
+"id": "S0229",
+"name": "Orz",
+"kind": "malware",
+"aliases": [
+"AIRBREAK"
+]
+},
+{
+"id": "S0230",
+"name": "ZeroT",
+"kind": "malware"
+},
+{
+"id": "S0232",
+"name": "HOMEFRY",
+"kind": "malware"
+},
+{
+"id": "S0233",
+"name": "MURKYTOP",
+"kind": "malware"
+},
+{
+"id": "S0234",
+"name": "Bandook",
+"kind": "malware"
+},
+{
+"id": "S0235",
+"name": "CrossRAT",
+"kind": "malware"
+},
+{
+"id": "S0236",
+"name": "Kwampirs",
+"kind": "malware"
+},
+{
+"id": "S0237",
+"name": "GravityRAT",
+"kind": "malware"
+},
+{
+"id": "S0238",
+"name": "Proxysvc",
+"kind": "malware"
+},
+{
+"id": "S0239",
+"name": "Bankshot",
+"kind": "malware",
+"aliases": [
+"Trojan Manuscript"
+]
+},
+{
+"id": "S0240",
+"name": "ROKRAT",
+"kind": "malware"
+},
+{
+"id": "S0241",
+"name": "RATANKBA",
+"kind": "malware"
+},
+{
+"id": "S0242",
+"name": "SynAck",
+"kind": "malware"
+},
+{
+"id": "S0243",
+"name": "DealersChoice",
+"kind": "malware"
+},
+{
+"id": "S0244",
+"name": "Comnie",
+"kind": "malware"
+},
+{
+"id": "S0245",
+"name": "BADCALL",
+"kind": "malware"
+},
+{
+"id": "S0246",
+"name": "HARDRAIN",
+"kind": "malware"
+},
+{
+"id": "S0247",
+"name": "NavRAT",
+"kind": "malware"
+},
+{
+"id": "S0248",
+"name": "yty",
+"kind": "malware"
+},
+{
+"id": "S0249",
+"name": "Gold Dragon",
+"kind": "malware"
+},
+{
+"id": "S0251",
+"name": "Zebrocy",
+"kind": "malware",
+"aliases": [
+"Zekapab"
+]
+},
+{
+"id": "S0252",
+"name": "Brave Prince",
+"kind": "malware"
+},
+{
+"id": "S0253",
+"name": "RunningRAT",
+"kind": "malware"
+},
+{
+"id": "S0254",
+"name": "PLAINTEE",
+"kind": "malware"
+},
+{
+"id": "S0255",
+"name": "DDKONG",
+"kind": "malware"
+},
+{
+"id": "S0256",
+"name": "Mosquito",
+"kind": "malware"
+},
+{
+"id": "S0257",
+"name": "VERMIN",
+"kind": "malware"
+},
+{
+"id": "S0258",
+"name": "RGDoor",
+"kind": "malware"
+},
+{
+"id": "S0259",
+"name": "InnaputRAT",
+"kind": "malware"
+},
+{
+"id": "S0260",
+"name": "InvisiMole",
+"kind": "malware"
+},
+{
+"id": "S0261",
+"name": "Catchamas",
+"kind": "malware"
+},
+{
+"id": "S0263",
+"name": "TYPEFRAME",
+"kind": "malware"
+},
+{
+"id": "S0264",
+"name": "OopsIE",
+"kind": "malware"
+},
+{
+"id": "S0265",
+"name": "Kazuar",
+"kind": "malware"
+},
+{
+"id": "S0266",
+"name": "TrickBot",
+"kind": "malware",
+"aliases": [
+"Totbrick",
+"TSPY_TRICKLOAD"
+]
+},
+{
+"id": "S0267",
+"name": "FELIXROOT",
+"kind": "malware",
+"aliases": [
+"GreyEnergy mini"
+]
+},
+{
+"id": "S0268",
+"name": "Bisonal",
+"kind": "malware"
+},
+{
+"id": "S0269",
+"name": "QUADAGENT",
+"kind": "malware"
+},
+{
+"id": "S0270",
+"name": "RogueRobin",
+"kind": "malware"
+},
+{
+"id": "S0271",
+"name": "KEYMARBLE",
+"kind": "malware"
+},
+{
+"id": "S0272",
+"name": "NDiskMonitor",
+"kind": "malware"
+},
+{
+"id": "S0273",
+"name": "Socksbot",
+"kind": "malware"
+},
+{
+"id": "S0274",
+"name": "Calisto",
+"kind": "malware"
+},
+{
+"id": "S0275",
+"name": "UPPERCUT",
+"kind": "malware",
+"aliases": [
+"ANEL"
+]
+},
+{
+"id": "S0276",
+"name": "Keydnap",
+"kind": "malware",
+"aliases": [
+"OSX/Keydnap"
+]
+},
+{
+"id": "S0277",
+"name": "FruitFly",
+"kind": "malware"
+},
+{
+"id": "S0278",
+"name": "iKitten",
+"kind": "malware",
+"aliases": [
+"OSX/MacDownloader"
+]
+},
+{
+"id": "S0279",
+"name": "Proton",
+"kind": "malware"
+},
+{
+"id": "S0280",
+"name": "MirageFox",
+"kind": "malware"
+},
+{
+"id": "S0281",
+"name": "Dok",
+"kind": "malware",
+"aliases": [
+"Retefe"
+]
+},
+{
+"id": "S0282",
+"name": "MacSpy",
+"kind": "malware"
+},
+{
+"id": "S0283",
+"name": "jRAT",
+"kind": "malware",
+"aliases": [
+"JSocket",
+"AlienSpy",
+"Frutas",
+"Sockrat",
+"Unrecom",
+"jFrutas",
+"Adwind",
+"jBiFrost",
+"Trojan.Maljava"
+]
+},
+{
+"id": "S0284",
+"name": "More_eggs",
+"kind": "malware",
+"aliases": [
+"SKID",
+"Terra Loader",
+"SpicyOmelette"
+]
+},
+{
+"id": "S0330",
+"name": "Zeus Panda",
+"kind": "malware"
+},
+{
+"id": "S0331",
+"name": "Agent Tesla",
+"kind": "malware"
+},
+{
+"id": "S0333",
+"name": "UBoatRAT",
+"kind": "malware"
+},
+{
+"id": "S0334",
+"name": "DarkComet",
+"kind": "malware",
+"aliases": [
+"DarkKomet",
+"Fynloski",
+"Krademok",
+"FYNLOS"
+]
+},
+{
+"id": "S0335",
+"name": "Carbon",
+"kind": "malware"
+},
+{
+"id": "S0336",
+"name": "NanoCore",
+"kind": "malware"
+},
+{
+"id": "S0337",
+"name": "BadPatch",
+"kind": "malware"
+},
+{
+"id": "S0338",
+"name": "Cobian RAT",
+"kind": "malware"
+},
+{
+"id": "S0339",
+"name": "Micropsia",
+"kind": "malware"
+},
+{
+"id": "S0340",
+"name": "Octopus",
+"kind": "malware"
+},
+{
+"id": "S0341",
+"name": "Xbash",
+"kind": "malware"
+},
+{
+"id": "S0342",
+"name": "GreyEnergy",
+"kind": "malware"
+},
+{
+"id": "S0343",
+"name": "Exaramel for Windows",
+"kind": "malware"
+},
+{
+"id": "S0344",
+"name": "Azorult",
+"kind": "malware"
+},
+{
+"id": "S0345",
+"name": "Seasalt",
+"kind": "malware"
+},
+{
+"id": "S0346",
+"name": "OceanSalt",
+"kind": "malware"
+},
+{
+"id": "S0347",
+"name": "AuditCred",
+"kind": "malware",
+"aliases": [
+"Roptimizer"
+]
+},
+{
+"id": "S0348",
+"name": "Cardinal RAT",
+"kind": "malware"
+},
+{
+"id": "S0350",
+"name": "zwShell",
+"kind": "malware"
+},
+{
+"id": "S0351",
+"name": "Cannon",
+"kind": "malware"
+},
+{
+"id": "S0352",
+"name": "OSX_OCEANLOTUS.D",
+"kind": "malware",
+"aliases": [
+"Backdoor.MacOS.OCEANLOTUS.F"
+]
+},
+{
+"id": "S0353",
+"name": "NOKKI",
+"kind": "malware"
+},
+{
+"id": "S0354",
+"name": "Denis",
+"kind": "malware"
+},
+{
+"id": "S0355",
+"name": "Final1stspy",
+"kind": "malware"
+},
+{
+"id": "S0356",
+"name": "KONNI",
+"kind": "malware"
+},
+{
+"id": "S0360",
+"name": "BONDUPDATER",
+"kind": "malware"
+},
+{
+"id": "S0362",
+"name": "Linux Rabbit",
+"kind": "malware"
+},
+{
+"id": "S0365",
+"name": "Olympic Destroyer",
+"kind": "malware"
+},
+{
+"id": "S0366",
+"name": "WannaCry",
+"kind": "malware",
+"aliases": [
+"WanaCry",
+"WanaCrypt",
+"WanaCrypt0r",
+"WCry"
+]
+},
+{
+"id": "S0367",
+"name": "Emotet",
+"kind": "malware",
+"aliases": [
+"Geodo"
+]
+},
+{
+"id": "S0368",
+"name": "NotPetya",
+"kind": "malware",
+"aliases": [
+"ExPetr",
+"Diskcoder.C",
+"GoldenEye",
+"Petrwrap",
+"Nyetya"
+]
+},
+{
+"id": "S0369",
+"name": "CoinTicker",
+"kind": "malware"
+},
+{
+"id": "S0370",
+"name": "SamSam",
+"kind": "malware",
+"aliases": [
+"Samas"
+]
+},
+{
+"id": "S0371",
+"name": "POWERTON",
+"kind": "malware"
+},
+{
+"id": "S0372",
+"name": "LockerGoga",
+"kind": "malware"
+},
+{
+"id": "S0373",
+"name": "Astaroth",
+"kind": "malware",
+"aliases": [
+"Guildma"
+]
+},
+{
+"id": "S0374",
+"name": "SpeakUp",
+"kind": "malware"
+},
+{
+"id": "S0375",
+"name": "Remexi",
+"kind": "malware"
+},
+{
+"id": "S0376",
+"name": "HOPLIGHT",
+"kind": "malware"
+},
+{
+"id": "S0377",
+"name": "Ebury",
+"kind": "malware"
+},
+{
+"id": "S0379",
+"name": "Revenge RAT",
+"kind": "malware"
+},
+{
+"id": "S0380",
+"name": "StoneDrill",
+"kind": "malware",
+"aliases": [
+"DROPSHOT"
+]
+},
+{
+"id": "S0381",
+"name": "FlawedAmmyy",
+"kind": "malware"
+},
+{
+"id": "S0382",
+"name": "ServHelper",
+"kind": "malware"
+},
+{
+"id": "S0383",
+"name": "FlawedGrace",
+"kind": "malware"
+},
+{
+"id": "S0384",
+"name": "Dridex",
+"kind": "malware",
+"aliases": [
+"Bugat v5"
+]
+},
+{
+"id": "S0385",
+"name": "njRAT",
+"kind": "malware",
+"aliases": [
+"Njw0rm",
+"LV",
+"Bladabindi"
+]
+},
+{
+"id": "S0386",
+"name": "Ursnif",
+"kind": "malware",
+"aliases": [
+"Gozi-ISFB",
+"PE_URSNIF",
+"Dreambot"
+]
+},
+{
+"id": "S0387",
+"name": "KeyBoy",
+"kind": "malware"
+},
+{
+"id": "S0388",
+"name": "YAHOYAH",
+"kind": "malware"
+},
+{
+"id": "S0389",
+"name": "JCry",
+"kind": "malware"
+},
+{
+"id": "S0390",
+"name": "SQLRat",
+"kind": "malware"
+},
+{
+"id": "S0391",
+"name": "HAWKBALL",
+"kind": "malware"
+},
+{
+"id": "S0393",
+"name": "PowerStallion",
+"kind": "malware"
+},
+{
+"id": "S0394",
+"name": "HiddenWasp",
+"kind": "malware"
+},
+{
+"id": "S0395",
+"name": "LightNeuron",
+"kind": "malware"
+},
+{
+"id": "S0396",
+"name": "EvilBunny",
+"kind": "malware"
+},
+{
+"id": "S0397",
+"name": "LoJax",
+"kind": "malware"
+},
+{
+"id": "S0398",
+"name": "HyperBro",
+"kind": "malware"
+},
+{
+"id": "S0400",
+"name": "RobbinHood",
+"kind": "malware"
+},
+{
+"id": "S0401",
+"name": "Exaramel for Linux",
+"kind": "malware"
+},
+{
+"id": "S0402",
+"name": "OSX/Shlayer",
+"kind": "malware",
+"aliases": [
+"Zshlayer",
+"Crossrider"
+]
+},
+{
+"id": "S0409",
+"name": "Machete",
+"kind": "malware",
+"aliases": [
+"Pyark"
+]
+},
+{
+"id": "S0410",
+"name": "Fysbis",
+"kind": "malware"
+},
+{
+"id": "S0412",
+"name": "ZxShell",
+"kind": "malware",
+"aliases": [
+"Sensocode"
+]
+},
+{
+"id": "S0414",
+"name": "BabyShark",
+"kind": "malware",
+"aliases": [
+"LATEOP"
+]
+},
+{
+"id": "S0415",
+"name": "BOOSTWRITE",
+"kind": "malware"
+},
+{
+"id": "S0416",
+"name": "RDFSNIFFER",
+"kind": "malware"
+},
+{
+"id": "S0417",
+"name": "GRIFFON",
+"kind": "malware"
+},
+{
+"id": "S0428",
+"name": "PoetRAT",
+"kind": "malware"
+},
+{
+"id": "S0430",
+"name": "Winnti for Linux",
+"kind": "malware"
+},
+{
+"id": "S0431",
+"name": "HotCroissant",
+"kind": "malware"
+},
+{
+"id": "S0433",
+"name": "Rifdoor",
+"kind": "malware"
+},
+{
+"id": "S0435",
+"name": "PLEAD",
+"kind": "malware"
+},
+{
+"id": "S0436",
+"name": "TSCookie",
+"kind": "malware"
+},
+{
+"id": "S0437",
+"name": "Kivars",
+"kind": "malware"
+},
+{
+"id": "S0438",
+"name": "Attor",
+"kind": "malware"
+},
+{
+"id": "S0439",
+"name": "Okrum",
+"kind": "malware"
+},
+{
+"id": "S0441",
+"name": "PowerShower",
+"kind": "malware"
+},
+{
+"id": "S0442",
+"name": "VBShower",
+"kind": "malware"
+},
+{
+"id": "S0443",
+"name": "MESSAGETAP",
+"kind": "malware"
+},
+{
+"id": "S0444",
+"name": "ShimRat",
+"kind": "malware"
+},
+{
+"id": "S0446",
+"name": "Ryuk",
+"kind": "malware"
+},
+{
+"id": "S0447",
+"name": "Lokibot",
+"kind": "malware"
+},
+{
+"id": "S0448",
+"name": "Rising Sun",
+"kind": "malware"
+},
+{
+"id": "S0449",
+"name": "Maze",
+"kind": "malware"
+},
+{
+"id": "S0450",
+"name": "SHARPSTATS",
+"kind": "malware"
+},
+{
+"id": "S0451",
+"name": "LoudMiner",
+"kind": "malware"
+},
+{
+"id": "S0452",
+"name": "USBferry",
+"kind": "malware"
+},
+{
+"id": "S0453",
+"name": "Pony",
+"kind": "malware"
+},
+{
+"id": "S0454",
+"name": "Cadelspy",
+"kind": "malware"
+},
+{
+"id": "S0455",
+"name": "Metamorfo",
+"kind": "malware",
+"aliases": [
+"Casbaneiro"
+]
+},
+{
+"id": "S0456",
+"name": "Aria-body",
+"kind": "malware"
+},
+{
+"id": "S0457",
+"name": "Netwalker",
+"kind": "malware"
+},
+{
+"id": "S0458",
+"name": "Ramsay",
+"kind": "malware"
+},
+{
+"id": "S0459",
+"name": "MechaFlounder",
+"kind": "malware"
+},
+{
+"id": "S0460",
+"name": "Get2",
+"kind": "malware"
+},
+{
+"id": "S0461",
+"name": "SDBbot",
+"kind": "malware"
+},
+{
+"id": "S0462",
+"name": "CARROTBAT",
+"kind": "malware"
+},
+{
+"id": "S0464",
+"name": "SYSCON",
+"kind": "malware"
+},
+{
+"id": "S0466",
+"name": "WindTail",
+"kind": "malware"
+},
+{
+"id": "S0467",
+"name": "TajMahal",
+"kind": "malware"
+},
+{
+"id": "S0468",
+"name": "Skidmap",
+"kind": "malware"
+},
+{
+"id": "S0469",
+"name": "ABK",
+"kind": "malware"
+},
+{
+"id": "S0470",
+"name": "BBK",
+"kind": "malware"
+},
+{
+"id": "S0471",
+"name": "build_downer",
+"kind": "malware"
+},
+{
+"id": "S0472",
+"name": "down_new",
+"kind": "malware"
+},
+{
+"id": "S0473",
+"name": "Avenger",
+"kind": "malware"
+},
+{
+"id": "S0475",
+"name": "BackConfig",
+"kind": "malware"
+},
+{
+"id": "S0476",
+"name": "Valak",
+"kind": "malware"
+},
+{
+"id": "S0477",
+"name": "Goopy",
+"kind": "malware"
+},
+{
+"id": "S0481",
+"name": "Ragnar Locker",
+"kind": "malware"
+},
+{
+"id": "S0482",
+"name": "Bundlore",
+"kind": "malware",
+"aliases": [
+"OSX.Bundlore"
+]
+},
+{
+"id": "S0483",
+"name": "IcedID",
+"kind": "malware"
+},
+{
+"id": "S0484",
+"name": "Carberp",
+"kind": "malware"
+},
+{
+"id": "S0486",
+"name": "Bonadan",
+"kind": "malware"
+},
+{
+"id": "S0487",
+"name": "Kessel",
+"kind": "malware"
+},
+{
+"id": "S0491",
+"name": "StrongPity",
+"kind": "malware"
+},
+{
+"id": "S0492",
+"name": "CookieMiner",
+"kind": "malware"
+},
+{
+"id": "S0493",
+"name": "GoldenSpy",
+"kind": "malware"
+},
+{
+"id": "S0495",
+"name": "RDAT",
+"kind": "malware"
+},
+{
+"id": "S0496",
+"name": "REvil",
+"kind": "malware",
+"aliases": [
+"Sodin",
+"Sodinokibi"
+]
+},
+{
+"id": "S0497",
+"name": "Dacls",
+"kind": "malware"
+},
+{
+"id": "S0498",
+"name": "Cryptoistic",
+"kind": "malware"
+},
+{
+"id": "S0499",
+"name": "Hancitor",
+"kind": "malware",
+"aliases": [
+"Chanitor"
+]
+},
+{
+"id": "S0501",
+"name": "PipeMon",
+"kind": "malware"
+},
+{
+"id": "S0502",
+"name": "Drovorub",
+"kind": "malware"
+},
+{
+"id": "S0503",
+"name": "FrameworkPOS",
+"kind": "malware",
+"aliases": [
+"Trinity"
+]
+},
+{
+"id": "S0504",
+"name": "Anchor",
+"kind": "malware",
+"aliases": [
+"Anchor_DNS"
+]
+},
+{
+"id": "S0511",
+"name": "RegDuke",
+"kind": "malware"
+},
+{
+"id": "S0512",
+"name": "FatDuke",
+"kind": "malware"
+},
+{
+"id": "S0513",
+"name": "LiteDuke",
+"kind": "malware"
+},
+{
+"id": "S0514",
+"name": "WellMess",
+"kind": "malware"
+},
+{
+"id": "S0515",
+"name": "WellMail",
+"kind": "malware"
+},
+{
+"id": "S0516",
+"name": "SoreFang",
+"kind": "malware"
+},
+{
+"id": "S0517",
+"name": "Pillowmint",
+"kind": "malware"
+},
+{
+"id": "S0518",
+"name": "PolyglotDuke",
+"kind": "malware"
+},
+{
+"id": "S0519",
+"name": "SYNful Knock",
+"kind": "malware"
+},
+{
+"id": "S0520",
+"name": "BLINDINGCAN",
+"kind": "malware"
+},
+{
+"id": "S0526",
+"name": "KGH_SPY",
+"kind": "malware"
+},
+{
+"id": "S0528",
+"name": "Javali",
+"kind": "malware"
+},
+{
+"id": "S0530",
+"name": "Melcoz",
+"kind": "malware"
+},
+{
+"id": "S0531",
+"name": "Grandoreiro",
+"kind": "malware"
+},
+{
+"id": "S0532",
+"name": "Lucifer",
+"kind": "malware"
+},
+{
+"id": "S0533",
+"name": "SLOTHFULMEDIA",
+"kind": "malware",
+"aliases": [
+"JackOfHearts",
+"QueenOfClubs"
+]
+},
+{
+"id": "S0534",
+"name": "Bazar",
+"kind": "malware",
+"aliases": [
+"KEGTAP",
+"Team9",
+"Bazaloader"
+]
+},
+{
+"id": "S0537",
+"name": "HyperStack",
+"kind": "malware"
+},
+{
+"id": "S0538",
+"name": "Crutch",
+"kind": "malware"
+},
+{
+"id": "S0543",
+"name": "Spark",
+"kind": "malware"
+},
+{
+"id": "S0546",
+"name": "SharpStage",
+"kind": "malware"
+},
+{
+"id": "S0547",
+"name": "DropBook",
+"kind": "malware"
+},
+{
+"id": "S0553",
+"name": "MoleNet",
+"kind": "malware"
+},
+{
+"id": "S0554",
+"name": "Egregor",
+"kind": "malware"
+},
+{
+"id": "S0556",
+"name": "Pay2Key",
+"kind": "malware"
+},
+{
+"id": "S0559",
+"name": "SUNBURST",
+"kind": "malware",
+"aliases": [
+"Solorigate"
+]
+},
+{
+"id": "S0560",
+"name": "TEARDROP",
+"kind": "malware"
+},
+{
+"id": "S0561",
+"name": "GuLoader",
+"kind": "malware"
+},
+{
+"id": "S0562",
+"name": "SUNSPOT",
+"kind": "malware"
+},
+{
+"id": "S0564",
+"name": "BlackMould",
+"kind": "malware"
+},
+{
+"id": "S0565",
+"name": "Raindrop",
+"kind": "malware"
+},
+{
+"id": "S0567",
+"name": "Dtrack",
+"kind": "malware"
+},
+{
+"id": "S0568",
+"name": "EVILNUM",
+"kind": "malware"
+},
+{
+"id": "S0569",
+"name": "Explosive",
+"kind": "malware"
+},
+{
+"id": "S0570",
+"name": "BitPaymer",
+"kind": "malware",
+"aliases": [
+"wp_encrypt",
+"FriedEx"
+]
+},
+{
+"id": "S0572",
+"name": "Caterpillar WebShell",
+"kind": "malware"
+},
+{
+"id": "S0574",
+"name": "BendyBear",
+"kind": "malware"
+},
+{
+"id": "S0575",
+"name": "Conti",
+"kind": "malware"
+},
+{
+"id": "S0576",
+"name": "MegaCortex",
+"kind": "malware"
+},
+{
+"id": "S0578",
+"name": "SUPERNOVA",
+"kind": "malware"
+},
+{
+"id": "S0579",
+"name": "Waterbear",
+"kind": "malware"
+},
+{
+"id": "S0582",
+"name": "LookBack",
+"kind": "malware"
+},
+{
+"id": "S0583",
+"name": "Pysa",
+"kind": "malware",
+"aliases": [
+"Mespinoza"
+]
+},
+{
+"id": "S0584",
+"name": "AppleJeus",
+"kind": "malware"
+},
+{
+"id": "S0585",
+"name": "Kerrdown",
+"kind": "malware"
+},
+{
+"id": "S0586",
+"name": "TAINTEDSCRIBE",
+"kind": "malware"
+},
+{
+"id": "S0587",
+"name": "Penquin",
+"kind": "malware",
+"aliases": [
+"Penquin 2.0",
+"Penquin_x64"
+]
+},
+{
+"id": "S0588",
+"name": "GoldMax",
+"kind": "malware",
+"aliases": [
+"SUNSHUTTLE"
+]
+},
+{
+"id": "S0589",
+"name": "Sibot",
+"kind": "malware"
+},
+{
+"id": "S0593",
+"name": "ECCENTRICBANDWAGON",
+"kind": "malware"
+},
+{
+"id": "S0595",
+"name": "ThiefQuest",
+"kind": "malware",
+"aliases": [
+"MacRansom.K",
+"EvilQuest"
+]
+},
+{
+"id": "S0596",
+"name": "ShadowPad",
+"kind": "malware",
+"aliases": [
+"POISONPLUG.SHADOW"
+]
+},
+{
+"id": "S0597",
+"name": "GoldFinder",
+"kind": "malware"
+},
+{
+"id": "S0598",
+"name": "P.A.S. Webshell",
+"kind": "malware",
+"aliases": [
+"Fobushell"
+]
+},
+{
+"id": "S0599",
+"name": "Kinsing",
+"kind": "malware"
+},
+{
+"id": "S0600",
+"name": "Doki",
+"kind": "malware"
+},
+{
+"id": "S0601",
+"name": "Hildegard",
+"kind": "malware"
+},
+{
+"id": "S0603",
+"name": "Stuxnet",
+"kind": "malware",
+"aliases": [
+"W32.Stuxnet"
+]
+},
+{
+"id": "S0604",
+"name": "Industroyer",
+"kind": "malware",
+"aliases": [
+"CRASHOVERRIDE",
+"Win32/Industroyer"
+]
+},
+{
+"id": "S0605",
+"name": "EKANS",
+"kind": "malware",
+"aliases": [
+"SNAKEHOSE"
+]
+},
+{
+"id": "S0606",
+"name": "Bad Rabbit",
+"kind": "malware",
+"aliases": [
+"Win32/Diskcoder.D"
+]
+},
+{
+"id": "S0607",
+"name": "KillDisk",
+"kind": "malware",
+"aliases": [
+"Win32/KillDisk.NBI",
+"Win32/KillDisk.NBH",
+"Win32/KillDisk.NBD",
+"Win32/KillDisk.NBC",
+"Win32/KillDisk.NBB"
+]
+},
+{
+"id": "S0608",
+"name": "Conficker",
+"kind": "malware",
+"aliases": [
+"Kido",
+"Downadup"
+]
+},
+{
+"id": "S0610",
+"name": "SideTwist",
+"kind": "malware"
+},
+{
+"id": "S0611",
+"name": "Clop",
+"kind": "malware"
+},
+{
+"id": "S0612",
+"name": "WastedLocker",
+"kind": "malware"
+},
+{
+"id": "S0613",
+"name": "PS1",
+"kind": "malware"
+},
+{
+"id": "S0614",
+"name": "CostaBricks",
+"kind": "malware"
+},
+{
+"id": "S0615",
+"name": "SombRAT",
+"kind": "malware"
+},
+{
+"id": "S0616",
+"name": "DEATHRANSOM",
+"kind": "malware"
+},
+{
+"id": "S0617",
+"name": "HELLOKITTY",
+"kind": "malware"
+},
+{
+"id": "S0618",
+"name": "FIVEHANDS",
+"kind": "malware"
+},
+{
+"id": "S0622",
+"name": "AppleSeed",
+"kind": "malware"
+},
+{
+"id": "S0623",
+"name": "Siloscape",
+"kind": "malware"
+},
+{
+"id": "S0624",
+"name": "Ecipekac",
+"kind": "malware",
+"aliases": [
+"HEAVYHAND",
+"SigLoader",
+"DESLoader"
+]
+},
+{
+"id": "S0625",
+"name": "Cuba",
+"kind": "malware"
+},
+{
+"id": "S0626",
+"name": "P8RAT",
+"kind": "malware",
+"aliases": [
+"HEAVYPOT",
+"GreetCake"
+]
+},
+{
+"id": "S0627",
+"name": "SodaMaster",
+"kind": "malware",
+"aliases": [
+"DARKTOWN",
+"dfls",
+"DelfsCake"
+]
+},
+{
+"id": "S0628",
+"name": "FYAnti",
+"kind": "malware",
+"aliases": [
+"DILLJUICE stage2"
+]
+},
+{
+"id": "S0629",
+"name": "RainyDay",
+"kind": "malware"
+},
+{
+"id": "S0630",
+"name": "Nebulae",
+"kind": "malware"
+},
+{
+"id": "S0631",
+"name": "Chaes",
+"kind": "malware"
+},
+{
+"id": "S0632",
+"name": "GrimAgent",
+"kind": "malware"
+},
+{
+"id": "S0634",
+"name": "EnvyScout",
+"kind": "malware"
+},
+{
+"id": "S0635",
+"name": "BoomBox",
+"kind": "malware"
+},
+{
+"id": "S0636",
+"name": "VaporRage",
+"kind": "malware"
+},
+{
+"id": "S0637",
+"name": "NativeZone",
+"kind": "malware"
+},
+{
+"id": "S0638",
+"name": "Babuk",
+"kind": "malware",
+"aliases": [
+"Babyk",
+"Vasa Locker"
+]
+},
+{
+"id": "S0639",
+"name": "Seth-Locker",
+"kind": "malware"
+},
+{
+"id": "S0640",
+"name": "Avaddon",
+"kind": "malware"
+},
+{
+"id": "S0641",
+"name": "Kobalos",
+"kind": "malware"
+},
+{
+"id": "S0642",
+"name": "BADFLICK",
+"kind": "malware"
+},
+{
+"id": "S0643",
+"name": "Peppy",
+"kind": "malware"
+},
+{
+"id": "S0644",
+"name": "ObliqueRAT",
+"kind": "malware"
+},
+{
+"id": "S0646",
+"name": "SpicyOmelette",
+"kind": "malware"
+},
+{
+"id": "S0647",
+"name": "Turian",
+"kind": "malware"
+},
+{
+"id": "S0648",
+"name": "JSS Loader",
+"kind": "malware"
+},
+{
+"id": "S0649",
+"name": "SMOKEDHAM",
+"kind": "malware"
+},
+{
+"id": "S0650",
+"name": "QakBot",
+"kind": "malware",
+"aliases": [
+"Pinkslipbot",
+"QuackBot",
+"QBot"
+]
+},
+{
+"id": "S0651",
+"name": "BoxCaon",
+"kind": "malware"
+},
+{
+"id": "S0652",
+"name": "MarkiRAT",
+"kind": "malware"
+},
+{
+"id": "S0653",
+"name": "xCaon",
+"kind": "malware"
+},
+{
+"id": "S0654",
+"name": "ProLock",
+"kind": "malware"
+},
+{
+"id": "S0657",
+"name": "BLUELIGHT",
+"kind": "malware"
+},
+{
+"id": "S0658",
+"name": "XCSSET",
+"kind": "malware",
+"aliases": [
+"OSX.DubRobber"
+]
+},
+{
+"id": "S0659",
+"name": "Diavol",
+"kind": "malware"
+},
+{
+"id": "S0660",
+"name": "Clambling",
+"kind": "malware"
+},
+{
+"id": "S0661",
+"name": "FoggyWeb",
+"kind": "malware"
+},
+{
+"id": "S0662",
+"name": "RCSession",
+"kind": "malware"
+},
+{
+"id": "S0663",
+"name": "SysUpdate",
+"kind": "malware",
+"aliases": [
+"HyperSSL",
+"Soldier",
+"FOCUSFJORD"
+]
+},
+{
+"id": "S0664",
+"name": "Pandora",
+"kind": "malware"
+},
+{
+"id": "S0665",
+"name": "ThreatNeedle",
+"kind": "malware"
+},
+{
+"id": "S0666",
+"name": "Gelsemium",
+"kind": "malware",
+"aliases": [
+"Gelsevirine",
+"Gelsenicine",
+"Gelsemine"
+]
+},
+{
+"id": "S0667",
+"name": "Chrommme",
+"kind": "malware"
+},
+{
+"id": "S0668",
+"name": "TinyTurla",
+"kind": "malware"
+},
+{
+"id": "S0669",
+"name": "KOCTOPUS",
+"kind": "malware"
+},
+{
+"id": "S0670",
+"name": "WarzoneRAT",
+"kind": "malware",
+"aliases": [
+"Warzone",
+"Ave Maria"
+]
+},
+{
+"id": "S0671",
+"name": "Tomiris",
+"kind": "malware"
+},
+{
+"id": "S0672",
+"name": "Zox",
+"kind": "malware",
+"aliases": [
+"Gresim",
+"ZoxRPC",
+"ZoxPNG"
+]
+},
+{
+"id": "S0673",
+"name": "DarkWatchman",
+"kind": "malware"
+},
+{
+"id": "S0674",
+"name": "CharmPower",
+"kind": "malware"
+},
+{
+"id": "S0678",
+"name": "Torisma",
+"kind": "malware"
+},
+{
+"id": "S0679",
+"name": "Ferocious",
+"kind": "malware"
+},
+{
+"id": "S0680",
+"name": "LitePower",
+"kind": "malware"
+},
+{
+"id": "S0681",
+"name": "Lizar",
+"kind": "malware",
+"aliases": [
+"Tirion",
+"Icebot",
+"DiceLoader"
+]
+},
+{
+"id": "S0682",
+"name": "TrailBlazer",
+"kind": "malware"
+},
+{
+"id": "S0685",
+"name": "PowerPunch",
+"kind": "malware"
+},
+{
+"id": "S0686",
+"name": "QuietSieve",
+"kind": "malware"
+},
+{
+"id": "S0687",
+"name": "Cyclops Blink",
+"kind": "malware"
+},
+{
+"id": "S0688",
+"name": "Meteor",
+"kind": "malware"
+},
+{
+"id": "S0689",
+"name": "WhisperGate",
+"kind": "malware"
+},
+{
+"id": "S0690",
+"name": "Green Lambert",
+"kind": "malware"
+},
+{
+"id": "S0691",
+"name": "Neoichor",
+"kind": "malware"
+},
+{
+"id": "S0693",
+"name": "CaddyWiper",
+"kind": "malware"
+},
+{
+"id": "S0694",
+"name": "DRATzarus",
+"kind": "malware"
+},
+{
+"id": "S0696",
+"name": "Flagpro",
+"kind": "malware"
+},
+{
+"id": "S0697",
+"name": "HermeticWiper",
+"kind": "malware",
+"aliases": [
+"Trojan.Killdisk",
+"DriveSlayer"
+]
+},
+{
+"id": "S0698",
+"name": "HermeticWizard",
+"kind": "malware"
+},
+{
+"id": "S1010",
+"name": "VPNFilter",
+"kind": "malware"
+},
+{
+"id": "S1011",
+"name": "Tarrask",
+"kind": "malware"
+},
+{
+"id": "S1012",
+"name": "PowerLess",
+"kind": "malware"
+},
+{
+"id": "S1013",
+"name": "ZxxZ",
+"kind": "malware"
+},
+{
+"id": "S1014",
+"name": "DanBot",
+"kind": "malware"
+},
+{
+"id": "S1015",
+"name": "Milan",
+"kind": "malware",
+"aliases": [
+"James"
+]
+},
+{
+"id": "S1016",
+"name": "MacMa",
+"kind": "malware",
+"aliases": [
+"OSX.CDDS",
+"DazzleSpy"
+]
+},
+{
+"id": "S1017",
+"name": "OutSteel",
+"kind": "malware"
+},
+{
+"id": "S1018",
+"name": "Saint Bot",
+"kind": "malware"
+},
+{
+"id": "S1019",
+"name": "Shark",
+"kind": "malware"
+},
+{
+"id": "S1020",
+"name": "Kevin",
+"kind": "malware"
+},
+{
+"id": "S1021",
+"name": "DnsSystem",
+"kind": "malware"
+},
+{
+"id": "S1022",
+"name": "IceApple",
+"kind": "malware"
+},
+{
+"id": "S1023",
+"name": "CreepyDrive",
+"kind": "malware"
+},
+{
+"id": "S1024",
+"name": "CreepySnail",
+"kind": "malware"
+},
+{
+"id": "S1025",
+"name": "Amadey",
+"kind": "malware"
+},
+{
+"id": "S1026",
+"name": "Mongall",
+"kind": "malware"
+},
+{
+"id": "S1027",
+"name": "Heyoka Backdoor",
+"kind": "malware"
+},
+{
+"id": "S1028",
+"name": "Action RAT",
+"kind": "malware"
+},
+{
+"id": "S1029",
+"name": "AuTo Stealer",
+"kind": "malware"
+},
+{
+"id": "S1030",
+"name": "Squirrelwaffle",
+"kind": "malware"
+},
+{
+"id": "S1031",
+"name": "PingPull",
+"kind": "malware"
+},
+{
+"id": "S1032",
+"name": "PyDCrypt",
+"kind": "malware"
+},
+{
+"id": "S1033",
+"name": "DCSrv",
+"kind": "malware"
+},
+{
+"id": "S1034",
+"name": "StrifeWater",
+"kind": "malware"
+},
+{
+"id": "S1035",
+"name": "Small Sieve",
+"kind": "malware",
+"aliases": [
+"GRAMDOOR"
+]
+},
+{
+"id": "S1037",
+"name": "STARWHALE",
+"kind": "malware",
+"aliases": [
+"CANOPY"
+]
+},
+{
+"id": "S1039",
+"name": "Bumblebee",
+"kind": "malware"
+},
+{
+"id": "S1041",
+"name": "Chinoxy",
+"kind": "malware"
+},
+{
+"id": "S1042",
+"name": "SUGARDUMP",
+"kind": "malware"
+},
+{
+"id": "S1043",
+"name": "ccf32",
+"kind": "malware"
+},
+{
+"id": "S1044",
+"name": "FunnyDream",
+"kind": "malware"
+},
+{
+"id": "S1046",
+"name": "PowGoop",
+"kind": "malware"
+},
+{
+"id": "S1047",
+"name": "Mori",
+"kind": "malware"
+},
+{
+"id": "S1048",
+"name": "macOS.OSAMiner",
+"kind": "malware"
+},
+{
+"id": "S1049",
+"name": "SUGARUSH",
+"kind": "malware"
+},
+{
+"id": "S1051",
+"name": "KEYPLUG",
+"kind": "malware",
+"aliases": [
+"KEYPLUG.LINUX"
+]
+},
+{
+"id": "S1052",
+"name": "DEADEYE",
+"kind": "malware",
+"aliases": [
+"DEADEYE.EMBED",
+"DEADEYE.APPEND"
+]
+},
+{
+"id": "S1053",
+"name": "AvosLocker",
+"kind": "malware"
+},
+{
+"id": "S1058",
+"name": "Prestige",
+"kind": "malware"
+},
+{
+"id": "S1059",
+"name": "metaMain",
+"kind": "malware"
+},
+{
+"id": "S1060",
+"name": "Mafalda",
+"kind": "malware"
+},
+{
+"id": "S1064",
+"name": "SVCReady",
+"kind": "malware"
+},
+{
+"id": "S1065",
+"name": "Woody RAT",
+"kind": "malware"
+},
+{
+"id": "S1066",
+"name": "DarkTortilla",
+"kind": "malware"
+},
+{
+"id": "S1068",
+"name": "BlackCat",
+"kind": "malware",
+"aliases": [
+"ALPHV",
+"Noberus"
+]
+},
+{
+"id": "S1070",
+"name": "Black Basta",
+"kind": "malware"
+},
+{
+"id": "S1072",
+"name": "Industroyer2",
+"kind": "malware"
+},
+{
+"id": "S1073",
+"name": "Royal",
+"kind": "malware"
+},
+{
+"id": "S1074",
+"name": "ANDROMEDA",
+"kind": "malware"
+},
+{
+"id": "S1075",
+"name": "KOPILUWAK",
+"kind": "malware"
+},
+{
+"id": "S1076",
+"name": "QUIETCANARY",
+"kind": "malware",
+"aliases": [
+"Tunnus"
+]
+},
+{
+"id": "S1078",
+"name": "RotaJakiro",
+"kind": "malware"
+},
+{
+"id": "S1081",
+"name": "BADHATCH",
+"kind": "malware"
+},
+{
+"id": "S1084",
+"name": "QUIETEXIT",
+"kind": "malware"
+},
+{
+"id": "S1085",
+"name": "Sardonic",
+"kind": "malware"
+},
+{
+"id": "S1086",
+"name": "Snip3",
+"kind": "malware"
+},
+{
+"id": "S1088",
+"name": "Disco",
+"kind": "malware"
+},
+{
+"id": "S1089",
+"name": "SharpDisco",
+"kind": "malware"
+},
+{
+"id": "S1090",
+"name": "NightClub",
+"kind": "malware"
+},
+{
+"id": "S1096",
+"name": "Cheerscrypt",
+"kind": "malware"
+},
+{
+"id": "S1097",
+"name": "HUI Loader",
+"kind": "malware"
+},
+{
+"id": "S1099",
+"name": "Samurai",
+"kind": "malware"
+},
+{
+"id": "S1100",
+"name": "Ninja",
+"kind": "malware"
+},
+{
+"id": "S1101",
+"name": "LoFiSe",
+"kind": "malware"
+},
+{
+"id": "S1102",
+"name": "Pcexter",
+"kind": "malware"
+},
+{
+"id": "S1104",
+"name": "SLOWPULSE",
+"kind": "malware"
+},
+{
+"id": "S1105",
+"name": "COATHANGER",
+"kind": "malware"
+},
+{
+"id": "S1106",
+"name": "NGLite",
+"kind": "malware"
+},
+{
+"id": "S1107",
+"name": "NKAbuse",
+"kind": "malware"
+},
+{
+"id": "S1108",
+"name": "PULSECHECK",
+"kind": "malware"
+},
+{
+"id": "S1109",
+"name": "PACEMAKER",
+"kind": "malware"
+},
+{
+"id": "S1110",
+"name": "SLIGHTPULSE",
+"kind": "malware"
+},
+{
+"id": "S1111",
+"name": "DarkGate",
+"kind": "malware"
+},
+{
+"id": "S1112",
+"name": "STEADYPULSE",
+"kind": "malware"
+},
+{
+"id": "S1113",
+"name": "RAPIDPULSE",
+"kind": "malware"
+},
+{
+"id": "S1114",
+"name": "ZIPLINE",
+"kind": "malware"
+},
+{
+"id": "S1115",
+"name": "WIREFIRE",
+"kind": "malware",
+"aliases": [
+"GIFTEDVISITOR"
+]
+},
+{
+"id": "S1116",
+"name": "WARPWIRE",
+"kind": "malware"
+},
+{
+"id": "S1117",
+"name": "GLASSTOKEN",
+"kind": "malware"
+},
+{
+"id": "S1118",
+"name": "BUSHWALK",
+"kind": "malware"
+},
+{
+"id": "S1119",
+"name": "LIGHTWIRE",
+"kind": "malware"
+},
+{
+"id": "S1120",
+"name": "FRAMESTING",
+"kind": "malware"
+},
+{
+"id": "S1121",
+"name": "LITTLELAMB.WOOLTEA",
+"kind": "malware"
+},
+{
+"id": "S1122",
+"name": "Mispadu",
+"kind": "malware"
+},
+{
+"id": "S1123",
+"name": "PITSTOP",
+"kind": "malware"
+},
+{
+"id": "S1124",
+"name": "SocGholish",
+"kind": "malware",
+"aliases": [
+"FakeUpdates"
+]
+},
+{
+"id": "S1125",
+"name": "AcidRain",
+"kind": "malware"
+},
+{
+"id": "S1129",
+"name": "Akira",
+"kind": "malware"
+},
+{
+"id": "S1130",
+"name": "Raspberry Robin",
+"kind": "malware"
+},
+{
+"id": "S1132",
+"name": "IPsec Helper",
+"kind": "malware"
+},
+{
+"id": "S1133",
+"name": "Apostle",
+"kind": "malware"
+},
+{
+"id": "S1134",
+"name": "DEADWOOD",
+"kind": "malware"
+},
+{
+"id": "S1135",
+"name": "MultiLayer Wiper",
+"kind": "malware"
+},
+{
+"id": "S1136",
+"name": "BFG Agonizer",
+"kind": "malware"
+},
+{
+"id": "S1137",
+"name": "Moneybird",
+"kind": "malware"
+},
+{
+"id": "S1138",
+"name": "Gootloader",
+"kind": "malware"
+},
+{
+"id": "S1139",
+"name": "INC Ransomware",
+"kind": "malware"
+},
+{
+"id": "S1140",
+"name": "Spica",
+"kind": "malware"
+},
+{
+"id": "S1141",
+"name": "LunarWeb",
+"kind": "malware"
+},
+{
+"id": "S1142",
+"name": "LunarMail",
+"kind": "malware"
+},
+{
+"id": "S1143",
+"name": "LunarLoader",
+"kind": "malware"
+},
+{
+"id": "S1145",
+"name": "Pikabot",
+"kind": "malware"
+},
+{
+"id": "S1146",
+"name": "MgBot",
+"kind": "malware"
+},
+{
+"id": "S1147",
+"name": "Nightdoor",
+"kind": "malware"
+},
+{
+"id": "S1148",
+"name": "Raccoon Stealer",
+"kind": "malware"
+},
+{
+"id": "S1149",
+"name": "CHIMNEYSWEEP",
+"kind": "malware"
+},
+{
+"id": "S1150",
+"name": "ROADSWEEP",
+"kind": "malware"
+},
+{
+"id": "S1151",
+"name": "ZeroCleare",
+"kind": "malware",
+"aliases": [
+"ZEROCLEAR"
+]
+},
+{
+"id": "S1152",
+"name": "IMAPLoader",
+"kind": "malware"
+},
+{
+"id": "S1153",
+"name": "Cuckoo Stealer",
+"kind": "malware"
+},
+{
+"id": "S1154",
+"name": "VersaMem",
+"kind": "malware"
+},
+{
+"id": "S1156",
+"name": "Manjusaka",
+"kind": "malware"
+},
+{
+"id": "S1158",
+"name": "DUSTPAN",
+"kind": "malware"
+},
+{
+"id": "S1159",
+"name": "DUSTTRAP",
+"kind": "malware"
+},
+{
+"id": "S1160",
+"name": "Latrodectus",
+"kind": "malware",
+"aliases": [
+"IceNova",
+"Unidentified 111"
+]
+},
+{
+"id": "S1161",
+"name": "BPFDoor",
+"kind": "malware",
+"aliases": [
+"JustForFun",
+"Backdoor.Linux.BPFDOOR",
+"Backdoor.Solaris.BPFDOOR.ZAJE"
+]
+},
+{
+"id": "S1162",
+"name": "Playcrypt",
+"kind": "malware",
+"aliases": [
+"Play"
+]
+},
+{
+"id": "S1163",
+"name": "SnappyTCP",
+"kind": "malware"
+},
+{
+"id": "S1164",
+"name": "UPSTYLE",
+"kind": "malware"
+},
+{
+"id": "S1166",
+"name": "Solar",
+"kind": "malware"
+},
+{
+"id": "S1167",
+"name": "AcidPour",
+"kind": "malware"
+},
+{
+"id": "S1168",
+"name": "SampleCheck5000",
+"kind": "malware",
+"aliases": [
+"SC5k"
+]
+},
+{
+"id": "S1169",
+"name": "Mango",
+"kind": "malware"
+},
+{
+"id": "S1170",
+"name": "ODAgent",
+"kind": "malware"
+},
+{
+"id": "S1171",
+"name": "OilCheck",
+"kind": "malware"
+},
+{
+"id": "S1172",
+"name": "OilBooster",
+"kind": "malware"
+},
+{
+"id": "S1173",
+"name": "PowerExchange",
+"kind": "malware"
+},
+{
+"id": "S1178",
+"name": "ShrinkLocker",
+"kind": "malware"
+},
+{
+"id": "S1179",
+"name": "Exbyte",
+"kind": "malware"
+},
+{
+"id": "S1180",
+"name": "BlackByte Ransomware",
+"kind": "malware"
+},
+{
+"id": "S1181",
+"name": "BlackByte 2.0 Ransomware",
+"kind": "malware"
+},
+{
+"id": "S1182",
+"name": "MagicRAT",
+"kind": "malware"
+},
+{
+"id": "S1183",
+"name": "StrelaStealer",
+"kind": "malware"
+},
+{
+"id": "S1184",
+"name": "BOLDMOVE",
+"kind": "malware"
+},
+{
+"id": "S1185",
+"name": "LightSpy",
+"kind": "malware"
+},
+{
+"id": "S1186",
+"name": "Line Dancer",
+"kind": "malware"
+},
+{
+"id": "S1187",
+"name": "reGeorg",
+"kind": "malware"
+},
+{
+"id": "S1188",
+"name": "Line Runner",
+"kind": "malware"
+},
+{
+"id": "S1189",
+"name": "Neo-reGeorg",
+"kind": "malware"
+},
+{
+"id": "S1190",
+"name": "Kapeka",
+"kind": "malware",
+"aliases": [
+"KnuckleTouch"
+]
+},
+{
+"id": "S1191",
+"name": "Megazord",
+"kind": "malware"
+},
+{
+"id": "S1192",
+"name": "NICECURL",
+"kind": "malware"
+},
+{
+"id": "S1193",
+"name": "TAMECAT",
+"kind": "malware"
+},
+{
+"id": "S1194",
+"name": "Akira _v2",
+"kind": "malware"
+},
+{
+"id": "S1196",
+"name": "Troll Stealer",
+"kind": "malware"
+},
+{
+"id": "S1197",
+"name": "GoBear",
+"kind": "malware"
+},
+{
+"id": "S1198",
+"name": "Gomir",
+"kind": "malware"
+},
+{
+"id": "S1199",
+"name": "LockBit 2.0",
+"kind": "malware"
+},
+{
+"id": "S1200",
+"name": "StealBit",
+"kind": "malware"
+},
+{
+"id": "S1201",
+"name": "TRANSLATEXT",
+"kind": "malware"
+},
+{
+"id": "S1202",
+"name": "LockBit 3.0",
+"kind": "malware",
+"aliases": [
+"LockBit Black"
+]
+},
+{
+"id": "S1203",
+"name": "J-magic",
+"kind": "malware"
+},
+{
+"id": "S1204",
+"name": "cd00r",
+"kind": "malware"
+},
+{
+"id": "S1206",
+"name": "JumbledPath",
+"kind": "malware"
+},
+{
+"id": "S1207",
+"name": "XLoader",
+"kind": "malware",
+"aliases": [
+"Formbook"
+]
+},
+{
+"id": "S1210",
+"name": "Sagerunex",
+"kind": "malware"
+},
+{
+"id": "S1211",
+"name": "Hannotog",
+"kind": "malware"
+},
+{
+"id": "S1212",
+"name": "RansomHub",
+"kind": "malware"
+},
+{
+"id": "S1213",
+"name": "Lumma Stealer",
+"kind": "malware",
+"aliases": [
+"LummaStealer"
+]
+},
+{
+"id": "S1217",
+"name": "VIRTUALPITA",
+"kind": "malware"
+},
+{
+"id": "S1218",
+"name": "VIRTUALPIE",
+"kind": "malware"
+},
+{
+"id": "S1219",
+"name": "REPTILE",
+"kind": "malware"
+},
+{
+"id": "S1220",
+"name": "MEDUSA",
+"kind": "malware"
+},
+{
+"id": "S1221",
+"name": "MOPSLED",
+"kind": "malware"
+},
+{
+"id": "S1222",
+"name": "RIFLESPINE",
+"kind": "malware"
+},
+{
+"id": "S1223",
+"name": "THINCRUST",
+"kind": "malware"
+},
+{
+"id": "S1224",
+"name": "CASTLETAP",
+"kind": "malware"
+},
+{
+"id": "S1226",
+"name": "BOOKWORM",
+"kind": "malware"
+},
+{
+"id": "S1227",
+"name": "StarProxy",
+"kind": "malware"
+},
+{
+"id": "S1228",
+"name": "PUBLOAD",
+"kind": "malware"
+},
+{
+"id": "S1229",
+"name": "Havoc",
+"kind": "malware"
+},
+{
+"id": "S1230",
+"name": "HIUPAN",
+"kind": "malware"
+},
+{
+"id": "S1232",
+"name": "SplatDropper",
+"kind": "malware"
+},
+{
+"id": "S1233",
+"name": "PAKLOG",
+"kind": "malware"
+},
+{
+"id": "S1234",
+"name": "SplatCloak",
+"kind": "malware"
+},
+{
+"id": "S1235",
+"name": "CorKLOG",
+"kind": "malware"
+},
+{
+"id": "S1236",
+"name": "CLAIMLOADER",
+"kind": "malware"
+},
+{
+"id": "S1237",
+"name": "CANONSTAGER",
+"kind": "malware"
+},
+{
+"id": "S1238",
+"name": "STATICPLUGIN",
+"kind": "malware"
+},
+{
+"id": "S1239",
+"name": "TONESHELL",
+"kind": "malware"
+},
+{
+"id": "S1240",
+"name": "RedLine Stealer",
+"kind": "malware"
+},
+{
+"id": "S1242",
+"name": "Qilin",
+"kind": "malware",
+"aliases": [
+"Agenda"
+]
+},
+{
+"id": "S1244",
+"name": "Medusa Ransomware",
+"kind": "malware"
+},
+{
+"id": "S1245",
+"name": "InvisibleFerret",
+"kind": "malware"
+},
+{
+"id": "S1246",
+"name": "BeaverTail",
+"kind": "malware"
+},
+{
+"id": "S1247",
+"name": "Embargo",
+"kind": "malware"
+},
+{
+"id": "S1248",
+"name": "XORIndex Loader",
+"kind": "malware"
+},
+{
+"id": "S1249",
+"name": "HexEval Loader",
+"kind": "malware"
+},
+{
+"id": "S9001",
+"name": "SystemBC",
+"kind": "malware",
+"aliases": [
+"Coroxy"
+]
+},
+{
+"id": "S9004",
+"name": "Crocodilus",
+"kind": "malware"
+},
+{
+"id": "S9007",
+"name": "HTTPTroy",
+"kind": "malware"
+},
+{
+"id": "S9008",
+"name": "Shai-Hulud",
+"kind": "malware"
+},
+{
+"id": "S9010",
+"name": "GlassWorm",
+"kind": "malware"
+},
+{
+"id": "S9011",
+"name": "BRUSHFIRE",
+"kind": "malware"
+},
+{
+"id": "S9012",
+"name": "TRAILBLAZE",
+"kind": "malware"
+},
+{
+"id": "S9013",
+"name": "DRYHOOK",
+"kind": "malware"
+},
+{
+"id": "S9014",
+"name": "PHASEJAM",
+"kind": "malware"
+},
+{
+"id": "S9015",
+"name": "BRICKSTORM",
+"kind": "malware"
+},
+{
+"id": "S9016",
+"name": "Caminho",
+"kind": "malware",
+"aliases": [
+"VMDetectLoader"
+]
+},
+{
+"id": "S9018",
+"name": "HeartCrypt",
+"kind": "malware"
+},
+{
+"id": "S9019",
+"name": "PureCrypter",
+"kind": "malware"
+},
+{
+"id": "S9020",
+"name": "LODEINFO",
+"kind": "malware"
+},
+{
+"id": "S9021",
+"name": "DOWNIISSA",
+"kind": "malware"
+},
+{
+"id": "S9022",
+"name": "MirrorStealer",
+"kind": "malware"
+},
+{
+"id": "S9023",
+"name": "HiddenFace",
+"kind": "malware",
+"aliases": [
+"NOOPDOOR"
+]
+},
+{
+"id": "S9024",
+"name": "SPAWNCHIMERA",
+"kind": "malware"
+},
+{
+"id": "S9025",
+"name": "NOOPLDR",
+"kind": "malware"
+},
+{
+"id": "S9026",
+"name": "ROAMINGHOUSE",
+"kind": "malware"
+},
+{
+"id": "S9027",
+"name": "ANELLDR",
+"kind": "malware"
+},
+{
+"id": "S9028",
+"name": "PHPsert",
+"kind": "malware"
+},
+{
+"id": "S9029",
+"name": "IronWind",
+"kind": "malware"
+},
+{
+"id": "S9030",
+"name": "SameCoin",
+"kind": "malware"
+},
+{
+"id": "S9031",
+"name": "AshTag",
+"kind": "malware"
+},
+{
+"id": "S9032",
+"name": "MuddyViper",
+"kind": "malware"
+},
+{
+"id": "S9033",
+"name": "Fooder",
+"kind": "malware"
+},
+{
+"id": "S9034",
+"name": "Tsundere Botnet",
+"kind": "malware",
+"aliases": [
+"DinDoor"
+]
+},
+{
+"id": "S9035",
+"name": "LAMEHUG",
+"kind": "malware",
+"aliases": [
+"PROMPTSTEAL"
+]
+},
+{
+"id": "S9036",
+"name": "LP-Notes",
+"kind": "malware"
+},
+{
+"id": "S9037",
+"name": "RustyWater",
+"kind": "malware",
+"aliases": [
+"Archer RAT / RUSTRIC"
+]
+},
+{
+"id": "S9038",
+"name": "DynoWiper",
+"kind": "malware"
+},
+{
+"id": "S9039",
+"name": "LazyWiper",
+"kind": "malware"
+},
+{
+"id": "S9041",
+"name": "TeamPCP Cloud Stealer",
+"kind": "malware",
+"aliases": [
+"SANDCLOCK"
+]
+},
+{
+"id": "S9042",
+"name": "CanisterWorm",
+"kind": "malware"
+},
+{
+"id": "S9043",
+"name": "Mini Shai-Hulud",
+"kind": "malware"
+},
+{
+"id": "S9044",
+"name": "Kali365",
+"kind": "malware"
+},
+{
+"id": "TA0001",
+"name": "Initial Access",
+"kind": "tactic"
+},
+{
+"id": "TA0002",
+"name": "Execution",
+"kind": "tactic"
+},
+{
+"id": "TA0003",
+"name": "Persistence",
+"kind": "tactic"
+},
+{
+"id": "TA0004",
+"name": "Privilege Escalation",
+"kind": "tactic"
+},
+{
+"id": "TA0005",
+"name": "Stealth",
+"kind": "tactic",
+"aliases": [
+"Defense Evasion"
+]
+},
+{
+"id": "TA0006",
+"name": "Credential Access",
+"kind": "tactic"
+},
+{
+"id": "TA0007",
+"name": "Discovery",
+"kind": "tactic"
+},
+{
+"id": "TA0008",
+"name": "Lateral Movement",
+"kind": "tactic"
+},
+{
+"id": "TA0009",
+"name": "Collection",
+"kind": "tactic"
+},
+{
+"id": "TA0010",
+"name": "Exfiltration",
+"kind": "tactic"
+},
+{
+"id": "TA0011",
+"name": "Command and Control",
+"kind": "tactic"
+},
+{
+"id": "TA0040",
+"name": "Impact",
+"kind": "tactic"
+},
+{
+"id": "TA0042",
+"name": "Resource Development",
+"kind": "tactic"
+},
+{
+"id": "TA0043",
+"name": "Reconnaissance",
+"kind": "tactic"
+},
+{
+"id": "TA0112",
+"name": "Defense Impairment",
+"kind": "tactic"
+},
+{
+"id": "T1001",
+"name": "Data Obfuscation",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1001.001",
+"name": "Junk Data",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1001.002",
+"name": "Steganography",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1001.003",
+"name": "Protocol or Service Impersonation",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1003",
+"name": "OS Credential Dumping",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1003.001",
+"name": "LSASS Memory",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1003.002",
+"name": "Security Account Manager",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1003.003",
+"name": "NTDS",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1003.004",
+"name": "LSA Secrets",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1003.005",
+"name": "Cached Domain Credentials",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1003.006",
+"name": "DCSync",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1003.007",
+"name": "Proc Filesystem",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1003.008",
+"name": "/etc/passwd and /etc/shadow",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1005",
+"name": "Data from Local System",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1006",
+"name": "Direct Volume Access",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1007",
+"name": "System Service Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1008",
+"name": "Fallback Channels",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1010",
+"name": "Application Window Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1011",
+"name": "Exfiltration Over Other Network Medium",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1011.001",
+"name": "Exfiltration Over Bluetooth",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1012",
+"name": "Query Registry",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1014",
+"name": "Rootkit",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1016",
+"name": "System Network Configuration Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1016.001",
+"name": "Internet Connection Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1016.002",
+"name": "Wi-Fi Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1018",
+"name": "Remote System Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1020",
+"name": "Automated Exfiltration",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1020.001",
+"name": "Traffic Duplication",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1021",
+"name": "Remote Services",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1021.001",
+"name": "Remote Desktop Protocol",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1021.002",
+"name": "SMB/Windows Admin Shares",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1021.003",
+"name": "Distributed Component Object Model",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1021.004",
+"name": "SSH",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1021.005",
+"name": "VNC",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1021.006",
+"name": "Windows Remote Management",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1021.007",
+"name": "Cloud Services",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1021.008",
+"name": "Direct Cloud VM Connections",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1025",
+"name": "Data from Removable Media",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1027",
+"name": "Obfuscated Files or Information",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.001",
+"name": "Binary Padding",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.002",
+"name": "Software Packing",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.003",
+"name": "Steganography",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.004",
+"name": "Compile After Delivery",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.005",
+"name": "Indicator Removal from Tools",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.006",
+"name": "HTML Smuggling",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.007",
+"name": "Dynamic API Resolution",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.008",
+"name": "Stripped Payloads",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.009",
+"name": "Embedded Payloads",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.010",
+"name": "Command Obfuscation",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.011",
+"name": "Fileless Storage",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.012",
+"name": "LNK Icon Smuggling",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.013",
+"name": "Encrypted/Encoded File",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.014",
+"name": "Polymorphic Code",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.015",
+"name": "Compression",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.016",
+"name": "Junk Code Insertion",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.017",
+"name": "SVG Smuggling",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1027.018",
+"name": "Invisible Unicode",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1029",
+"name": "Scheduled Transfer",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1030",
+"name": "Data Transfer Size Limits",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1033",
+"name": "System Owner/User Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1036",
+"name": "Masquerading",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.001",
+"name": "Invalid Code Signature",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.002",
+"name": "Right-to-Left Override",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.003",
+"name": "Rename Legitimate Utilities",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.004",
+"name": "Masquerade Task or Service",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.005",
+"name": "Match Legitimate Resource Name or Location",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.006",
+"name": "Space after Filename",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.007",
+"name": "Double File Extension",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.008",
+"name": "Masquerade File Type",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.009",
+"name": "Break Process Trees",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.010",
+"name": "Masquerade Account Name",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.011",
+"name": "Overwrite Process Arguments",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1036.012",
+"name": "Browser Fingerprint",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1037",
+"name": "Boot or Logon Initialization Scripts",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1037.001",
+"name": "Logon Script (Windows)",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1037.002",
+"name": "Login Hook",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1037.003",
+"name": "Network Logon Script",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1037.004",
+"name": "RC Scripts",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1037.005",
+"name": "Startup Items",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1039",
+"name": "Data from Network Shared Drive",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1040",
+"name": "Network Sniffing",
+"kind": "technique",
+"tactics": [
+"credential-access",
+"discovery"
+]
+},
+{
+"id": "T1041",
+"name": "Exfiltration Over C2 Channel",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1046",
+"name": "Network Service Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1047",
+"name": "Windows Management Instrumentation",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1048",
+"name": "Exfiltration Over Alternative Protocol",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1048.001",
+"name": "Exfiltration Over Symmetric Encrypted Non-C2 Protocol",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1048.002",
+"name": "Exfiltration Over Asymmetric Encrypted Non-C2 Protocol",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1048.003",
+"name": "Exfiltration Over Unencrypted Non-C2 Protocol",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1049",
+"name": "System Network Connections Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1052",
+"name": "Exfiltration Over Physical Medium",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1052.001",
+"name": "Exfiltration over USB",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1053",
+"name": "Scheduled Task/Job",
+"kind": "technique",
+"tactics": [
+"execution",
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1053.002",
+"name": "At",
+"kind": "technique",
+"tactics": [
+"execution",
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1053.003",
+"name": "Cron",
+"kind": "technique",
+"tactics": [
+"execution",
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1053.005",
+"name": "Scheduled Task",
+"kind": "technique",
+"tactics": [
+"execution",
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1053.006",
+"name": "Systemd Timers",
+"kind": "technique",
+"tactics": [
+"execution",
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1053.007",
+"name": "Container Orchestration Job",
+"kind": "technique",
+"tactics": [
+"execution",
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055",
+"name": "Process Injection",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.001",
+"name": "Dynamic-link Library Injection",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.002",
+"name": "Portable Executable Injection",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.003",
+"name": "Thread Execution Hijacking",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.004",
+"name": "Asynchronous Procedure Call",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.005",
+"name": "Thread Local Storage",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.008",
+"name": "Ptrace System Calls",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.009",
+"name": "Proc Memory",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.011",
+"name": "Extra Window Memory Injection",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.012",
+"name": "Process Hollowing",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.013",
+"name": "Process Doppelgänging",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.014",
+"name": "VDSO Hijacking",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1055.015",
+"name": "ListPlanting",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1056",
+"name": "Input Capture",
+"kind": "technique",
+"tactics": [
+"collection",
+"credential-access"
+]
+},
+{
+"id": "T1056.001",
+"name": "Keylogging",
+"kind": "technique",
+"tactics": [
+"collection",
+"credential-access"
+]
+},
+{
+"id": "T1056.002",
+"name": "GUI Input Capture",
+"kind": "technique",
+"tactics": [
+"collection",
+"credential-access"
+]
+},
+{
+"id": "T1056.003",
+"name": "Web Portal Capture",
+"kind": "technique",
+"tactics": [
+"collection",
+"credential-access"
+]
+},
+{
+"id": "T1056.004",
+"name": "Credential API Hooking",
+"kind": "technique",
+"tactics": [
+"collection",
+"credential-access"
+]
+},
+{
+"id": "T1057",
+"name": "Process Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1059",
+"name": "Command and Scripting Interpreter",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.001",
+"name": "PowerShell",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.002",
+"name": "AppleScript",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.003",
+"name": "Windows Command Shell",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.004",
+"name": "Unix Shell",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.005",
+"name": "Visual Basic",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.006",
+"name": "Python",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.007",
+"name": "JavaScript",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.008",
+"name": "Network Device CLI",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.009",
+"name": "Cloud API",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.010",
+"name": "AutoHotKey & AutoIT",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.011",
+"name": "Lua",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.012",
+"name": "Hypervisor CLI",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1059.013",
+"name": "Container CLI/API",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1068",
+"name": "Exploitation for Privilege Escalation",
+"kind": "technique",
+"tactics": [
+"privilege-escalation"
+]
+},
+{
+"id": "T1069",
+"name": "Permission Groups Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1069.001",
+"name": "Local Groups",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1069.002",
+"name": "Domain Groups",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1069.003",
+"name": "Cloud Groups",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1070",
+"name": "Indicator Removal",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1070.003",
+"name": "Clear Command History",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1070.004",
+"name": "File Deletion",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1070.005",
+"name": "Network Share Connection Removal",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1070.006",
+"name": "Timestomp",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1070.007",
+"name": "Clear Network Connection History and Configurations",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1070.008",
+"name": "Clear Mailbox Data",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1070.009",
+"name": "Clear Persistence",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1070.010",
+"name": "Relocate Malware",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1071",
+"name": "Application Layer Protocol",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1071.001",
+"name": "Web Protocols",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1071.002",
+"name": "File Transfer Protocols",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1071.003",
+"name": "Mail Protocols",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1071.004",
+"name": "DNS",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1071.005",
+"name": "Publish/Subscribe Protocols",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1072",
+"name": "Software Deployment Tools",
+"kind": "technique",
+"tactics": [
+"execution",
+"lateral-movement"
+]
+},
+{
+"id": "T1074",
+"name": "Data Staged",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1074.001",
+"name": "Local Data Staging",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1074.002",
+"name": "Remote Data Staging",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1078",
+"name": "Valid Accounts",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence",
+"privilege-escalation",
+"initial-access"
+]
+},
+{
+"id": "T1078.001",
+"name": "Default Accounts",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence",
+"privilege-escalation",
+"initial-access"
+]
+},
+{
+"id": "T1078.002",
+"name": "Domain Accounts",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence",
+"privilege-escalation",
+"initial-access"
+]
+},
+{
+"id": "T1078.003",
+"name": "Local Accounts",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence",
+"privilege-escalation",
+"initial-access"
+]
+},
+{
+"id": "T1078.004",
+"name": "Cloud Accounts",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence",
+"privilege-escalation",
+"initial-access"
+]
+},
+{
+"id": "T1080",
+"name": "Taint Shared Content",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1082",
+"name": "System Information Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1083",
+"name": "File and Directory Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1087",
+"name": "Account Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1087.001",
+"name": "Local Account",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1087.002",
+"name": "Domain Account",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1087.003",
+"name": "Email Account",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1087.004",
+"name": "Cloud Account",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1090",
+"name": "Proxy",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1090.001",
+"name": "Internal Proxy",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1090.002",
+"name": "External Proxy",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1090.003",
+"name": "Multi-hop Proxy",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1090.004",
+"name": "Domain Fronting",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1091",
+"name": "Replication Through Removable Media",
+"kind": "technique",
+"tactics": [
+"lateral-movement",
+"initial-access"
+]
+},
+{
+"id": "T1092",
+"name": "Communication Through Removable Media",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1095",
+"name": "Non-Application Layer Protocol",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1098",
+"name": "Account Manipulation",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1098.001",
+"name": "Additional Cloud Credentials",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1098.002",
+"name": "Additional Email Delegate Permissions",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1098.003",
+"name": "Additional Cloud Roles",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1098.004",
+"name": "SSH Authorized Keys",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1098.005",
+"name": "Device Registration",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1098.006",
+"name": "Additional Container Cluster Roles",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1098.007",
+"name": "Additional Local or Domain Groups",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1102",
+"name": "Web Service",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1102.001",
+"name": "Dead Drop Resolver",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1102.002",
+"name": "Bidirectional Communication",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1102.003",
+"name": "One-Way Communication",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1104",
+"name": "Multi-Stage Channels",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1105",
+"name": "Ingress Tool Transfer",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1106",
+"name": "Native API",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1110",
+"name": "Brute Force",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1110.001",
+"name": "Password Guessing",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1110.002",
+"name": "Password Cracking",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1110.003",
+"name": "Password Spraying",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1110.004",
+"name": "Credential Stuffing",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1111",
+"name": "Multi-Factor Authentication Interception",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1112",
+"name": "Modify Registry",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence"
+]
+},
+{
+"id": "T1113",
+"name": "Screen Capture",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1114",
+"name": "Email Collection",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1114.001",
+"name": "Local Email Collection",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1114.002",
+"name": "Remote Email Collection",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1114.003",
+"name": "Email Forwarding Rule",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1115",
+"name": "Clipboard Data",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1119",
+"name": "Automated Collection",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1120",
+"name": "Peripheral Device Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1123",
+"name": "Audio Capture",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1124",
+"name": "System Time Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1125",
+"name": "Video Capture",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1127",
+"name": "Trusted Developer Utilities Proxy Execution",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1127.001",
+"name": "MSBuild",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1127.002",
+"name": "ClickOnce",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1127.003",
+"name": "JamPlus",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1129",
+"name": "Shared Modules",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1132",
+"name": "Data Encoding",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1132.001",
+"name": "Standard Encoding",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1132.002",
+"name": "Non-Standard Encoding",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1133",
+"name": "External Remote Services",
+"kind": "technique",
+"tactics": [
+"persistence",
+"initial-access"
+]
+},
+{
+"id": "T1134",
+"name": "Access Token Manipulation",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1134.001",
+"name": "Token Impersonation/Theft",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1134.002",
+"name": "Create Process with Token",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1134.003",
+"name": "Make and Impersonate Token",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1134.004",
+"name": "Parent PID Spoofing",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1134.005",
+"name": "SID-History Injection",
+"kind": "technique",
+"tactics": [
+"stealth",
+"privilege-escalation"
+]
+},
+{
+"id": "T1135",
+"name": "Network Share Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1136",
+"name": "Create Account",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1136.001",
+"name": "Local Account",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1136.002",
+"name": "Domain Account",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1136.003",
+"name": "Cloud Account",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1137",
+"name": "Office Application Startup",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1137.001",
+"name": "Office Template Macros",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1137.002",
+"name": "Office Test",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1137.003",
+"name": "Outlook Forms",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1137.004",
+"name": "Outlook Home Page",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1137.005",
+"name": "Outlook Rules",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1137.006",
+"name": "Add-ins",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1140",
+"name": "Deobfuscate/Decode Files or Information",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1176",
+"name": "Software Extensions",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1176.001",
+"name": "Browser Extensions",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1176.002",
+"name": "IDE Extensions",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1185",
+"name": "Browser Session Hijacking",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1187",
+"name": "Forced Authentication",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1189",
+"name": "Drive-by Compromise",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1190",
+"name": "Exploit Public-Facing Application",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1195",
+"name": "Supply Chain Compromise",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1195.001",
+"name": "Compromise Software Dependencies and Development Tools",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1195.002",
+"name": "Compromise Software Supply Chain",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1195.003",
+"name": "Compromise Hardware Supply Chain",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1197",
+"name": "BITS Jobs",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence",
+"execution"
+]
+},
+{
+"id": "T1199",
+"name": "Trusted Relationship",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1200",
+"name": "Hardware Additions",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1201",
+"name": "Password Policy Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1202",
+"name": "Indirect Command Execution",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1203",
+"name": "Exploitation for Client Execution",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1204",
+"name": "User Execution",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1204.001",
+"name": "Malicious Link",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1204.002",
+"name": "Malicious File",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1204.003",
+"name": "Malicious Image",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1204.004",
+"name": "Malicious Copy and Paste",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1204.005",
+"name": "Malicious Library",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1205",
+"name": "Traffic Signaling",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence",
+"command-and-control"
+]
+},
+{
+"id": "T1205.001",
+"name": "Port Knocking",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence",
+"command-and-control"
+]
+},
+{
+"id": "T1205.002",
+"name": "Socket Filters",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence",
+"command-and-control"
+]
+},
+{
+"id": "T1207",
+"name": "Rogue Domain Controller",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1210",
+"name": "Exploitation of Remote Services",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1211",
+"name": "Exploitation for Stealth",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1212",
+"name": "Exploitation for Credential Access",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1213",
+"name": "Data from Information Repositories",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1213.001",
+"name": "Confluence",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1213.002",
+"name": "Sharepoint",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1213.003",
+"name": "Code Repositories",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1213.004",
+"name": "Customer Relationship Management Software",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1213.005",
+"name": "Messaging Applications",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1213.006",
+"name": "Databases",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1216",
+"name": "System Script Proxy Execution",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1216.001",
+"name": "PubPrn",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1216.002",
+"name": "SyncAppvPublishingServer",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1217",
+"name": "Browser Information Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1218",
+"name": "System Binary Proxy Execution",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.001",
+"name": "Compiled HTML File",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.002",
+"name": "Control Panel",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.003",
+"name": "CMSTP",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.004",
+"name": "InstallUtil",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.005",
+"name": "Mshta",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.007",
+"name": "Msiexec",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.008",
+"name": "Odbcconf",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.009",
+"name": "Regsvcs/Regasm",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.010",
+"name": "Regsvr32",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.011",
+"name": "Rundll32",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.012",
+"name": "Verclsid",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.013",
+"name": "Mavinject",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.014",
+"name": "MMC",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1218.015",
+"name": "Electron Applications",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1219",
+"name": "Remote Access Tools",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1219.001",
+"name": "IDE Tunneling",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1219.002",
+"name": "Remote Desktop Software",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1219.003",
+"name": "Remote Access Hardware",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1220",
+"name": "XSL Script Processing",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1221",
+"name": "Template Injection",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1222",
+"name": "File and Directory Permissions Modification",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1222.001",
+"name": "Windows Permissions",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1222.002",
+"name": "Linux and Mac Permissions",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1480",
+"name": "Execution Guardrails",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1480.001",
+"name": "Environmental Keying",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1480.002",
+"name": "Mutual Exclusion",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1482",
+"name": "Domain Trust Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1484",
+"name": "Domain or Tenant Policy Modification",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"privilege-escalation"
+]
+},
+{
+"id": "T1484.001",
+"name": "Group Policy Modification",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"privilege-escalation"
+]
+},
+{
+"id": "T1484.002",
+"name": "Trust Modification",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"privilege-escalation"
+]
+},
+{
+"id": "T1485",
+"name": "Data Destruction",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1485.001",
+"name": "Lifecycle-Triggered Deletion",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1486",
+"name": "Data Encrypted for Impact",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1489",
+"name": "Service Stop",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1490",
+"name": "Inhibit System Recovery",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1491",
+"name": "Defacement",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1491.001",
+"name": "Internal Defacement",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1491.002",
+"name": "External Defacement",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1495",
+"name": "Firmware Corruption",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1496",
+"name": "Resource Hijacking",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1496.001",
+"name": "Compute Hijacking",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1496.002",
+"name": "Bandwidth Hijacking",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1496.003",
+"name": "SMS Pumping",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1496.004",
+"name": "Cloud Service Hijacking",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1497",
+"name": "Virtualization/Sandbox Evasion",
+"kind": "technique",
+"tactics": [
+"stealth",
+"discovery"
+]
+},
+{
+"id": "T1497.001",
+"name": "System Checks",
+"kind": "technique",
+"tactics": [
+"stealth",
+"discovery"
+]
+},
+{
+"id": "T1497.002",
+"name": "User Activity Based Checks",
+"kind": "technique",
+"tactics": [
+"stealth",
+"discovery"
+]
+},
+{
+"id": "T1497.003",
+"name": "Time Based Checks",
+"kind": "technique",
+"tactics": [
+"stealth",
+"discovery"
+]
+},
+{
+"id": "T1498",
+"name": "Network Denial of Service",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1498.001",
+"name": "Direct Network Flood",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1498.002",
+"name": "Reflection Amplification",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1499",
+"name": "Endpoint Denial of Service",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1499.001",
+"name": "OS Exhaustion Flood",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1499.002",
+"name": "Service Exhaustion Flood",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1499.003",
+"name": "Application Exhaustion Flood",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1499.004",
+"name": "Application or System Exploitation",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1505",
+"name": "Server Software Component",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1505.001",
+"name": "SQL Stored Procedures",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1505.002",
+"name": "Transport Agent",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1505.003",
+"name": "Web Shell",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1505.004",
+"name": "IIS Components",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1505.005",
+"name": "Terminal Services DLL",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1505.006",
+"name": "vSphere Installation Bundles",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1518",
+"name": "Software Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1518.001",
+"name": "Security Software Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1518.002",
+"name": "Backup Software Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1525",
+"name": "Implant Internal Image",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1526",
+"name": "Cloud Service Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1528",
+"name": "Steal Application Access Token",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1529",
+"name": "System Shutdown/Reboot",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1530",
+"name": "Data from Cloud Storage",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1531",
+"name": "Account Access Removal",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1534",
+"name": "Internal Spearphishing",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1535",
+"name": "Unused/Unsupported Cloud Regions",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1537",
+"name": "Transfer Data to Cloud Account",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1538",
+"name": "Cloud Service Dashboard",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1539",
+"name": "Steal Web Session Cookie",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1542",
+"name": "Pre-OS Boot",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence"
+]
+},
+{
+"id": "T1542.001",
+"name": "System Firmware",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence"
+]
+},
+{
+"id": "T1542.002",
+"name": "Component Firmware",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence"
+]
+},
+{
+"id": "T1542.003",
+"name": "Bootkit",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence"
+]
+},
+{
+"id": "T1542.004",
+"name": "ROMMONkit",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence"
+]
+},
+{
+"id": "T1542.005",
+"name": "TFTP Boot",
+"kind": "technique",
+"tactics": [
+"stealth",
+"persistence"
+]
+},
+{
+"id": "T1543",
+"name": "Create or Modify System Process",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1543.001",
+"name": "Launch Agent",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1543.002",
+"name": "Systemd Service",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1543.003",
+"name": "Windows Service",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1543.004",
+"name": "Launch Daemon",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1543.005",
+"name": "Container Service",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1546",
+"name": "Event Triggered Execution",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.001",
+"name": "Change Default File Association",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.002",
+"name": "Screensaver",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.003",
+"name": "Windows Management Instrumentation Event Subscription",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.004",
+"name": "Unix Shell Configuration Modification",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.005",
+"name": "Trap",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.006",
+"name": "LC_LOAD_DYLIB Addition",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.007",
+"name": "Netsh Helper DLL",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.008",
+"name": "Accessibility Features",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.009",
+"name": "AppCert DLLs",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.010",
+"name": "AppInit DLLs",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.011",
+"name": "Application Shimming",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.012",
+"name": "Image File Execution Options Injection",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.013",
+"name": "PowerShell Profile",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.014",
+"name": "Emond",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.015",
+"name": "Component Object Model Hijacking",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.016",
+"name": "Installer Packages",
+"kind": "technique",
+"tactics": [
+"privilege-escalation",
+"persistence"
+]
+},
+{
+"id": "T1546.017",
+"name": "Udev Rules",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1546.018",
+"name": "Python Startup Hooks",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547",
+"name": "Boot or Logon Autostart Execution",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.001",
+"name": "Registry Run Keys / Startup Folder",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.002",
+"name": "Authentication Package",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.003",
+"name": "Time Providers",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.004",
+"name": "Winlogon Helper DLL",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.005",
+"name": "Security Support Provider",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.006",
+"name": "Kernel Modules and Extensions",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.007",
+"name": "Re-opened Applications",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.008",
+"name": "LSASS Driver",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.009",
+"name": "Shortcut Modification",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.010",
+"name": "Port Monitors",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.012",
+"name": "Print Processors",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.013",
+"name": "XDG Autostart Entries",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.014",
+"name": "Active Setup",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1547.015",
+"name": "Login Items",
+"kind": "technique",
+"tactics": [
+"persistence",
+"privilege-escalation"
+]
+},
+{
+"id": "T1548",
+"name": "Abuse Elevation Control Mechanism",
+"kind": "technique",
+"tactics": [
+"privilege-escalation"
+]
+},
+{
+"id": "T1548.001",
+"name": "Setuid and Setgid",
+"kind": "technique",
+"tactics": [
+"privilege-escalation"
+]
+},
+{
+"id": "T1548.002",
+"name": "Bypass User Account Control",
+"kind": "technique",
+"tactics": [
+"privilege-escalation"
+]
+},
+{
+"id": "T1548.003",
+"name": "Sudo and Sudo Caching",
+"kind": "technique",
+"tactics": [
+"privilege-escalation"
+]
+},
+{
+"id": "T1548.004",
+"name": "Elevated Execution with Prompt",
+"kind": "technique",
+"tactics": [
+"privilege-escalation"
+]
+},
+{
+"id": "T1548.005",
+"name": "Temporary Elevated Cloud Access",
+"kind": "technique",
+"tactics": [
+"privilege-escalation"
+]
+},
+{
+"id": "T1548.006",
+"name": "TCC Manipulation",
+"kind": "technique",
+"tactics": [
+"privilege-escalation"
+]
+},
+{
+"id": "T1550",
+"name": "Use Alternate Authentication Material",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1550.001",
+"name": "Application Access Token",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1550.002",
+"name": "Pass the Hash",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1550.003",
+"name": "Pass the Ticket",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1550.004",
+"name": "Web Session Cookie",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1552",
+"name": "Unsecured Credentials",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1552.001",
+"name": "Credentials In Files",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1552.002",
+"name": "Credentials in Registry",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1552.003",
+"name": "Shell History",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1552.004",
+"name": "Private Keys",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1552.005",
+"name": "Cloud Instance Metadata API",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1552.006",
+"name": "Group Policy Preferences",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1552.007",
+"name": "Container API",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1552.008",
+"name": "Chat Messages",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1553",
+"name": "Subvert Trust Controls",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1553.001",
+"name": "Gatekeeper Bypass",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1553.002",
+"name": "Code Signing",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1553.003",
+"name": "SIP and Trust Provider Hijacking",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1553.004",
+"name": "Install Root Certificate",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1553.005",
+"name": "Mark-of-the-Web Bypass",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1553.006",
+"name": "Code Signing Policy Modification",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1554",
+"name": "Compromise Host Software Binary",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1555",
+"name": "Credentials from Password Stores",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1555.001",
+"name": "Keychain",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1555.002",
+"name": "Securityd Memory",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1555.003",
+"name": "Credentials from Web Browsers",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1555.004",
+"name": "Windows Credential Manager",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1555.005",
+"name": "Password Managers",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1555.006",
+"name": "Cloud Secrets Management Stores",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1556",
+"name": "Modify Authentication Process",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1556.001",
+"name": "Domain Controller Authentication",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1556.002",
+"name": "Password Filter DLL",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1556.003",
+"name": "Pluggable Authentication Modules",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1556.004",
+"name": "Network Device Authentication",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1556.005",
+"name": "Reversible Encryption",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1556.006",
+"name": "Multi-Factor Authentication",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1556.007",
+"name": "Hybrid Identity",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1556.008",
+"name": "Network Provider DLL",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1556.009",
+"name": "Conditional Access Policies",
+"kind": "technique",
+"tactics": [
+"defense-impairment",
+"persistence",
+"credential-access"
+]
+},
+{
+"id": "T1557",
+"name": "Adversary-in-the-Middle",
+"kind": "technique",
+"tactics": [
+"credential-access",
+"collection"
+]
+},
+{
+"id": "T1557.001",
+"name": "Name Resolution Poisoning and SMB Relay",
+"kind": "technique",
+"tactics": [
+"credential-access",
+"collection"
+]
+},
+{
+"id": "T1557.002",
+"name": "ARP Cache Poisoning",
+"kind": "technique",
+"tactics": [
+"credential-access",
+"collection"
+]
+},
+{
+"id": "T1557.003",
+"name": "DHCP Spoofing",
+"kind": "technique",
+"tactics": [
+"credential-access",
+"collection"
+]
+},
+{
+"id": "T1557.004",
+"name": "Evil Twin",
+"kind": "technique",
+"tactics": [
+"credential-access",
+"collection"
+]
+},
+{
+"id": "T1558",
+"name": "Steal or Forge Kerberos Tickets",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1558.001",
+"name": "Golden Ticket",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1558.002",
+"name": "Silver Ticket",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1558.003",
+"name": "Kerberoasting",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1558.004",
+"name": "AS-REP Roasting",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1558.005",
+"name": "Ccache Files",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1559",
+"name": "Inter-Process Communication",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1559.001",
+"name": "Component Object Model",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1559.002",
+"name": "Dynamic Data Exchange",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1559.003",
+"name": "XPC Services",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1560",
+"name": "Archive Collected Data",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1560.001",
+"name": "Archive via Utility",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1560.002",
+"name": "Archive via Library",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1560.003",
+"name": "Archive via Custom Method",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1561",
+"name": "Disk Wipe",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1561.001",
+"name": "Disk Content Wipe",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1561.002",
+"name": "Disk Structure Wipe",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1563",
+"name": "Remote Service Session Hijacking",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1563.001",
+"name": "SSH Hijacking",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1563.002",
+"name": "RDP Hijacking",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1564",
+"name": "Hide Artifacts",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.001",
+"name": "Hidden Files and Directories",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.002",
+"name": "Hidden Users",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.003",
+"name": "Hidden Window",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.004",
+"name": "NTFS File Attributes",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.005",
+"name": "Hidden File System",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.006",
+"name": "Run Virtual Instance",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.007",
+"name": "VBA Stomping",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.008",
+"name": "Email Hiding Rules",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.009",
+"name": "Resource Forking",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.010",
+"name": "Process Argument Spoofing",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.011",
+"name": "Ignore Process Interrupts",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.012",
+"name": "File/Path Exclusions",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.013",
+"name": "Bind Mounts",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1564.014",
+"name": "Extended Attributes",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1565",
+"name": "Data Manipulation",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1565.001",
+"name": "Stored Data Manipulation",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1565.002",
+"name": "Transmitted Data Manipulation",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1565.003",
+"name": "Runtime Data Manipulation",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1566",
+"name": "Phishing",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1566.001",
+"name": "Spearphishing Attachment",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1566.002",
+"name": "Spearphishing Link",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1566.003",
+"name": "Spearphishing via Service",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1566.004",
+"name": "Spearphishing Voice",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1567",
+"name": "Exfiltration Over Web Service",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1567.001",
+"name": "Exfiltration to Code Repository",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1567.002",
+"name": "Exfiltration to Cloud Storage",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1567.003",
+"name": "Exfiltration to Text Storage Sites",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1567.004",
+"name": "Exfiltration Over Webhook",
+"kind": "technique",
+"tactics": [
+"exfiltration"
+]
+},
+{
+"id": "T1568",
+"name": "Dynamic Resolution",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1568.001",
+"name": "Fast Flux DNS",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1568.002",
+"name": "Domain Generation Algorithms",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1568.003",
+"name": "DNS Calculation",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1569",
+"name": "System Services",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1569.001",
+"name": "Launchctl",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1569.002",
+"name": "Service Execution",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1569.003",
+"name": "Systemctl",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1570",
+"name": "Lateral Tool Transfer",
+"kind": "technique",
+"tactics": [
+"lateral-movement"
+]
+},
+{
+"id": "T1571",
+"name": "Non-Standard Port",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1572",
+"name": "Protocol Tunneling",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1573",
+"name": "Encrypted Channel",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1573.001",
+"name": "Symmetric Cryptography",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1573.002",
+"name": "Asymmetric Cryptography",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1574",
+"name": "Hijack Execution Flow",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.001",
+"name": "DLL",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.004",
+"name": "Dylib Hijacking",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.005",
+"name": "Executable Installer File Permissions Weakness",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.006",
+"name": "Dynamic Linker Hijacking",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.007",
+"name": "Path Interception by PATH Environment Variable",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.008",
+"name": "Path Interception by Search Order Hijacking",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.009",
+"name": "Path Interception by Unquoted Path",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.010",
+"name": "Services File Permissions Weakness",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.011",
+"name": "Services Registry Permissions Weakness",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.012",
+"name": "COR_PROFILER",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.013",
+"name": "KernelCallbackTable",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1574.014",
+"name": "AppDomainManager",
+"kind": "technique",
+"tactics": [
+"stealth",
+"execution"
+]
+},
+{
+"id": "T1578",
+"name": "Modify Cloud Compute Infrastructure",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1578.001",
+"name": "Create Snapshot",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1578.002",
+"name": "Create Cloud Instance",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1578.003",
+"name": "Delete Cloud Instance",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1578.004",
+"name": "Revert Cloud Instance",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1578.005",
+"name": "Modify Cloud Compute Configurations",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1580",
+"name": "Cloud Infrastructure Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1583",
+"name": "Acquire Infrastructure",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1583.001",
+"name": "Domains",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1583.002",
+"name": "DNS Server",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1583.003",
+"name": "Virtual Private Server",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1583.004",
+"name": "Server",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1583.005",
+"name": "Botnet",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1583.006",
+"name": "Web Services",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1583.007",
+"name": "Serverless",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1583.008",
+"name": "Malvertising",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1584",
+"name": "Compromise Infrastructure",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1584.001",
+"name": "Domains",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1584.002",
+"name": "DNS Server",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1584.003",
+"name": "Virtual Private Server",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1584.004",
+"name": "Server",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1584.005",
+"name": "Botnet",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1584.006",
+"name": "Web Services",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1584.007",
+"name": "Serverless",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1584.008",
+"name": "Network Devices",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1585",
+"name": "Establish Accounts",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1585.001",
+"name": "Social Media Accounts",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1585.002",
+"name": "Email Accounts",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1585.003",
+"name": "Cloud Accounts",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1586",
+"name": "Compromise Accounts",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1586.001",
+"name": "Social Media Accounts",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1586.002",
+"name": "Email Accounts",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1586.003",
+"name": "Cloud Accounts",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1587",
+"name": "Develop Capabilities",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1587.001",
+"name": "Malware",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1587.002",
+"name": "Code Signing Certificates",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1587.003",
+"name": "Digital Certificates",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1587.004",
+"name": "Exploits",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1588",
+"name": "Obtain Capabilities",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1588.001",
+"name": "Malware",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1588.002",
+"name": "Tool",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1588.003",
+"name": "Code Signing Certificates",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1588.004",
+"name": "Digital Certificates",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1588.005",
+"name": "Exploits",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1588.006",
+"name": "Vulnerabilities",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1588.007",
+"name": "Artificial Intelligence",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1589",
+"name": "Gather Victim Identity Information",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1589.001",
+"name": "Credentials",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1589.002",
+"name": "Email Addresses",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1589.003",
+"name": "Employee Names",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1590",
+"name": "Gather Victim Network Information",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1590.001",
+"name": "Domain Properties",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1590.002",
+"name": "DNS",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1590.003",
+"name": "Network Trust Dependencies",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1590.004",
+"name": "Network Topology",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1590.005",
+"name": "IP Addresses",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1590.006",
+"name": "Network Security Appliances",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1591",
+"name": "Gather Victim Org Information",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1591.001",
+"name": "Determine Physical Locations",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1591.002",
+"name": "Business Relationships",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1591.003",
+"name": "Identify Business Tempo",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1591.004",
+"name": "Identify Roles",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1592",
+"name": "Gather Victim Host Information",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1592.001",
+"name": "Hardware",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1592.002",
+"name": "Software",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1592.003",
+"name": "Firmware",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1592.004",
+"name": "Client Configurations",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1593",
+"name": "Search Open Websites/Domains",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1593.001",
+"name": "Social Media",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1593.002",
+"name": "Search Engines",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1593.003",
+"name": "Code Repositories",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1594",
+"name": "Search Victim-Owned Websites",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1595",
+"name": "Active Scanning",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1595.001",
+"name": "Scanning IP Blocks",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1595.002",
+"name": "Vulnerability Scanning",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1595.003",
+"name": "Wordlist Scanning",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1596",
+"name": "Search Open Technical Databases",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1596.001",
+"name": "DNS/Passive DNS",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1596.002",
+"name": "WHOIS",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1596.003",
+"name": "Digital Certificates",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1596.004",
+"name": "CDNs",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1596.005",
+"name": "Scan Databases",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1597",
+"name": "Search Closed Sources",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1597.001",
+"name": "Threat Intel Vendors",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1597.002",
+"name": "Purchase Technical Data",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1598",
+"name": "Phishing for Information",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1598.001",
+"name": "Spearphishing Service",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1598.002",
+"name": "Spearphishing Attachment",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1598.003",
+"name": "Spearphishing Link",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1598.004",
+"name": "Spearphishing Voice",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1599",
+"name": "Network Boundary Bridging",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1599.001",
+"name": "Network Address Translation Traversal",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1600",
+"name": "Weaken Encryption",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1600.001",
+"name": "Reduce Key Space",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1600.002",
+"name": "Disable Crypto Hardware",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1601",
+"name": "Modify System Image",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1601.001",
+"name": "Patch System Image",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1601.002",
+"name": "Downgrade System Image",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1602",
+"name": "Data from Configuration Repository",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1602.001",
+"name": "SNMP (MIB Dump)",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1602.002",
+"name": "Network Device Configuration Dump",
+"kind": "technique",
+"tactics": [
+"collection"
+]
+},
+{
+"id": "T1606",
+"name": "Forge Web Credentials",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1606.001",
+"name": "Web Cookies",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1606.002",
+"name": "SAML Tokens",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1608",
+"name": "Stage Capabilities",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1608.001",
+"name": "Upload Malware",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1608.002",
+"name": "Upload Tool",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1608.003",
+"name": "Install Digital Certificate",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1608.004",
+"name": "Drive-by Target",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1608.005",
+"name": "Link Target",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1608.006",
+"name": "SEO Poisoning",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1609",
+"name": "Container Administration Command",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1610",
+"name": "Deploy Container",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1611",
+"name": "Escape to Host",
+"kind": "technique",
+"tactics": [
+"privilege-escalation"
+]
+},
+{
+"id": "T1612",
+"name": "Build Image on Host",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1613",
+"name": "Container and Resource Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1614",
+"name": "System Location Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1614.001",
+"name": "System Language Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1615",
+"name": "Group Policy Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1619",
+"name": "Cloud Storage Object Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1620",
+"name": "Reflective Code Loading",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1621",
+"name": "Multi-Factor Authentication Request Generation",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1622",
+"name": "Debugger Evasion",
+"kind": "technique",
+"tactics": [
+"stealth",
+"discovery"
+]
+},
+{
+"id": "T1647",
+"name": "Plist File Modification",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1648",
+"name": "Serverless Execution",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1649",
+"name": "Steal or Forge Authentication Certificates",
+"kind": "technique",
+"tactics": [
+"credential-access"
+]
+},
+{
+"id": "T1650",
+"name": "Acquire Access",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1651",
+"name": "Cloud Administration Command",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1652",
+"name": "Device Driver Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1653",
+"name": "Power Settings",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1654",
+"name": "Log Enumeration",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1657",
+"name": "Financial Theft",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1659",
+"name": "Content Injection",
+"kind": "technique",
+"tactics": [
+"initial-access",
+"command-and-control"
+]
+},
+{
+"id": "T1665",
+"name": "Hide Infrastructure",
+"kind": "technique",
+"tactics": [
+"command-and-control"
+]
+},
+{
+"id": "T1666",
+"name": "Modify Cloud Resource Hierarchy",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1667",
+"name": "Email Bombing",
+"kind": "technique",
+"tactics": [
+"impact"
+]
+},
+{
+"id": "T1668",
+"name": "Exclusive Control",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1669",
+"name": "Wi-Fi Networks",
+"kind": "technique",
+"tactics": [
+"initial-access"
+]
+},
+{
+"id": "T1671",
+"name": "Cloud Application Integration",
+"kind": "technique",
+"tactics": [
+"persistence"
+]
+},
+{
+"id": "T1673",
+"name": "Virtual Machine Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1674",
+"name": "Input Injection",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1675",
+"name": "ESXi Administration Command",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1677",
+"name": "Poisoned Pipeline Execution",
+"kind": "technique",
+"tactics": [
+"execution"
+]
+},
+{
+"id": "T1678",
+"name": "Delay Execution",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1679",
+"name": "Selective Exclusion",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1680",
+"name": "Local Storage Discovery",
+"kind": "technique",
+"tactics": [
+"discovery"
+]
+},
+{
+"id": "T1681",
+"name": "Search Threat Vendor Data",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1682",
+"name": "Query Public AI Services",
+"kind": "technique",
+"tactics": [
+"reconnaissance"
+]
+},
+{
+"id": "T1683",
+"name": "Generate Content",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1683.001",
+"name": "Written Content",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1683.002",
+"name": "Audio-Visual Content",
+"kind": "technique",
+"tactics": [
+"resource-development"
+]
+},
+{
+"id": "T1684",
+"name": "Social Engineering",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1684.001",
+"name": "Impersonation",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1684.002",
+"name": "Email Spoofing",
+"kind": "technique",
+"tactics": [
+"stealth"
+]
+},
+{
+"id": "T1685",
+"name": "Disable or Modify Tools",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1685.001",
+"name": "Disable or Modify Windows Event Log",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1685.002",
+"name": "Disable or Modify Cloud Log",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1685.003",
+"name": "Modify or Spoof Tool UI",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1685.004",
+"name": "Disable or Modify Linux Audit System Log",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1685.005",
+"name": "Clear Windows Event Logs",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1685.006",
+"name": "Clear Linux or Mac System Logs",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1686",
+"name": "Disable or Modify System Firewall",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1686.001",
+"name": "Cloud Firewall",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1686.002",
+"name": "Network Device Firewall",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1686.003",
+"name": "Windows Host Firewall",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1687",
+"name": "Exploitation for Defense Impairment",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1688",
+"name": "Safe Mode Boot",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1689",
+"name": "Downgrade Attack",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "T1690",
+"name": "Prevent Command History Logging",
+"kind": "technique",
+"tactics": [
+"defense-impairment"
+]
+},
+{
+"id": "S0002",
+"name": "Mimikatz",
+"kind": "tool"
+},
+{
+"id": "S0005",
+"name": "Windows Credential Editor",
+"kind": "tool",
+"aliases": [
+"WCE"
+]
+},
+{
+"id": "S0006",
+"name": "pwdump",
+"kind": "tool"
+},
+{
+"id": "S0008",
+"name": "gsecdump",
+"kind": "tool"
+},
+{
+"id": "S0029",
+"name": "PsExec",
+"kind": "tool"
+},
+{
+"id": "S0039",
+"name": "Net",
+"kind": "tool",
+"aliases": [
+"net.exe"
+]
+},
+{
+"id": "S0040",
+"name": "HTRAN",
+"kind": "tool",
+"aliases": [
+"HUC Packet Transmit Tool"
+]
+},
+{
+"id": "S0057",
+"name": "Tasklist",
+"kind": "tool"
+},
+{
+"id": "S0075",
+"name": "Reg",
+"kind": "tool",
+"aliases": [
+"reg.exe"
+]
+},
+{
+"id": "S0095",
+"name": "ftp",
+"kind": "tool",
+"aliases": [
+"ftp.exe"
+]
+},
+{
+"id": "S0096",
+"name": "Systeminfo",
+"kind": "tool"
+},
+{
+"id": "S0097",
+"name": "Ping",
+"kind": "tool"
+},
+{
+"id": "S0099",
+"name": "Arp",
+"kind": "tool",
+"aliases": [
+"arp.exe"
+]
+},
+{
+"id": "S0100",
+"name": "ipconfig",
+"kind": "tool"
+},
+{
+"id": "S0101",
+"name": "ifconfig",
+"kind": "tool"
+},
+{
+"id": "S0102",
+"name": "nbtstat",
+"kind": "tool"
+},
+{
+"id": "S0103",
+"name": "route",
+"kind": "tool"
+},
+{
+"id": "S0104",
+"name": "netstat",
+"kind": "tool"
+},
+{
+"id": "S0105",
+"name": "dsquery",
+"kind": "tool",
+"aliases": [
+"dsquery.exe"
+]
+},
+{
+"id": "S0106",
+"name": "cmd",
+"kind": "tool",
+"aliases": [
+"cmd.exe"
+]
+},
+{
+"id": "S0108",
+"name": "netsh",
+"kind": "tool",
+"aliases": [
+"netsh.exe"
+]
+},
+{
+"id": "S0110",
+"name": "at",
+"kind": "tool",
+"aliases": [
+"at.exe"
+]
+},
+{
+"id": "S0111",
+"name": "schtasks",
+"kind": "tool",
+"aliases": [
+"schtasks.exe"
+]
+},
+{
+"id": "S0116",
+"name": "UACMe",
+"kind": "tool"
+},
+{
+"id": "S0119",
+"name": "Cachedump",
+"kind": "tool"
+},
+{
+"id": "S0120",
+"name": "Fgdump",
+"kind": "tool"
+},
+{
+"id": "S0121",
+"name": "Lslsass",
+"kind": "tool"
+},
+{
+"id": "S0122",
+"name": "Pass-The-Hash Toolkit",
+"kind": "tool"
+},
+{
+"id": "S0123",
+"name": "xCmd",
+"kind": "tool"
+},
+{
+"id": "S0160",
+"name": "certutil",
+"kind": "tool",
+"aliases": [
+"certutil.exe"
+]
+},
+{
+"id": "S0174",
+"name": "Responder",
+"kind": "tool"
+},
+{
+"id": "S0175",
+"name": "meek",
+"kind": "tool"
+},
+{
+"id": "S0179",
+"name": "MimiPenguin",
+"kind": "tool"
+},
+{
+"id": "S0183",
+"name": "Tor",
+"kind": "tool"
+},
+{
+"id": "S0190",
+"name": "BITSAdmin",
+"kind": "tool"
+},
+{
+"id": "S0191",
+"name": "Winexe",
+"kind": "tool"
+},
+{
+"id": "S0192",
+"name": "Pupy",
+"kind": "tool"
+},
+{
+"id": "S0193",
+"name": "Forfiles",
+"kind": "tool"
+},
+{
+"id": "S0194",
+"name": "PowerSploit",
+"kind": "tool"
+},
+{
+"id": "S0195",
+"name": "SDelete",
+"kind": "tool"
+},
+{
+"id": "S0224",
+"name": "Havij",
+"kind": "tool"
+},
+{
+"id": "S0225",
+"name": "sqlmap",
+"kind": "tool"
+},
+{
+"id": "S0227",
+"name": "spwebmember",
+"kind": "tool"
+},
+{
+"id": "S0231",
+"name": "Invoke-PSImage",
+"kind": "tool"
+},
+{
+"id": "S0250",
+"name": "Koadic",
+"kind": "tool"
+},
+{
+"id": "S0262",
+"name": "QuasarRAT",
+"kind": "tool",
+"aliases": [
+"xRAT"
+]
+},
+{
+"id": "S0332",
+"name": "Remcos",
+"kind": "tool"
+},
+{
+"id": "S0349",
+"name": "LaZagne",
+"kind": "tool"
+},
+{
+"id": "S0357",
+"name": "Impacket",
+"kind": "tool"
+},
+{
+"id": "S0358",
+"name": "Ruler",
+"kind": "tool"
+},
+{
+"id": "S0359",
+"name": "Nltest",
+"kind": "tool"
+},
+{
+"id": "S0361",
+"name": "Expand",
+"kind": "tool"
+},
+{
+"id": "S0363",
+"name": "Empire",
+"kind": "tool",
+"aliases": [
+"EmPyre",
+"PowerShell Empire"
+]
+},
+{
+"id": "S0364",
+"name": "RawDisk",
+"kind": "tool"
+},
+{
+"id": "S0378",
+"name": "PoshC2",
+"kind": "tool"
+},
+{
+"id": "S0404",
+"name": "esentutl",
+"kind": "tool",
+"aliases": [
+"esentutl.exe"
+]
+},
+{
+"id": "S0413",
+"name": "MailSniper",
+"kind": "tool"
+},
+{
+"id": "S0434",
+"name": "Imminent Monitor",
+"kind": "tool"
+},
+{
+"id": "S0445",
+"name": "ShimRatReporter",
+"kind": "tool"
+},
+{
+"id": "S0465",
+"name": "CARROTBALL",
+"kind": "tool"
+},
+{
+"id": "S0488",
+"name": "CrackMapExec",
+"kind": "tool"
+},
+{
+"id": "S0500",
+"name": "MCMD",
+"kind": "tool"
+},
+{
+"id": "S0508",
+"name": "ngrok",
+"kind": "tool"
+},
+{
+"id": "S0521",
+"name": "BloodHound",
+"kind": "tool"
+},
+{
+"id": "S0527",
+"name": "CSPY Downloader",
+"kind": "tool"
+},
+{
+"id": "S0552",
+"name": "AdFind",
+"kind": "tool"
+},
+{
+"id": "S0581",
+"name": "IronNetInjector",
+"kind": "tool"
+},
+{
+"id": "S0590",
+"name": "NBTscan",
+"kind": "tool"
+},
+{
+"id": "S0591",
+"name": "ConnectWise",
+"kind": "tool",
+"aliases": [
+"ScreenConnect"
+]
+},
+{
+"id": "S0592",
+"name": "RemoteUtilities",
+"kind": "tool"
+},
+{
+"id": "S0594",
+"name": "Out1",
+"kind": "tool"
+},
+{
+"id": "S0633",
+"name": "Sliver",
+"kind": "tool"
+},
+{
+"id": "S0645",
+"name": "Wevtutil",
+"kind": "tool"
+},
+{
+"id": "S0677",
+"name": "AADInternals",
+"kind": "tool"
+},
+{
+"id": "S0683",
+"name": "Peirates",
+"kind": "tool"
+},
+{
+"id": "S0684",
+"name": "ROADTools",
+"kind": "tool"
+},
+{
+"id": "S0692",
+"name": "SILENTTRINITY",
+"kind": "tool"
+},
+{
+"id": "S0695",
+"name": "Donut",
+"kind": "tool"
+},
+{
+"id": "S0699",
+"name": "Mythic",
+"kind": "tool"
+},
+{
+"id": "S1040",
+"name": "Rclone",
+"kind": "tool"
+},
+{
+"id": "S1050",
+"name": "PcShare",
+"kind": "tool"
+},
+{
+"id": "S1063",
+"name": "Brute Ratel C4",
+"kind": "tool",
+"aliases": [
+"BRc4"
+]
+},
+{
+"id": "S1071",
+"name": "Rubeus",
+"kind": "tool"
+},
+{
+"id": "S1087",
+"name": "AsyncRAT",
+"kind": "tool"
+},
+{
+"id": "S1091",
+"name": "Pacu",
+"kind": "tool"
+},
+{
+"id": "S1131",
+"name": "NPPSPY",
+"kind": "tool"
+},
+{
+"id": "S1144",
+"name": "FRP",
+"kind": "tool"
+},
+{
+"id": "S1155",
+"name": "Covenant",
+"kind": "tool"
+},
+{
+"id": "S1176",
+"name": "attrib",
+"kind": "tool",
+"aliases": [
+"attrib.exe"
+]
+},
+{
+"id": "S1205",
+"name": "cipher.exe",
+"kind": "tool"
+},
+{
+"id": "S1209",
+"name": "Quick Assist",
+"kind": "tool"
+},
+{
+"id": "S9002",
+"name": "Diskpart",
+"kind": "tool"
+},
+{
+"id": "S9003",
+"name": "evilginx2",
+"kind": "tool"
+},
+{
+"id": "S9009",
+"name": "TruffleHog",
+"kind": "tool",
+"aliases": [
+"Trufflehog"
+]
+},
+{
+"id": "S9017",
+"name": "DCRAT",
+"kind": "tool"
+}
+],
+"redirects": {
+"G0042": "G0040",
+"G0057": "G0049",
+"G0058": "G0059",
+"G0074": "G0035",
+"G0086": "G0094",
+"G0118": "G0016",
+"S0209": "S0012",
+"S9000": "S0508",
+"T1002": "T1560",
+"T1004": "T1547.004",
+"T1009": "T1027.001",
+"T1013": "T1547.010",
+"T1015": "T1546.008",
+"T1017": "T1072",
+"T1019": "T1542.001",
+"T1022": "T1560",
+"T1023": "T1547.009",
+"T1024": "T1573",
+"T1028": "T1021.006",
+"T1031": "T1543.003",
+"T1032": "T1573",
+"T1035": "T1569.002",
+"T1038": "T1574.001",
+"T1042": "T1546.001",
+"T1044": "T1574.010",
+"T1045": "T1027.002",
+"T1050": "T1543.003",
+"T1053.001": "T1053.002",
+"T1054": "T1685",
+"T1058": "T1574.011",
+"T1060": "T1547.001",
+"T1063": "T1518.001",
+"T1065": "T1571",
+"T1066": "T1027.005",
+"T1067": "T1542.003",
+"T1070.001": "T1685.005",
+"T1070.002": "T1685.006",
+"T1073": "T1574.002",
+"T1075": "T1550.002",
+"T1076": "T1021.001",
+"T1077": "T1021.002",
+"T1079": "T1573",
+"T1081": "T1552.001",
+"T1084": "T1546.003",
+"T1085": "T1218.011",
+"T1086": "T1059.001",
+"T1088": "T1548.002",
+"T1089": "T1685",
+"T1093": "T1055.012",
+"T1094": "T1095",
+"T1096": "T1564.004",
+"T1097": "T1550.003",
+"T1099": "T1070.006",
+"T1100": "T1505.003",
+"T1101": "T1547.005",
+"T1103": "T1546.010",
+"T1107": "T1070.004",
+"T1109": "T1542.002",
+"T1116": "T1553.002",
+"T1117": "T1218.010",
+"T1118": "T1218.004",
+"T1121": "T1218.009",
+"T1122": "T1546.015",
+"T1126": "T1070.005",
+"T1128": "T1546.007",
+"T1130": "T1553.004",
+"T1131": "T1547.002",
+"T1138": "T1546.011",
+"T1139": "T1552.003",
+"T1141": "T1056.002",
+"T1142": "T1555.001",
+"T1143": "T1564.003",
+"T1144": "T1553.001",
+"T1145": "T1552.004",
+"T1146": "T1070.003",
+"T1147": "T1564.002",
+"T1148": "T1690",
+"T1150": "T1547.011",
+"T1151": "T1036.006",
+"T1152": "T1569.001",
+"T1154": "T1546.005",
+"T1155": "T1059.002",
+"T1156": "T1546.004",
+"T1157": "T1574.004",
+"T1158": "T1564.001",
+"T1159": "T1543.001",
+"T1160": "T1543.004",
+"T1161": "T1546.006",
+"T1162": "T1547.011",
+"T1163": "T1037.004",
+"T1164": "T1547.007",
+"T1165": "T1037.005",
+"T1166": "T1548.001",
+"T1167": "T1555.002",
+"T1168": "T1053",
+"T1169": "T1548.003",
+"T1170": "T1218.005",
+"T1171": "T1557.001",
+"T1172": "T1090.004",
+"T1173": "T1559.002",
+"T1174": "T1556.002",
+"T1177": "T1547.008",
+"T1178": "T1134.005",
+"T1179": "T1056.004",
+"T1180": "T1546.002",
+"T1181": "T1055.011",
+"T1182": "T1546.009",
+"T1183": "T1546.012",
+"T1184": "T1563.001",
+"T1186": "T1055.013",
+"T1188": "T1090.003",
+"T1191": "T1218.003",
+"T1192": "T1566.002",
+"T1193": "T1566.001",
+"T1194": "T1566.003",
+"T1196": "T1218.002",
+"T1198": "T1553.003",
+"T1206": "T1548.003",
+"T1208": "T1558.003",
+"T1209": "T1547.003",
+"T1214": "T1552.002",
+"T1215": "T1547.006",
+"T1223": "T1218.001",
+"T1483": "T1568.002",
+"T1487": "T1561.002",
+"T1488": "T1561.001",
+"T1492": "T1565.001",
+"T1493": "T1565.002",
+"T1494": "T1565.003",
+"T1500": "T1027.004",
+"T1501": "T1543.002",
+"T1502": "T1134.004",
+"T1503": "T1555.003",
+"T1504": "T1546.013",
+"T1506": "T1550.004",
+"T1514": "T1548.004",
+"T1519": "T1546.014",
+"T1522": "T1552.005",
+"T1527": "T1550.001",
+"T1536": "T1578.004",
+"T1547.011": "T1647",
+"T1562": "T1685",
+"T1562.001": "T1685",
+"T1562.002": "T1685.001",
+"T1562.003": "T1690",
+"T1562.004": "T1686",
+"T1562.006": "T1685",
+"T1562.007": "T1686.001",
+"T1562.008": "T1685.002",
+"T1562.009": "T1688",
+"T1562.010": "T1689",
+"T1562.011": "T1685.003",
+"T1562.012": "T1685.004",
+"T1562.013": "T1686.002",
+"T1574.002": "T1574.001",
+"T1656": "T1684.001",
+"T1672": "T1684.002"
+}
+}

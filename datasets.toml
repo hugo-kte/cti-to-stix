@@ -1,0 +1,28 @@
+# Public datasets used to build and evaluate Gleaner. Every file is pinned to a commit and
+# listed with its SHA-256 in checksums.sha256 (paths relative to data/raw/).
+# `gleaner download` fetches them from raw.githubusercontent.com and verifies the checksums.
+# The corpora are never committed to this repository.
+
+[sources.tram]
+title = "MITRE CTID TRAM training data (tram2-data)"
+repo = "center-for-threat-informed-defense/tram"
+commit = "f29793d8d665f7f552898696e00065ef24a29a20"
+remote = "data/tram2-data"
+license = "Apache-2.0"
+citation = "MITRE Center for Threat-Informed Defense, Threat Report ATT&CK Mapper (TRAM)."
+
+[sources.attack]
+title = "MITRE ATT&CK Enterprise v19.2 (STIX 2.1 bundle)"
+repo = "mitre-attack/attack-stix-data"
+commit = "6cda5ad8462c79e14fbb872f4e09059b18e0cfc4"
+remote = "enterprise-attack"
+license = "ATT&CK Terms of Use (https://attack.mitre.org/resources/legal-and-branding/terms-of-use/)"
+citation = "The MITRE Corporation, MITRE ATT&CK, Enterprise v19.2."
+
+[sources.annoctr]
+title = "AnnoCTR: cyber threat reports annotated with entities and ATT&CK mentions"
+repo = "boschresearch/anno-ctr-lrec-coling-2024"
+commit = "d510b6949e1938d47c93a43eedd562dc538439dc"
+remote = "AnnoCTR"
+license = "CC-BY-SA-4.0"
+citation = "Lange et al., AnnoCTR: A Dataset for Detecting and Linking Entities, Tactics, and Techniques in Cyber Threat Reports, LREC-COLING 2024."

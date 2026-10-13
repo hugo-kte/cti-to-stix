@@ -1,0 +1,184 @@
+{
+  "ner": {
+    "grid": [
+      {
+        "variant": "crf",
+        "c1": 0.05,
+        "c2": 0.01,
+        "dev_micro_f1_all": 0.5881032547699214,
+        "dev_micro_f1_cti": 0.5771812080536912
+      },
+      {
+        "variant": "crf",
+        "c1": 0.05,
+        "c2": 0.1,
+        "dev_micro_f1_all": 0.5987701767870869,
+        "dev_micro_f1_cti": 0.5894263217097863
+      },
+      {
+        "variant": "crf",
+        "c1": 0.2,
+        "c2": 0.01,
+        "dev_micro_f1_all": 0.5786726323639075,
+        "dev_micro_f1_cti": 0.5755879059350505
+      },
+      {
+        "variant": "crf",
+        "c1": 0.2,
+        "c2": 0.1,
+        "dev_micro_f1_all": 0.5844302369311771,
+        "dev_micro_f1_cti": 0.560344827586207
+      },
+      {
+        "variant": "crf+gazetteer",
+        "c1": 0.05,
+        "c2": 0.01,
+        "dev_micro_f1_all": 0.5780389276533235,
+        "dev_micro_f1_cti": 0.5895196506550219
+      },
+      {
+        "variant": "crf+gazetteer",
+        "c1": 0.05,
+        "c2": 0.1,
+        "dev_micro_f1_all": 0.595535376466137,
+        "dev_micro_f1_cti": 0.6119733924611972
+      },
+      {
+        "variant": "crf+gazetteer",
+        "c1": 0.2,
+        "c2": 0.01,
+        "dev_micro_f1_all": 0.5860914838229825,
+        "dev_micro_f1_cti": 0.6010928961748634
+      },
+      {
+        "variant": "crf+gazetteer",
+        "c1": 0.2,
+        "c2": 0.1,
+        "dev_micro_f1_all": 0.5943325876211782,
+        "dev_micro_f1_cti": 0.6215921483097055
+      }
+    ],
+    "best": {
+      "crf": {
+        "variant": "crf",
+        "c1": 0.05,
+        "c2": 0.1,
+        "dev_micro_f1_all": 0.5987701767870869,
+        "dev_micro_f1_cti": 0.5894263217097863
+      },
+      "crf+gazetteer": {
+        "variant": "crf+gazetteer",
+        "c1": 0.05,
+        "c2": 0.1,
+        "dev_micro_f1_all": 0.595535376466137,
+        "dev_micro_f1_cti": 0.6119733924611972
+      }
+    },
+    "selected": "crf+gazetteer",
+    "rules": {
+      "common_words": 5768,
+      "blocklist": 56,
+      "relabel": 7
+    },
+    "train_sentences": 9120
+  },
+  "attack_version": "19.2",
+  "trained_at": "2026-10-13T11:24:16+00:00",
+  "techniques": {
+    "grid": [
+      {
+        "features": "word",
+        "C": 4.0,
+        "class_weight": null,
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.1,
+        "micro_f1": 0.428898332788493,
+        "macro_f1": 0.2435080722910541
+      },
+      {
+        "features": "word",
+        "C": 4.0,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.5,
+        "micro_f1": 0.4876669591498489,
+        "macro_f1": 0.38477483286002573
+      },
+      {
+        "features": "word",
+        "C": 16.0,
+        "class_weight": null,
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.07,
+        "micro_f1": 0.46370510396975423,
+        "macro_f1": 0.33501608493548035
+      },
+      {
+        "features": "word",
+        "C": 16.0,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.4,
+        "micro_f1": 0.4895132568262763,
+        "macro_f1": 0.3881784754828783
+      },
+      {
+        "features": "word+char",
+        "C": 4.0,
+        "class_weight": null,
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.07,
+        "micro_f1": 0.5179908675799088,
+        "macro_f1": 0.4048896306150293
+      },
+      {
+        "features": "word+char",
+        "C": 4.0,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.5,
+        "micro_f1": 0.5433826469412235,
+        "macro_f1": 0.45337946532550716
+      },
+      {
+        "features": "word+char",
+        "C": 16.0,
+        "class_weight": null,
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.07,
+        "micro_f1": 0.5339050658157161,
+        "macro_f1": 0.42238677721608575
+      },
+      {
+        "features": "word+char",
+        "C": 16.0,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.3,
+        "micro_f1": 0.5456101968990773,
+        "macro_f1": 0.46068454207820236
+      }
+    ],
+    "selected": {
+      "features": "word+char",
+      "C": 16.0,
+      "class_weight": "balanced",
+      "min_df": 2,
+      "top_k": 3000,
+      "threshold": 0.3
+    },
+    "labels": 50,
+    "sentences": 19178,
+    "documents": 151,
+    "document_groups": 148,
+    "nonzero_weights": 150000
+  }
+}

@@ -1,0 +1,433 @@
+{
+ "type": "bundle",
+ "id": "bundle--00000000-0000-4000-8000-000000000000",
+ "objects": [
+  {
+   "type": "x-mitre-collection",
+   "id": "x-mitre-collection--00000000-0000-4000-8000-000000000001",
+   "spec_version": "2.1",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Test ATT&CK",
+   "x_mitre_version": "0.1"
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--f81e565b-5187-55fc-a080-494b30caf0e6",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Phishing",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1566",
+     "url": "https://attack.mitre.org/techniques/T1566"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "initial-access"
+    }
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--649f7e59-1010-5ebc-9e09-3c94f402034f",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Spearphishing Attachment",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1566.001",
+     "url": "https://attack.mitre.org/techniques/T1566/001"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "initial-access"
+    }
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--697ef63d-fa88-5176-9226-fd765aa6ac8a",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Command and Scripting Interpreter",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1059",
+     "url": "https://attack.mitre.org/techniques/T1059"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "execution"
+    }
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--973369c0-0395-5551-8013-85d043979add",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "PowerShell",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1059.001",
+     "url": "https://attack.mitre.org/techniques/T1059/001"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "execution"
+    }
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--eb4464ca-4599-5a80-8d98-bc89577369b6",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "OS Credential Dumping",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1003",
+     "url": "https://attack.mitre.org/techniques/T1003"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "credential-access"
+    }
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--6b566e5d-bf8d-5fc0-beeb-fb044e6b44dc",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "LSASS Memory",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1003.001",
+     "url": "https://attack.mitre.org/techniques/T1003/001"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "credential-access"
+    }
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--87b13758-1571-5758-b05d-ce3ddd7d280e",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Hijack Execution Flow",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1574",
+     "url": "https://attack.mitre.org/techniques/T1574"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "persistence"
+    },
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "stealth"
+    }
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--33d9f6f9-186e-59fd-bd78-7c257cb743e2",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "DLL",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1574.001",
+     "url": "https://attack.mitre.org/techniques/T1574/001"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "persistence"
+    },
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "stealth"
+    }
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--65380f10-4f25-5972-8c04-008c82726f09",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "DLL Side-Loading",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1574.002",
+     "url": "https://attack.mitre.org/techniques/T1574/002"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "persistence"
+    }
+   ],
+   "revoked": true
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--d6997b0a-1981-5b05-8e3e-1df1d00575d4",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Ingress Tool Transfer",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1105",
+     "url": "https://attack.mitre.org/techniques/T1105"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "command-and-control"
+    }
+   ]
+  },
+  {
+   "type": "attack-pattern",
+   "spec_version": "2.1",
+   "id": "attack-pattern--905b3751-aa63-5847-8137-a4b34c53b687",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "PowerShell (old)",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "T1086",
+     "url": "https://attack.mitre.org/techniques/T1086"
+    }
+   ],
+   "kill_chain_phases": [
+    {
+     "kill_chain_name": "mitre-attack",
+     "phase_name": "execution"
+    }
+   ],
+   "x_mitre_deprecated": true
+  },
+  {
+   "type": "x-mitre-tactic",
+   "id": "x-mitre-tactic--00000000-0000-4000-8000-000000000002",
+   "spec_version": "2.1",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Initial Access",
+   "x_mitre_shortname": "initial-access",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "TA0001"
+    }
+   ]
+  },
+  {
+   "type": "x-mitre-tactic",
+   "id": "x-mitre-tactic--00000000-0000-4000-8000-000000000003",
+   "spec_version": "2.1",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Stealth",
+   "x_mitre_shortname": "stealth",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "TA0005"
+    }
+   ]
+  },
+  {
+   "type": "intrusion-set",
+   "spec_version": "2.1",
+   "id": "intrusion-set--77d52449-f357-5b7e-a5b5-0f77d1a1671f",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Glass Heron",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "G9001"
+    }
+   ],
+   "aliases": [
+    "Glass Heron",
+    "GLASS HERON",
+    "Example Spider"
+   ]
+  },
+  {
+   "type": "intrusion-set",
+   "spec_version": "2.1",
+   "id": "intrusion-set--2619890b-036c-51ef-b522-125b4805bb4b",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Copper Kite Group",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "G9002"
+    }
+   ],
+   "aliases": [
+    "Copper Kite Group",
+    "Copper Kite"
+   ]
+  },
+  {
+   "type": "malware",
+   "spec_version": "2.1",
+   "id": "malware--50f47048-4ef7-5c2c-9bdb-1e5280d6fec2",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "InkPot",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "S9001"
+    }
+   ],
+   "x_mitre_aliases": [
+    "InkPot",
+    "InkPot RAT"
+   ],
+   "is_family": true
+  },
+  {
+   "type": "malware",
+   "spec_version": "2.1",
+   "id": "malware--6cef2bd4-ba45-5e91-a014-4311355db1c9",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Royal",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "S9002"
+    }
+   ],
+   "is_family": true
+  },
+  {
+   "type": "malware",
+   "spec_version": "2.1",
+   "id": "malware--ee126ed9-0056-542c-a255-afebfc733e4b",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "QakBot",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "S9003"
+    }
+   ],
+   "x_mitre_aliases": [
+    "QakBot",
+    "Qbot",
+    "Pinkslipbot"
+   ],
+   "is_family": true
+  },
+  {
+   "type": "tool",
+   "spec_version": "2.1",
+   "id": "tool--468a62b4-3bf1-5eb1-b874-33fca7e50ca2",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "PsExec",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "S9101"
+    }
+   ]
+  },
+  {
+   "type": "tool",
+   "spec_version": "2.1",
+   "id": "tool--e8ef8db2-4ad0-59c4-8aba-71659d28e760",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Net",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "S9102"
+    }
+   ],
+   "x_mitre_aliases": [
+    "Net",
+    "net.exe"
+   ]
+  },
+  {
+   "type": "tool",
+   "spec_version": "2.1",
+   "id": "tool--e975631c-1905-5390-b785-a9bb7f142d8f",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "name": "Mimikatz",
+   "external_references": [
+    {
+     "source_name": "mitre-attack",
+     "external_id": "S9103"
+    }
+   ]
+  },
+  {
+   "type": "relationship",
+   "spec_version": "2.1",
+   "id": "relationship--00000000-0000-4000-8000-000000000004",
+   "created": "2020-01-01T00:00:00.000Z",
+   "modified": "2026-01-01T00:00:00.000Z",
+   "relationship_type": "revoked-by",
+   "source_ref": "attack-pattern--65380f10-4f25-5972-8c04-008c82726f09",
+   "target_ref": "attack-pattern--33d9f6f9-186e-59fd-bd78-7c257cb743e2"
+  }
+ ]
+}

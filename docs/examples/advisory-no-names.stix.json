@@ -1,0 +1,349 @@
+{
+    "type": "bundle",
+    "id": "bundle--87d1e11a-dfc4-48cb-9ca9-22018830f73d",
+    "objects": [
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-01-01T00:00:00.000Z",
+            "modified": "2026-01-01T00:00:00.000Z",
+            "name": "Gleaner",
+            "description": "Automated extraction of threat intelligence from unstructured reports.",
+            "identity_class": "system"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82",
+            "created": "2017-01-20T00:00:00.000Z",
+            "definition_type": "tlp",
+            "name": "TLP:AMBER",
+            "definition": {
+                "tlp": "amber"
+            }
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--5e41f687-0bb7-455b-a736-75d991c0386a",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "Advisory: credential theft and data staging observed on a file server (synthetic example)",
+            "description": "Extracted by Gleaner 0.1.0 (iocs, gazetteer, crf, technique-classifier): 1 indicator(s), 0 named entit(ies), 10 ATT&CK technique(s). Machine-generated; review before use.",
+            "report_types": [
+                "threat-report"
+            ],
+            "published": "2026-10-13T11:46:11.124554Z",
+            "object_refs": [
+                "attack-pattern--c2dccc89-18a2-464b-85ed-af9e0ab4f4b7",
+                "attack-pattern--296753d2-719d-44d2-a267-e8e0aad67bc6",
+                "attack-pattern--f22fee28-7485-4104-bd6b-e28770961234",
+                "attack-pattern--0cf87a77-e470-434c-bcbe-dacb6d945557",
+                "attack-pattern--383e3be6-5f05-4b68-a6d8-9f515acdd700",
+                "attack-pattern--dd3bf247-d7b6-457d-a88a-75c75984cf51",
+                "attack-pattern--7823131f-ba6b-4b97-9fc9-13b2effdf420",
+                "attack-pattern--e76f2034-5657-4af4-b1d0-a6d17332fde9",
+                "attack-pattern--1ca70c2a-53e9-4952-a555-6d6c20c6a697",
+                "attack-pattern--e440f611-39a3-429e-8138-5794d644279a",
+                "indicator--33544462-dbe9-4158-8b2c-964eac5f2307"
+            ],
+            "external_references": [
+                {
+                    "source_name": "source-document",
+                    "description": "examples/advisory-no-names.txt"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--c2dccc89-18a2-464b-85ed-af9e0ab4f4b7",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "System Information Discovery",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1082",
+                    "external_id": "T1082"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--296753d2-719d-44d2-a267-e8e0aad67bc6",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "Web Protocols",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1071/001",
+                    "external_id": "T1071.001"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--f22fee28-7485-4104-bd6b-e28770961234",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "Security Software Discovery",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1518/001",
+                    "external_id": "T1518.001"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--0cf87a77-e470-434c-bcbe-dacb6d945557",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "File Deletion",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "stealth"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1070/004",
+                    "external_id": "T1070.004"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--383e3be6-5f05-4b68-a6d8-9f515acdd700",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "Process Discovery",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1057",
+                    "external_id": "T1057"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--dd3bf247-d7b6-457d-a88a-75c75984cf51",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "System Network Configuration Discovery",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "discovery"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1016",
+                    "external_id": "T1016"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--7823131f-ba6b-4b97-9fc9-13b2effdf420",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "Lateral Tool Transfer",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "lateral-movement"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1570",
+                    "external_id": "T1570"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--e76f2034-5657-4af4-b1d0-a6d17332fde9",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "Valid Accounts",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "stealth"
+                },
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "persistence"
+                },
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "privilege-escalation"
+                },
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "initial-access"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1078",
+                    "external_id": "T1078"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--1ca70c2a-53e9-4952-a555-6d6c20c6a697",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "Modify Registry",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "defense-impairment"
+                },
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "persistence"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1112",
+                    "external_id": "T1112"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--e440f611-39a3-429e-8138-5794d644279a",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "Service Execution",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "execution"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1569/002",
+                    "external_id": "T1569.002"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--33544462-dbe9-4158-8b2c-964eac5f2307",
+            "created_by_ref": "identity--6aa3898c-8e48-4172-a8f6-4f6acc184d68",
+            "created": "2026-10-13T11:46:11.124554Z",
+            "modified": "2026-10-13T11:46:11.124554Z",
+            "name": "http://files.example.com/upload",
+            "description": "url extracted from the report (1 mention(s)).",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[url:value = 'http://files.example.com/upload']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2026-10-13T11:46:11.124554Z",
+            "object_marking_refs": [
+                "marking-definition--f88d31f6-486f-44da-b317-01333bde0b82"
+            ]
+        }
+    ]
+}

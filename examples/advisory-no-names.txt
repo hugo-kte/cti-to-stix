@@ -1,0 +1,13 @@
+Advisory: credential theft and data staging observed on a file server (synthetic example)
+
+This synthetic advisory contains no product or actor names on purpose: techniques have to be
+recognised from how the activity is described. All indicators are documentation values.
+
+The attacker logged in through the VPN with a valid account belonging to a contractor.
+A PowerShell script queried the registry for installed security products and listed running processes.
+The script then collected the hostname, operating system version and network configuration of the server.
+Credentials were read from a configuration file left on a network share.
+The intruder copied a remote administration utility to two other servers over SMB and started it as a service.
+Documents were gathered in a local temporary folder and compressed before transfer.
+The archive was sent to hxxp://files.example[.]com/upload over the same HTTP channel used for commands.
+Finally, the attacker deleted the scripts and cleared the event logs to cover their tracks.

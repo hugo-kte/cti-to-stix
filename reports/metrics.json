@@ -1,0 +1,2225 @@
+{
+  "iocs": {
+    "documents": 34,
+    "documents_with_defanged_indicators": 17,
+    "exported_by_type": {
+      "url": 143,
+      "md5": 53,
+      "domain-name": 46,
+      "file-path": 41,
+      "ipv4-addr": 40,
+      "sha256": 33,
+      "sha1": 12,
+      "cve": 2,
+      "registry-key": 2
+    },
+    "by_status": {
+      "reference": 366,
+      "indicator": 327,
+      "artifact": 43,
+      "benign": 4,
+      "vulnerability": 2
+    },
+    "audit": {
+      "documents": 34,
+      "exported": 372,
+      "per_type": {
+        "url": {
+          "extracted": 143,
+          "audited": 40,
+          "ioc": 35,
+          "benign": 1,
+          "invalid": 4,
+          "precision": 0.875,
+          "precision_ci95": [
+            0.7388757932976187,
+            0.9454058022645873
+          ],
+          "valid_observable_rate": 0.9
+        },
+        "domain-name": {
+          "extracted": 46,
+          "audited": 40,
+          "ioc": 38,
+          "benign": 2,
+          "invalid": 0,
+          "precision": 0.95,
+          "precision_ci95": [
+            0.834958291820748,
+            0.9861796228538989
+          ],
+          "valid_observable_rate": 1.0
+        },
+        "ipv4-addr": {
+          "extracted": 40,
+          "audited": 40,
+          "ioc": 40,
+          "benign": 0,
+          "invalid": 0,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9123754607496077,
+            1.0
+          ],
+          "valid_observable_rate": 1.0
+        },
+        "md5": {
+          "extracted": 53,
+          "audited": 40,
+          "ioc": 39,
+          "benign": 0,
+          "invalid": 1,
+          "precision": 0.975,
+          "precision_ci95": [
+            0.8711834051199223,
+            0.9955732825922052
+          ],
+          "valid_observable_rate": 0.975
+        },
+        "sha1": {
+          "extracted": 12,
+          "audited": 12,
+          "ioc": 10,
+          "benign": 0,
+          "invalid": 2,
+          "precision": 0.8333333333333334,
+          "precision_ci95": [
+            0.5519636426153274,
+            0.9530358523851776
+          ],
+          "valid_observable_rate": 0.8333333333333334
+        },
+        "sha256": {
+          "extracted": 33,
+          "audited": 33,
+          "ioc": 33,
+          "benign": 0,
+          "invalid": 0,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.8957265699643882,
+            1.0
+          ],
+          "valid_observable_rate": 1.0
+        },
+        "cve": {
+          "extracted": 2,
+          "audited": 2,
+          "ioc": 2,
+          "benign": 0,
+          "invalid": 0,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.34237195288961925,
+            1.0
+          ],
+          "valid_observable_rate": 1.0
+        },
+        "file-path": {
+          "extracted": 41,
+          "audited": 40,
+          "ioc": 21,
+          "benign": 16,
+          "invalid": 3,
+          "precision": 0.525,
+          "precision_ci95": [
+            0.37497106853929735,
+            0.6706477044981831
+          ],
+          "valid_observable_rate": 0.925
+        },
+        "registry-key": {
+          "extracted": 2,
+          "audited": 2,
+          "ioc": 0,
+          "benign": 0,
+          "invalid": 2,
+          "precision": 0.0,
+          "precision_ci95": [
+            0.0,
+            0.6576280471103807
+          ],
+          "valid_observable_rate": 0.0
+        }
+      },
+      "precision": 0.8790994623655913,
+      "by_group": {
+        "network_and_hashes": {
+          "extracted": 327,
+          "precision": 0.9281345565749235
+        },
+        "host_artifacts": {
+          "extracted": 43,
+          "precision": 0.5005813953488373
+        }
+      },
+      "missed_pools": {
+        "withheld": {
+          "population": 370,
+          "audited": 60,
+          "ioc": 1,
+          "out_of_scope": 0,
+          "ioc_rate": 0.016666666666666666
+        },
+        "missed": {
+          "population": 185,
+          "audited": 80,
+          "ioc": 6,
+          "out_of_scope": 17,
+          "ioc_rate": 0.075
+        }
+      },
+      "estimated_true_positives": 327.025,
+      "estimated_false_negatives": 20.041666666666668,
+      "recall": 0.9422541298501729,
+      "labels": 389
+    }
+  },
+  "runtime_seconds": {
+    "iocs": 1.3,
+    "entities": 8.9,
+    "cross": 1.4,
+    "stix": 19.4,
+    "techniques": 3493.4
+  },
+  "entities": {
+    "split": "test",
+    "documents": 34,
+    "sentences": 3059,
+    "support": {
+      "CON": 446,
+      "MALWARE": 421,
+      "ORG": 372,
+      "TECHNIQUE": 359,
+      "DATE": 272,
+      "GROUP": 213,
+      "LOC": 189,
+      "TACTIC": 189,
+      "SECTOR": 141,
+      "TOOL": 52,
+      "CLICommand/CodeSnippet": 39
+    },
+    "systems": {
+      "gazetteer, names only": {
+        "strict": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.9318181818181818,
+              "recall": 0.19248826291079812,
+              "f1": 0.31906614785992216,
+              "tp": 41,
+              "fp": 3,
+              "fn": 172,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.9049295774647887,
+              "recall": 0.6104513064133017,
+              "f1": 0.7290780141843972,
+              "tp": 257,
+              "fp": 27,
+              "fn": 164,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.2786885245901639,
+              "recall": 0.3269230769230769,
+              "f1": 0.30088495575221236,
+              "tp": 17,
+              "fp": 44,
+              "fn": 35,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.07725321888412018,
+              "recall": 0.05013927576601671,
+              "f1": 0.060810810810810814,
+              "tp": 18,
+              "fp": 215,
+              "fn": 341,
+              "support": 359
+            },
+            "TACTIC": {
+              "precision": 0.24074074074074073,
+              "recall": 0.13756613756613756,
+              "f1": 0.1750841750841751,
+              "tp": 26,
+              "fp": 82,
+              "fn": 163,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.4917808219178082,
+            "recall": 0.2909238249594814,
+            "f1": 0.36558044806517315,
+            "tp": 359,
+            "fp": 371,
+            "fn": 875,
+            "support": 1234
+          },
+          "macro_f1": 0.3169848207383036
+        },
+        "lenient": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.9318181818181818,
+              "recall": 0.19248826291079812,
+              "f1": 0.31906614785992216,
+              "tp": 41,
+              "fp": 3,
+              "fn": 172,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.9612676056338029,
+              "recall": 0.6484560570071259,
+              "f1": 0.774468085106383,
+              "tp": 273,
+              "fp": 11,
+              "fn": 148,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.2786885245901639,
+              "recall": 0.3269230769230769,
+              "f1": 0.30088495575221236,
+              "tp": 17,
+              "fp": 44,
+              "fn": 35,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.5836909871244635,
+              "recall": 0.3726027397260274,
+              "f1": 0.4548494983277592,
+              "tp": 136,
+              "fp": 97,
+              "fn": 229,
+              "support": 365
+            },
+            "TACTIC": {
+              "precision": 0.3888888888888889,
+              "recall": 0.2222222222222222,
+              "f1": 0.28282828282828276,
+              "tp": 42,
+              "fp": 66,
+              "fn": 147,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.6972602739726027,
+            "recall": 0.4104838709677419,
+            "f1": 0.5167512690355329,
+            "tp": 509,
+            "fp": 221,
+            "fn": 731,
+            "support": 1240
+          },
+          "macro_f1": 0.4264193939749119
+        }
+      },
+      "gazetteer + rules": {
+        "strict": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.8775510204081632,
+              "recall": 0.20187793427230047,
+              "f1": 0.32824427480916035,
+              "tp": 43,
+              "fp": 6,
+              "fn": 170,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.8881789137380192,
+              "recall": 0.6603325415676959,
+              "f1": 0.7574931880108993,
+              "tp": 278,
+              "fp": 35,
+              "fn": 143,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.625,
+              "recall": 0.28846153846153844,
+              "f1": 0.3947368421052631,
+              "tp": 15,
+              "fp": 9,
+              "fn": 37,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.13178294573643412,
+              "recall": 0.04735376044568245,
+              "f1": 0.06967213114754098,
+              "tp": 17,
+              "fp": 112,
+              "fn": 342,
+              "support": 359
+            },
+            "TACTIC": {
+              "precision": 0.42,
+              "recall": 0.1111111111111111,
+              "f1": 0.17573221757322174,
+              "tp": 21,
+              "fp": 29,
+              "fn": 168,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.6619469026548672,
+            "recall": 0.30307941653160453,
+            "f1": 0.41578654808226795,
+            "tp": 374,
+            "fp": 191,
+            "fn": 860,
+            "support": 1234
+          },
+          "macro_f1": 0.34517573072921703
+        },
+        "lenient": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.9387755102040817,
+              "recall": 0.215962441314554,
+              "f1": 0.3511450381679389,
+              "tp": 46,
+              "fp": 3,
+              "fn": 167,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.9424920127795527,
+              "recall": 0.7007125890736342,
+              "f1": 0.8038147138964579,
+              "tp": 295,
+              "fp": 18,
+              "fn": 126,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.625,
+              "recall": 0.28846153846153844,
+              "f1": 0.3947368421052631,
+              "tp": 15,
+              "fp": 9,
+              "fn": 37,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.7906976744186046,
+              "recall": 0.2841225626740947,
+              "f1": 0.41803278688524587,
+              "tp": 102,
+              "fp": 27,
+              "fn": 257,
+              "support": 359
+            },
+            "TACTIC": {
+              "precision": 0.58,
+              "recall": 0.15343915343915343,
+              "f1": 0.24267782426778245,
+              "tp": 29,
+              "fp": 21,
+              "fn": 160,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.8619469026548673,
+            "recall": 0.3946515397082658,
+            "f1": 0.5414118954974986,
+            "tp": 487,
+            "fp": 78,
+            "fn": 747,
+            "support": 1234
+          },
+          "macro_f1": 0.4420814410645376
+        }
+      },
+      "CRF": {
+        "strict": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.8441558441558441,
+              "recall": 0.3051643192488263,
+              "f1": 0.4482758620689656,
+              "tp": 65,
+              "fp": 12,
+              "fn": 148,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.8594377510040161,
+              "recall": 0.5083135391923991,
+              "f1": 0.6388059701492538,
+              "tp": 214,
+              "fp": 35,
+              "fn": 207,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 1.0,
+              "recall": 0.09615384615384616,
+              "f1": 0.17543859649122806,
+              "tp": 5,
+              "fp": 0,
+              "fn": 47,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.6,
+              "recall": 0.4178272980501393,
+              "f1": 0.4926108374384236,
+              "tp": 150,
+              "fp": 100,
+              "fn": 209,
+              "support": 359
+            },
+            "TACTIC": {
+              "precision": 0.8561151079136691,
+              "recall": 0.6296296296296297,
+              "f1": 0.725609756097561,
+              "tp": 119,
+              "fp": 20,
+              "fn": 70,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.7680555555555556,
+            "recall": 0.4481361426256078,
+            "f1": 0.5660184237461617,
+            "tp": 553,
+            "fp": 167,
+            "fn": 681,
+            "support": 1234
+          },
+          "macro_f1": 0.49614820444908636
+        },
+        "lenient": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.8441558441558441,
+              "recall": 0.3051643192488263,
+              "f1": 0.4482758620689656,
+              "tp": 65,
+              "fp": 12,
+              "fn": 148,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.9196787148594378,
+              "recall": 0.5439429928741093,
+              "f1": 0.6835820895522389,
+              "tp": 229,
+              "fp": 20,
+              "fn": 192,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 1.0,
+              "recall": 0.09615384615384616,
+              "f1": 0.17543859649122806,
+              "tp": 5,
+              "fp": 0,
+              "fn": 47,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.812,
+              "recall": 0.5670391061452514,
+              "f1": 0.667763157894737,
+              "tp": 203,
+              "fp": 47,
+              "fn": 155,
+              "support": 358
+            },
+            "TACTIC": {
+              "precision": 0.9496402877697842,
+              "recall": 0.6984126984126984,
+              "f1": 0.8048780487804876,
+              "tp": 132,
+              "fp": 7,
+              "fn": 57,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.8805555555555555,
+            "recall": 0.5141930251419302,
+            "f1": 0.6492575524833589,
+            "tp": 634,
+            "fp": 86,
+            "fn": 599,
+            "support": 1233
+          },
+          "macro_f1": 0.5559875509575314
+        },
+        "all_labels": {
+          "per_label": {
+            "CLICommand/CodeSnippet": {
+              "precision": 0.45161290322580644,
+              "recall": 0.358974358974359,
+              "f1": 0.4,
+              "tp": 14,
+              "fp": 17,
+              "fn": 25,
+              "support": 39
+            },
+            "CON": {
+              "precision": 0.7569060773480663,
+              "recall": 0.6143497757847534,
+              "f1": 0.6782178217821782,
+              "tp": 274,
+              "fp": 88,
+              "fn": 172,
+              "support": 446
+            },
+            "DATE": {
+              "precision": 0.8661710037174721,
+              "recall": 0.8566176470588235,
+              "f1": 0.8613678373382626,
+              "tp": 233,
+              "fp": 36,
+              "fn": 39,
+              "support": 272
+            },
+            "GROUP": {
+              "precision": 0.8441558441558441,
+              "recall": 0.3051643192488263,
+              "f1": 0.4482758620689656,
+              "tp": 65,
+              "fp": 12,
+              "fn": 148,
+              "support": 213
+            },
+            "LOC": {
+              "precision": 0.8685714285714285,
+              "recall": 0.8042328042328042,
+              "f1": 0.8351648351648351,
+              "tp": 152,
+              "fp": 23,
+              "fn": 37,
+              "support": 189
+            },
+            "MALWARE": {
+              "precision": 0.8594377510040161,
+              "recall": 0.5083135391923991,
+              "f1": 0.6388059701492538,
+              "tp": 214,
+              "fp": 35,
+              "fn": 207,
+              "support": 421
+            },
+            "ORG": {
+              "precision": 0.8735632183908046,
+              "recall": 0.8172043010752689,
+              "f1": 0.8444444444444446,
+              "tp": 304,
+              "fp": 44,
+              "fn": 68,
+              "support": 372
+            },
+            "SECTOR": {
+              "precision": 0.7076923076923077,
+              "recall": 0.3262411347517731,
+              "f1": 0.4466019417475729,
+              "tp": 46,
+              "fp": 19,
+              "fn": 95,
+              "support": 141
+            },
+            "TACTIC": {
+              "precision": 0.8561151079136691,
+              "recall": 0.6296296296296297,
+              "f1": 0.725609756097561,
+              "tp": 119,
+              "fp": 20,
+              "fn": 70,
+              "support": 189
+            },
+            "TECHNIQUE": {
+              "precision": 0.6,
+              "recall": 0.4178272980501393,
+              "f1": 0.4926108374384236,
+              "tp": 150,
+              "fp": 100,
+              "fn": 209,
+              "support": 359
+            },
+            "TOOL": {
+              "precision": 1.0,
+              "recall": 0.09615384615384616,
+              "f1": 0.17543859649122806,
+              "tp": 5,
+              "fp": 0,
+              "fn": 47,
+              "support": 52
+            }
+          },
+          "micro": {
+            "precision": 0.8,
+            "recall": 0.5852209431860379,
+            "f1": 0.6759596826077632,
+            "tp": 1576,
+            "fp": 394,
+            "fn": 1117,
+            "support": 2693
+          },
+          "macro_f1": 0.5951398093384296
+        }
+      },
+      "CRF + gazetteer features": {
+        "strict": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.898989898989899,
+              "recall": 0.41784037558685444,
+              "f1": 0.5705128205128205,
+              "tp": 89,
+              "fp": 10,
+              "fn": 124,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.8690909090909091,
+              "recall": 0.5676959619952494,
+              "f1": 0.6867816091954023,
+              "tp": 239,
+              "fp": 36,
+              "fn": 182,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.7142857142857143,
+              "recall": 0.19230769230769232,
+              "f1": 0.30303030303030304,
+              "tp": 10,
+              "fp": 4,
+              "fn": 42,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.6007905138339921,
+              "recall": 0.4233983286908078,
+              "f1": 0.4967320261437909,
+              "tp": 152,
+              "fp": 101,
+              "fn": 207,
+              "support": 359
+            },
+            "TACTIC": {
+              "precision": 0.8633093525179856,
+              "recall": 0.6349206349206349,
+              "f1": 0.7317073170731707,
+              "tp": 120,
+              "fp": 19,
+              "fn": 69,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.782051282051282,
+            "recall": 0.49432739059967584,
+            "f1": 0.6057596822244291,
+            "tp": 610,
+            "fp": 170,
+            "fn": 624,
+            "support": 1234
+          },
+          "macro_f1": 0.5577528151910975
+        },
+        "lenient": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.9393939393939394,
+              "recall": 0.43661971830985913,
+              "f1": 0.5961538461538461,
+              "tp": 93,
+              "fp": 6,
+              "fn": 120,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.9309090909090909,
+              "recall": 0.6080760095011877,
+              "f1": 0.735632183908046,
+              "tp": 256,
+              "fp": 19,
+              "fn": 165,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.7142857142857143,
+              "recall": 0.19230769230769232,
+              "f1": 0.30303030303030304,
+              "tp": 10,
+              "fp": 4,
+              "fn": 42,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.8458498023715415,
+              "recall": 0.5977653631284916,
+              "f1": 0.7004909983633387,
+              "tp": 214,
+              "fp": 39,
+              "fn": 144,
+              "support": 358
+            },
+            "TACTIC": {
+              "precision": 0.9424460431654677,
+              "recall": 0.6931216931216931,
+              "f1": 0.798780487804878,
+              "tp": 131,
+              "fp": 8,
+              "fn": 58,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.9025641025641026,
+            "recall": 0.5709651257096513,
+            "f1": 0.6994535519125684,
+            "tp": 704,
+            "fp": 76,
+            "fn": 529,
+            "support": 1233
+          },
+          "macro_f1": 0.6268175638520824
+        },
+        "all_labels": {
+          "per_label": {
+            "CLICommand/CodeSnippet": {
+              "precision": 0.3870967741935484,
+              "recall": 0.3076923076923077,
+              "f1": 0.34285714285714286,
+              "tp": 12,
+              "fp": 19,
+              "fn": 27,
+              "support": 39
+            },
+            "CON": {
+              "precision": 0.7632311977715878,
+              "recall": 0.6143497757847534,
+              "f1": 0.6807453416149069,
+              "tp": 274,
+              "fp": 85,
+              "fn": 172,
+              "support": 446
+            },
+            "DATE": {
+              "precision": 0.8661710037174721,
+              "recall": 0.8566176470588235,
+              "f1": 0.8613678373382626,
+              "tp": 233,
+              "fp": 36,
+              "fn": 39,
+              "support": 272
+            },
+            "GROUP": {
+              "precision": 0.898989898989899,
+              "recall": 0.41784037558685444,
+              "f1": 0.5705128205128205,
+              "tp": 89,
+              "fp": 10,
+              "fn": 124,
+              "support": 213
+            },
+            "LOC": {
+              "precision": 0.8693181818181818,
+              "recall": 0.8095238095238095,
+              "f1": 0.8383561643835615,
+              "tp": 153,
+              "fp": 23,
+              "fn": 36,
+              "support": 189
+            },
+            "MALWARE": {
+              "precision": 0.8690909090909091,
+              "recall": 0.5676959619952494,
+              "f1": 0.6867816091954023,
+              "tp": 239,
+              "fp": 36,
+              "fn": 182,
+              "support": 421
+            },
+            "ORG": {
+              "precision": 0.8782608695652174,
+              "recall": 0.8145161290322581,
+              "f1": 0.8451882845188284,
+              "tp": 303,
+              "fp": 42,
+              "fn": 69,
+              "support": 372
+            },
+            "SECTOR": {
+              "precision": 0.7313432835820896,
+              "recall": 0.3475177304964539,
+              "f1": 0.4711538461538461,
+              "tp": 49,
+              "fp": 18,
+              "fn": 92,
+              "support": 141
+            },
+            "TACTIC": {
+              "precision": 0.8633093525179856,
+              "recall": 0.6349206349206349,
+              "f1": 0.7317073170731707,
+              "tp": 120,
+              "fp": 19,
+              "fn": 69,
+              "support": 189
+            },
+            "TECHNIQUE": {
+              "precision": 0.6007905138339921,
+              "recall": 0.4233983286908078,
+              "f1": 0.4967320261437909,
+              "tp": 152,
+              "fp": 101,
+              "fn": 207,
+              "support": 359
+            },
+            "TOOL": {
+              "precision": 0.7142857142857143,
+              "recall": 0.19230769230769232,
+              "f1": 0.30303030303030304,
+              "tp": 10,
+              "fp": 4,
+              "fn": 42,
+              "support": 52
+            }
+          },
+          "micro": {
+            "precision": 0.8061174148988653,
+            "recall": 0.6067582621611586,
+            "f1": 0.6923728813559322,
+            "tp": 1634,
+            "fp": 393,
+            "fn": 1059,
+            "support": 2693
+          },
+          "macro_f1": 0.6207666084383668
+        }
+      },
+      "CRF ∪ gazetteer": {
+        "strict": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.8440366972477065,
+              "recall": 0.431924882629108,
+              "f1": 0.5714285714285714,
+              "tp": 92,
+              "fp": 17,
+              "fn": 121,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.8614457831325302,
+              "recall": 0.6793349168646081,
+              "f1": 0.7596281540504648,
+              "tp": 286,
+              "fp": 46,
+              "fn": 135,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.7037037037037037,
+              "recall": 0.36538461538461536,
+              "f1": 0.48101265822784806,
+              "tp": 19,
+              "fp": 8,
+              "fn": 33,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.50814332247557,
+              "recall": 0.43454038997214484,
+              "f1": 0.46846846846846846,
+              "tp": 156,
+              "fp": 151,
+              "fn": 203,
+              "support": 359
+            },
+            "TACTIC": {
+              "precision": 0.7721518987341772,
+              "recall": 0.6455026455026455,
+              "f1": 0.7031700288184438,
+              "tp": 122,
+              "fp": 36,
+              "fn": 67,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.7234726688102894,
+            "recall": 0.5470016207455429,
+            "f1": 0.6229810798338716,
+            "tp": 675,
+            "fp": 258,
+            "fn": 559,
+            "support": 1234
+          },
+          "macro_f1": 0.5967415761987593
+        },
+        "lenient": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.8715596330275229,
+              "recall": 0.4460093896713615,
+              "f1": 0.5900621118012422,
+              "tp": 95,
+              "fp": 14,
+              "fn": 118,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.9126506024096386,
+              "recall": 0.7197149643705463,
+              "f1": 0.804780876494024,
+              "tp": 303,
+              "fp": 29,
+              "fn": 118,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.7037037037037037,
+              "recall": 0.36538461538461536,
+              "f1": 0.48101265822784806,
+              "tp": 19,
+              "fp": 8,
+              "fn": 33,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.7654723127035831,
+              "recall": 0.6564245810055865,
+              "f1": 0.7067669172932329,
+              "tp": 235,
+              "fp": 72,
+              "fn": 123,
+              "support": 358
+            },
+            "TACTIC": {
+              "precision": 0.8607594936708861,
+              "recall": 0.7195767195767195,
+              "f1": 0.7838616714697405,
+              "tp": 136,
+              "fp": 22,
+              "fn": 53,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.8445873526259379,
+            "recall": 0.6390916463909164,
+            "f1": 0.7276084949215142,
+            "tp": 788,
+            "fp": 145,
+            "fn": 445,
+            "support": 1233
+          },
+          "macro_f1": 0.6732968470572176
+        }
+      },
+      "CRF + gazetteer features ∪ gazetteer": {
+        "strict": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.8846153846153846,
+              "recall": 0.431924882629108,
+              "f1": 0.580441640378549,
+              "tp": 92,
+              "fp": 12,
+              "fn": 121,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.8788819875776398,
+              "recall": 0.672209026128266,
+              "f1": 0.7617765814266488,
+              "tp": 283,
+              "fp": 39,
+              "fn": 138,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.6785714285714286,
+              "recall": 0.36538461538461536,
+              "f1": 0.475,
+              "tp": 19,
+              "fp": 9,
+              "fn": 33,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.5167785234899329,
+              "recall": 0.42896935933147634,
+              "f1": 0.4687975646879757,
+              "tp": 154,
+              "fp": 144,
+              "fn": 205,
+              "support": 359
+            },
+            "TACTIC": {
+              "precision": 0.7721518987341772,
+              "recall": 0.6455026455026455,
+              "f1": 0.7031700288184438,
+              "tp": 122,
+              "fp": 36,
+              "fn": 67,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.7362637362637363,
+            "recall": 0.5429497568881686,
+            "f1": 0.625,
+            "tp": 670,
+            "fp": 240,
+            "fn": 564,
+            "support": 1234
+          },
+          "macro_f1": 0.5978371630623235
+        },
+        "lenient": {
+          "per_label": {
+            "GROUP": {
+              "precision": 0.9230769230769231,
+              "recall": 0.4507042253521127,
+              "f1": 0.6056782334384858,
+              "tp": 96,
+              "fp": 8,
+              "fn": 117,
+              "support": 213
+            },
+            "MALWARE": {
+              "precision": 0.9316770186335404,
+              "recall": 0.7125890736342043,
+              "f1": 0.8075370121130552,
+              "tp": 300,
+              "fp": 22,
+              "fn": 121,
+              "support": 421
+            },
+            "TOOL": {
+              "precision": 0.6785714285714286,
+              "recall": 0.36538461538461536,
+              "f1": 0.475,
+              "tp": 19,
+              "fp": 9,
+              "fn": 33,
+              "support": 52
+            },
+            "TECHNIQUE": {
+              "precision": 0.785234899328859,
+              "recall": 0.6536312849162011,
+              "f1": 0.7134146341463415,
+              "tp": 234,
+              "fp": 64,
+              "fn": 124,
+              "support": 358
+            },
+            "TACTIC": {
+              "precision": 0.8544303797468354,
+              "recall": 0.7142857142857143,
+              "f1": 0.7780979827089337,
+              "tp": 135,
+              "fp": 23,
+              "fn": 54,
+              "support": 189
+            }
+          },
+          "micro": {
+            "precision": 0.8615384615384616,
+            "recall": 0.6358475263584753,
+            "f1": 0.7316845543630425,
+            "tp": 784,
+            "fp": 126,
+            "fn": 449,
+            "support": 1233
+          },
+          "macro_f1": 0.6759455724813632
+        }
+      }
+    },
+    "linking": {
+      "GROUP": {
+        "mentions": 213,
+        "in_attack": 52,
+        "in_attack_share": 0.24413145539906103,
+        "linked": 30,
+        "correct": 30,
+        "accuracy": 0.5769230769230769,
+        "precision": 1.0,
+        "outside_attack": 161,
+        "extra_links": 14
+      },
+      "MALWARE": {
+        "mentions": 421,
+        "in_attack": 250,
+        "in_attack_share": 0.5938242280285035,
+        "linked": 226,
+        "correct": 226,
+        "accuracy": 0.904,
+        "precision": 1.0,
+        "outside_attack": 171,
+        "extra_links": 63
+      },
+      "TOOL": {
+        "mentions": 52,
+        "in_attack": 11,
+        "in_attack_share": 0.21153846153846154,
+        "linked": 11,
+        "correct": 11,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "outside_attack": 41,
+        "extra_links": 7
+      }
+    }
+  },
+  "cross": {
+    "all": {
+      "mentions": 3348,
+      "in_scope": 894,
+      "in_scope_share": 0.2670250896057348,
+      "top1": 0.6498881431767338,
+      "top3": 0.854586129753915,
+      "recall_at_threshold": 0.5167785234899329,
+      "parent_in_scope": 2301,
+      "parent_top1": 0.4784876140808344
+    },
+    "explicit": {
+      "mentions": 1084,
+      "in_scope": 224,
+      "in_scope_share": 0.2066420664206642,
+      "top1": 0.7767857142857143,
+      "top3": 0.9375,
+      "recall_at_threshold": 0.5803571428571429,
+      "parent_in_scope": 575,
+      "parent_top1": 0.5843478260869566
+    },
+    "implicit": {
+      "mentions": 2264,
+      "in_scope": 670,
+      "in_scope_share": 0.2959363957597173,
+      "top1": 0.6074626865671642,
+      "top3": 0.826865671641791,
+      "recall_at_threshold": 0.4955223880597015,
+      "parent_in_scope": 1726,
+      "parent_top1": 0.44322132097334876
+    },
+    "distinct_gold_techniques": 149,
+    "distinct_gold_in_scope": 28,
+    "threshold": 0.3
+  },
+  "stix": {
+    "reports": 34,
+    "valid_bundles": 34,
+    "validator_errors": 0,
+    "validator_warnings": 0,
+    "strict_mode": true,
+    "objects_per_report": {
+      "indicator": 10.882352941176471,
+      "relationship": 8.823529411764707,
+      "attack-pattern": 8.147058823529411,
+      "malware": 1.588235294117647,
+      "identity": 1.0,
+      "marking-definition": 1.0,
+      "report": 1.0,
+      "intrusion-set": 0.9117647058823529,
+      "tool": 0.29411764705882354,
+      "vulnerability": 0.058823529411764705
+    },
+    "seconds_per_report": 0.267777267819517,
+    "components": [
+      "iocs",
+      "gazetteer",
+      "crf",
+      "technique-classifier"
+    ]
+  },
+  "training": {
+    "ner": {
+      "grid": [
+        {
+          "variant": "crf",
+          "c1": 0.05,
+          "c2": 0.01,
+          "dev_micro_f1_all": 0.5881032547699214,
+          "dev_micro_f1_cti": 0.5771812080536912
+        },
+        {
+          "variant": "crf",
+          "c1": 0.05,
+          "c2": 0.1,
+          "dev_micro_f1_all": 0.5987701767870869,
+          "dev_micro_f1_cti": 0.5894263217097863
+        },
+        {
+          "variant": "crf",
+          "c1": 0.2,
+          "c2": 0.01,
+          "dev_micro_f1_all": 0.5786726323639075,
+          "dev_micro_f1_cti": 0.5755879059350505
+        },
+        {
+          "variant": "crf",
+          "c1": 0.2,
+          "c2": 0.1,
+          "dev_micro_f1_all": 0.5844302369311771,
+          "dev_micro_f1_cti": 0.560344827586207
+        },
+        {
+          "variant": "crf+gazetteer",
+          "c1": 0.05,
+          "c2": 0.01,
+          "dev_micro_f1_all": 0.5780389276533235,
+          "dev_micro_f1_cti": 0.5895196506550219
+        },
+        {
+          "variant": "crf+gazetteer",
+          "c1": 0.05,
+          "c2": 0.1,
+          "dev_micro_f1_all": 0.595535376466137,
+          "dev_micro_f1_cti": 0.6119733924611972
+        },
+        {
+          "variant": "crf+gazetteer",
+          "c1": 0.2,
+          "c2": 0.01,
+          "dev_micro_f1_all": 0.5860914838229825,
+          "dev_micro_f1_cti": 0.6010928961748634
+        },
+        {
+          "variant": "crf+gazetteer",
+          "c1": 0.2,
+          "c2": 0.1,
+          "dev_micro_f1_all": 0.5943325876211782,
+          "dev_micro_f1_cti": 0.6215921483097055
+        }
+      ],
+      "best": {
+        "crf": {
+          "variant": "crf",
+          "c1": 0.05,
+          "c2": 0.1,
+          "dev_micro_f1_all": 0.5987701767870869,
+          "dev_micro_f1_cti": 0.5894263217097863
+        },
+        "crf+gazetteer": {
+          "variant": "crf+gazetteer",
+          "c1": 0.05,
+          "c2": 0.1,
+          "dev_micro_f1_all": 0.595535376466137,
+          "dev_micro_f1_cti": 0.6119733924611972
+        }
+      },
+      "selected": "crf+gazetteer",
+      "rules": {
+        "common_words": 5768,
+        "blocklist": 56,
+        "relabel": 7
+      },
+      "train_sentences": 9120
+    },
+    "attack_version": "19.2",
+    "trained_at": "2026-10-13T11:24:16+00:00",
+    "techniques": {
+      "grid": [
+        {
+          "features": "word",
+          "C": 4.0,
+          "class_weight": null,
+          "min_df": 2,
+          "top_k": 3000,
+          "threshold": 0.1,
+          "micro_f1": 0.428898332788493,
+          "macro_f1": 0.2435080722910541
+        },
+        {
+          "features": "word",
+          "C": 4.0,
+          "class_weight": "balanced",
+          "min_df": 2,
+          "top_k": 3000,
+          "threshold": 0.5,
+          "micro_f1": 0.4876669591498489,
+          "macro_f1": 0.38477483286002573
+        },
+        {
+          "features": "word",
+          "C": 16.0,
+          "class_weight": null,
+          "min_df": 2,
+          "top_k": 3000,
+          "threshold": 0.07,
+          "micro_f1": 0.46370510396975423,
+          "macro_f1": 0.33501608493548035
+        },
+        {
+          "features": "word",
+          "C": 16.0,
+          "class_weight": "balanced",
+          "min_df": 2,
+          "top_k": 3000,
+          "threshold": 0.4,
+          "micro_f1": 0.4895132568262763,
+          "macro_f1": 0.3881784754828783
+        },
+        {
+          "features": "word+char",
+          "C": 4.0,
+          "class_weight": null,
+          "min_df": 2,
+          "top_k": 3000,
+          "threshold": 0.07,
+          "micro_f1": 0.5179908675799088,
+          "macro_f1": 0.4048896306150293
+        },
+        {
+          "features": "word+char",
+          "C": 4.0,
+          "class_weight": "balanced",
+          "min_df": 2,
+          "top_k": 3000,
+          "threshold": 0.5,
+          "micro_f1": 0.5433826469412235,
+          "macro_f1": 0.45337946532550716
+        },
+        {
+          "features": "word+char",
+          "C": 16.0,
+          "class_weight": null,
+          "min_df": 2,
+          "top_k": 3000,
+          "threshold": 0.07,
+          "micro_f1": 0.5339050658157161,
+          "macro_f1": 0.42238677721608575
+        },
+        {
+          "features": "word+char",
+          "C": 16.0,
+          "class_weight": "balanced",
+          "min_df": 2,
+          "top_k": 3000,
+          "threshold": 0.3,
+          "micro_f1": 0.5456101968990773,
+          "macro_f1": 0.46068454207820236
+        }
+      ],
+      "selected": {
+        "features": "word+char",
+        "C": 16.0,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.3
+      },
+      "labels": 50,
+      "sentences": 19178,
+      "documents": 151,
+      "document_groups": 148,
+      "nonzero_weights": 150000
+    }
+  },
+  "meta": {
+    "gleaner_version": "0.1.0",
+    "attack_version": "19.2",
+    "generated": "2026-10-13T12:30:02+00:00",
+    "datasets": {
+      "tram": {
+        "repo": "center-for-threat-informed-defense/tram",
+        "commit": "f29793d8d665f7f552898696e00065ef24a29a20",
+        "license": "Apache-2.0"
+      },
+      "attack": {
+        "repo": "mitre-attack/attack-stix-data",
+        "commit": "6cda5ad8462c79e14fbb872f4e09059b18e0cfc4",
+        "license": "ATT&CK Terms of Use (https://attack.mitre.org/resources/legal-and-branding/terms-of-use/)"
+      },
+      "annoctr": {
+        "repo": "boschresearch/anno-ctr-lrec-coling-2024",
+        "commit": "d510b6949e1938d47c93a43eedd562dc538439dc",
+        "license": "CC-BY-SA-4.0"
+      }
+    }
+  },
+  "techniques": {
+    "dataset": {
+      "sentences": 19178,
+      "labelled_sentences": 4070,
+      "documents": 151,
+      "document_groups": 148,
+      "techniques": 50,
+      "scored_sentences": 18473,
+      "near_duplicates_dropped": 705
+    },
+    "nested_cv": {
+      "folds": [
+        {
+          "fold": 0,
+          "config": {
+            "features": "word+char",
+            "C": 16.0,
+            "class_weight": "balanced",
+            "min_df": 2,
+            "top_k": 3000
+          },
+          "threshold": 0.3,
+          "test_sentences": 3593,
+          "test_documents": 30,
+          "near_duplicates_dropped": 118,
+          "micro_f1": 0.5511640498105035,
+          "macro_f1": 0.47354961901293185
+        },
+        {
+          "fold": 1,
+          "config": {
+            "features": "word+char",
+            "C": 16.0,
+            "class_weight": "balanced",
+            "min_df": 2,
+            "top_k": 3000
+          },
+          "threshold": 0.3,
+          "test_sentences": 3757,
+          "test_documents": 31,
+          "near_duplicates_dropped": 158,
+          "micro_f1": 0.5303030303030303,
+          "macro_f1": 0.4811668789505185
+        },
+        {
+          "fold": 2,
+          "config": {
+            "features": "word+char",
+            "C": 16.0,
+            "class_weight": "balanced",
+            "min_df": 2,
+            "top_k": 3000
+          },
+          "threshold": 0.3,
+          "test_sentences": 4364,
+          "test_documents": 31,
+          "near_duplicates_dropped": 165,
+          "micro_f1": 0.5461135722915829,
+          "macro_f1": 0.4583860167665381
+        },
+        {
+          "fold": 3,
+          "config": {
+            "features": "word+char",
+            "C": 16.0,
+            "class_weight": "balanced",
+            "min_df": 2,
+            "top_k": 3000
+          },
+          "threshold": 0.25,
+          "test_sentences": 3440,
+          "test_documents": 29,
+          "near_duplicates_dropped": 143,
+          "micro_f1": 0.5786948176583494,
+          "macro_f1": 0.5021088509142108
+        },
+        {
+          "fold": 4,
+          "config": {
+            "features": "word+char",
+            "C": 16.0,
+            "class_weight": "balanced",
+            "min_df": 2,
+            "top_k": 3000
+          },
+          "threshold": 0.25,
+          "test_sentences": 4024,
+          "test_documents": 30,
+          "near_duplicates_dropped": 121,
+          "micro_f1": 0.5779436152570482,
+          "macro_f1": 0.5091170934318971
+        }
+      ],
+      "micro": {
+        "precision": 0.5297221245163559,
+        "recall": 0.58828125,
+        "f1": 0.5574680732926152,
+        "tp": 3012,
+        "fp": 2674,
+        "fn": 2108,
+        "support": 5120
+      },
+      "macro": {
+        "precision": 0.48907635138680594,
+        "recall": 0.5023949794500951,
+        "f1": 0.4814060627841006
+      },
+      "top1_accuracy_labelled": 0.7708076068164978,
+      "fold_micro_f1_std": 0.01883867819982474,
+      "fold_macro_f1_std": 0.018592282953123488
+    },
+    "protocols": {
+      "fixed_config": {
+        "features": "word+char",
+        "C": 16.0,
+        "class_weight": "balanced",
+        "min_df": 2,
+        "top_k": 3000,
+        "threshold": 0.3
+      },
+      "random_sentence_split": {
+        "micro": {
+          "precision": 0.5590783090783091,
+          "recall": 0.6274547929224188,
+          "f1": 0.5912963811268896,
+          "tp": 3227,
+          "fp": 2545,
+          "fn": 1916,
+          "support": 5143
+        },
+        "macro": {
+          "precision": 0.5273566227993961,
+          "recall": 0.5784728990230406,
+          "f1": 0.5459715830551122
+        }
+      },
+      "document_grouped_split": {
+        "micro": {
+          "precision": 0.5374211000901713,
+          "recall": 0.5794283492125218,
+          "f1": 0.5576347305389222,
+          "tp": 2980,
+          "fp": 2565,
+          "fn": 2163,
+          "support": 5143
+        },
+        "macro": {
+          "precision": 0.497020970590333,
+          "recall": 0.4916108850039459,
+          "f1": 0.4788326757049721
+        }
+      }
+    },
+    "name_matching_baseline": {
+      "micro": {
+        "precision": 0.4111969111969112,
+        "recall": 0.083203125,
+        "f1": 0.13840155945419105,
+        "tp": 426,
+        "fp": 610,
+        "fn": 4694,
+        "support": 5120
+      },
+      "macro": {
+        "precision": 0.3199481872624,
+        "recall": 0.1104199541065371,
+        "f1": 0.14583013719872517
+      }
+    },
+    "per_technique": {
+      "T1003.001": {
+        "precision": 0.5935483870967742,
+        "recall": 0.8363636363636363,
+        "f1": 0.6943396226415094,
+        "tp": 92,
+        "fp": 63,
+        "fn": 18,
+        "support": 110,
+        "name": "LSASS Memory",
+        "current_id": "T1003.001",
+        "sentences": 112
+      },
+      "T1005": {
+        "precision": 0.25,
+        "recall": 0.2459016393442623,
+        "f1": 0.24793388429752067,
+        "tp": 15,
+        "fp": 45,
+        "fn": 46,
+        "support": 61,
+        "name": "Data from Local System",
+        "current_id": "T1005",
+        "sentences": 61
+      },
+      "T1012": {
+        "precision": 0.375,
+        "recall": 0.375,
+        "f1": 0.375,
+        "tp": 9,
+        "fp": 15,
+        "fn": 15,
+        "support": 24,
+        "name": "Query Registry",
+        "current_id": "T1012",
+        "sentences": 24
+      },
+      "T1016": {
+        "precision": 0.43859649122807015,
+        "recall": 0.4807692307692308,
+        "f1": 0.4587155963302752,
+        "tp": 25,
+        "fp": 32,
+        "fn": 27,
+        "support": 52,
+        "name": "System Network Configuration Discovery",
+        "current_id": "T1016",
+        "sentences": 52
+      },
+      "T1021.001": {
+        "precision": 0.6178861788617886,
+        "recall": 0.7676767676767676,
+        "f1": 0.6846846846846848,
+        "tp": 76,
+        "fp": 47,
+        "fn": 23,
+        "support": 99,
+        "name": "Remote Desktop Protocol",
+        "current_id": "T1021.001",
+        "sentences": 99
+      },
+      "T1027": {
+        "precision": 0.5385802469135802,
+        "recall": 0.5147492625368731,
+        "f1": 0.5263951734539969,
+        "tp": 349,
+        "fp": 299,
+        "fn": 329,
+        "support": 678,
+        "name": "Obfuscated Files or Information",
+        "current_id": "T1027",
+        "sentences": 678
+      },
+      "T1033": {
+        "precision": 0.4262295081967213,
+        "recall": 0.5531914893617021,
+        "f1": 0.48148148148148145,
+        "tp": 26,
+        "fp": 35,
+        "fn": 21,
+        "support": 47,
+        "name": "System Owner/User Discovery",
+        "current_id": "T1033",
+        "sentences": 47
+      },
+      "T1036.005": {
+        "precision": 0.25396825396825395,
+        "recall": 0.22535211267605634,
+        "f1": 0.2388059701492537,
+        "tp": 16,
+        "fp": 47,
+        "fn": 55,
+        "support": 71,
+        "name": "Match Legitimate Resource Name or Location",
+        "current_id": "T1036.005",
+        "sentences": 71
+      },
+      "T1041": {
+        "precision": 0.37349397590361444,
+        "recall": 0.3875,
+        "f1": 0.38036809815950917,
+        "tp": 31,
+        "fp": 52,
+        "fn": 49,
+        "support": 80,
+        "name": "Exfiltration Over C2 Channel",
+        "current_id": "T1041",
+        "sentences": 80
+      },
+      "T1047": {
+        "precision": 0.675,
+        "recall": 0.7012987012987013,
+        "f1": 0.6878980891719745,
+        "tp": 54,
+        "fp": 26,
+        "fn": 23,
+        "support": 77,
+        "name": "Windows Management Instrumentation",
+        "current_id": "T1047",
+        "sentences": 77
+      },
+      "T1053.005": {
+        "precision": 0.6304347826086957,
+        "recall": 0.7372881355932204,
+        "f1": 0.6796875000000001,
+        "tp": 87,
+        "fp": 51,
+        "fn": 31,
+        "support": 118,
+        "name": "Scheduled Task",
+        "current_id": "T1053.005",
+        "sentences": 118
+      },
+      "T1055": {
+        "precision": 0.6170212765957447,
+        "recall": 0.7302158273381295,
+        "f1": 0.6688632619439868,
+        "tp": 203,
+        "fp": 126,
+        "fn": 75,
+        "support": 278,
+        "name": "Process Injection",
+        "current_id": "T1055",
+        "sentences": 278
+      },
+      "T1056.001": {
+        "precision": 0.8947368421052632,
+        "recall": 0.8225806451612904,
+        "f1": 0.8571428571428571,
+        "tp": 51,
+        "fp": 6,
+        "fn": 11,
+        "support": 62,
+        "name": "Keylogging",
+        "current_id": "T1056.001",
+        "sentences": 62
+      },
+      "T1057": {
+        "precision": 0.5180722891566265,
+        "recall": 0.5584415584415584,
+        "f1": 0.5375000000000001,
+        "tp": 43,
+        "fp": 40,
+        "fn": 34,
+        "support": 77,
+        "name": "Process Discovery",
+        "current_id": "T1057",
+        "sentences": 77
+      },
+      "T1059.003": {
+        "precision": 0.5571776155717761,
+        "recall": 0.6656976744186046,
+        "f1": 0.6066225165562914,
+        "tp": 229,
+        "fp": 182,
+        "fn": 115,
+        "support": 344,
+        "name": "Windows Command Shell",
+        "current_id": "T1059.003",
+        "sentences": 358
+      },
+      "T1068": {
+        "precision": 0.16666666666666666,
+        "recall": 0.1,
+        "f1": 0.125,
+        "tp": 1,
+        "fp": 5,
+        "fn": 9,
+        "support": 10,
+        "name": "Exploitation for Privilege Escalation",
+        "current_id": "T1068",
+        "sentences": 10
+      },
+      "T1070.004": {
+        "precision": 0.41964285714285715,
+        "recall": 0.5222222222222223,
+        "f1": 0.4653465346534654,
+        "tp": 47,
+        "fp": 65,
+        "fn": 43,
+        "support": 90,
+        "name": "File Deletion",
+        "current_id": "T1070.004",
+        "sentences": 90
+      },
+      "T1071.001": {
+        "precision": 0.5483870967741935,
+        "recall": 0.5743243243243243,
+        "f1": 0.561056105610561,
+        "tp": 85,
+        "fp": 70,
+        "fn": 63,
+        "support": 148,
+        "name": "Web Protocols",
+        "current_id": "T1071.001",
+        "sentences": 148
+      },
+      "T1072": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "support": 10,
+        "name": "Software Deployment Tools",
+        "current_id": "T1072",
+        "sentences": 10
+      },
+      "T1074.001": {
+        "precision": 0.6666666666666666,
+        "recall": 0.15384615384615385,
+        "f1": 0.25,
+        "tp": 4,
+        "fp": 2,
+        "fn": 22,
+        "support": 26,
+        "name": "Local Data Staging",
+        "current_id": "T1074.001",
+        "sentences": 26
+      },
+      "T1078": {
+        "precision": 0.2875,
+        "recall": 0.2857142857142857,
+        "f1": 0.2866043613707165,
+        "tp": 46,
+        "fp": 114,
+        "fn": 115,
+        "support": 161,
+        "name": "Valid Accounts",
+        "current_id": "T1078",
+        "sentences": 161
+      },
+      "T1082": {
+        "precision": 0.5078125,
+        "recall": 0.5327868852459017,
+        "f1": 0.52,
+        "tp": 65,
+        "fp": 63,
+        "fn": 57,
+        "support": 122,
+        "name": "System Information Discovery",
+        "current_id": "T1082",
+        "sentences": 123
+      },
+      "T1083": {
+        "precision": 0.40816326530612246,
+        "recall": 0.43010752688172044,
+        "f1": 0.418848167539267,
+        "tp": 40,
+        "fp": 58,
+        "fn": 53,
+        "support": 93,
+        "name": "File and Directory Discovery",
+        "current_id": "T1083",
+        "sentences": 93
+      },
+      "T1090": {
+        "precision": 0.6642857142857143,
+        "recall": 0.6283783783783784,
+        "f1": 0.6458333333333334,
+        "tp": 93,
+        "fp": 47,
+        "fn": 55,
+        "support": 148,
+        "name": "Proxy",
+        "current_id": "T1090",
+        "sentences": 149
+      },
+      "T1095": {
+        "precision": 0.5116279069767442,
+        "recall": 0.38596491228070173,
+        "f1": 0.44,
+        "tp": 22,
+        "fp": 21,
+        "fn": 35,
+        "support": 57,
+        "name": "Non-Application Layer Protocol",
+        "current_id": "T1095",
+        "sentences": 57
+      },
+      "T1105": {
+        "precision": 0.42058823529411765,
+        "recall": 0.5478927203065134,
+        "f1": 0.475873544093178,
+        "tp": 143,
+        "fp": 197,
+        "fn": 118,
+        "support": 261,
+        "name": "Ingress Tool Transfer",
+        "current_id": "T1105",
+        "sentences": 261
+      },
+      "T1106": {
+        "precision": 0.44649446494464945,
+        "recall": 0.5845410628019324,
+        "f1": 0.5062761506276151,
+        "tp": 121,
+        "fp": 150,
+        "fn": 86,
+        "support": 207,
+        "name": "Native API",
+        "current_id": "T1106",
+        "sentences": 207
+      },
+      "T1110": {
+        "precision": 0.5925925925925926,
+        "recall": 0.6153846153846154,
+        "f1": 0.6037735849056604,
+        "tp": 32,
+        "fp": 22,
+        "fn": 20,
+        "support": 52,
+        "name": "Brute Force",
+        "current_id": "T1110",
+        "sentences": 52
+      },
+      "T1112": {
+        "precision": 0.3891891891891892,
+        "recall": 0.7058823529411765,
+        "f1": 0.5017421602787456,
+        "tp": 72,
+        "fp": 113,
+        "fn": 30,
+        "support": 102,
+        "name": "Modify Registry",
+        "current_id": "T1112",
+        "sentences": 107
+      },
+      "T1113": {
+        "precision": 0.5606060606060606,
+        "recall": 0.7551020408163265,
+        "f1": 0.6434782608695652,
+        "tp": 37,
+        "fp": 29,
+        "fn": 12,
+        "support": 49,
+        "name": "Screen Capture",
+        "current_id": "T1113",
+        "sentences": 49
+      },
+      "T1140": {
+        "precision": 0.7137404580152672,
+        "recall": 0.8025751072961373,
+        "f1": 0.7555555555555556,
+        "tp": 374,
+        "fp": 150,
+        "fn": 92,
+        "support": 466,
+        "name": "Deobfuscate/Decode Files or Information",
+        "current_id": "T1140",
+        "sentences": 466
+      },
+      "T1190": {
+        "precision": 0.47058823529411764,
+        "recall": 0.5245901639344263,
+        "f1": 0.49612403100775193,
+        "tp": 32,
+        "fp": 36,
+        "fn": 29,
+        "support": 61,
+        "name": "Exploit Public-Facing Application",
+        "current_id": "T1190",
+        "sentences": 61
+      },
+      "T1204.002": {
+        "precision": 0.4626865671641791,
+        "recall": 0.6458333333333334,
+        "f1": 0.5391304347826088,
+        "tp": 62,
+        "fp": 72,
+        "fn": 34,
+        "support": 96,
+        "name": "Malicious File",
+        "current_id": "T1204.002",
+        "sentences": 96
+      },
+      "T1210": {
+        "precision": 1.0,
+        "recall": 0.17647058823529413,
+        "f1": 0.3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 14,
+        "support": 17,
+        "name": "Exploitation of Remote Services",
+        "current_id": "T1210",
+        "sentences": 17
+      },
+      "T1218.011": {
+        "precision": 0.5180722891566265,
+        "recall": 0.7166666666666667,
+        "f1": 0.6013986013986015,
+        "tp": 43,
+        "fp": 40,
+        "fn": 17,
+        "support": 60,
+        "name": "Rundll32",
+        "current_id": "T1218.011",
+        "sentences": 60
+      },
+      "T1219": {
+        "precision": 0.5230769230769231,
+        "recall": 0.6071428571428571,
+        "f1": 0.5619834710743802,
+        "tp": 34,
+        "fp": 31,
+        "fn": 22,
+        "support": 56,
+        "name": "Remote Access Tools",
+        "current_id": "T1219",
+        "sentences": 56
+      },
+      "T1484.001": {
+        "precision": 0.5882352941176471,
+        "recall": 0.4166666666666667,
+        "f1": 0.48780487804878053,
+        "tp": 10,
+        "fp": 7,
+        "fn": 14,
+        "support": 24,
+        "name": "Group Policy Modification",
+        "current_id": "T1484.001",
+        "sentences": 24
+      },
+      "T1518.001": {
+        "precision": 0.39285714285714285,
+        "recall": 0.2972972972972973,
+        "f1": 0.3384615384615385,
+        "tp": 11,
+        "fp": 17,
+        "fn": 26,
+        "support": 37,
+        "name": "Security Software Discovery",
+        "current_id": "T1518.001",
+        "sentences": 37
+      },
+      "T1543.003": {
+        "precision": 0.5263157894736842,
+        "recall": 0.5660377358490566,
+        "f1": 0.5454545454545455,
+        "tp": 30,
+        "fp": 27,
+        "fn": 23,
+        "support": 53,
+        "name": "Windows Service",
+        "current_id": "T1543.003",
+        "sentences": 53
+      },
+      "T1547.001": {
+        "precision": 0.5324675324675324,
+        "recall": 0.6307692307692307,
+        "f1": 0.5774647887323944,
+        "tp": 41,
+        "fp": 36,
+        "fn": 24,
+        "support": 65,
+        "name": "Registry Run Keys / Startup Folder",
+        "current_id": "T1547.001",
+        "sentences": 65
+      },
+      "T1548.002": {
+        "precision": 0.6956521739130435,
+        "recall": 0.6153846153846154,
+        "f1": 0.6530612244897959,
+        "tp": 16,
+        "fp": 7,
+        "fn": 10,
+        "support": 26,
+        "name": "Bypass User Account Control",
+        "current_id": "T1548.002",
+        "sentences": 26
+      },
+      "T1552.001": {
+        "precision": 0.21052631578947367,
+        "recall": 0.18181818181818182,
+        "f1": 0.1951219512195122,
+        "tp": 4,
+        "fp": 15,
+        "fn": 18,
+        "support": 22,
+        "name": "Credentials In Files",
+        "current_id": "T1552.001",
+        "sentences": 22
+      },
+      "T1557.001": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "support": 7,
+        "name": "Name Resolution Poisoning and SMB Relay",
+        "current_id": "T1557.001",
+        "sentences": 7
+      },
+      "T1562.001": {
+        "precision": 0.5142857142857142,
+        "recall": 0.5806451612903226,
+        "f1": 0.5454545454545455,
+        "tp": 54,
+        "fp": 51,
+        "fn": 39,
+        "support": 93,
+        "name": "Disable or Modify Tools",
+        "current_id": "T1685",
+        "sentences": 93
+      },
+      "T1564.001": {
+        "precision": 0.5833333333333334,
+        "recall": 0.4375,
+        "f1": 0.5,
+        "tp": 7,
+        "fp": 5,
+        "fn": 9,
+        "support": 16,
+        "name": "Hidden Files and Directories",
+        "current_id": "T1564.001",
+        "sentences": 16
+      },
+      "T1566.001": {
+        "precision": 0.4583333333333333,
+        "recall": 0.6111111111111112,
+        "f1": 0.5238095238095238,
+        "tp": 55,
+        "fp": 65,
+        "fn": 35,
+        "support": 90,
+        "name": "Spearphishing Attachment",
+        "current_id": "T1566.001",
+        "sentences": 90
+      },
+      "T1569.002": {
+        "precision": 0.18181818181818182,
+        "recall": 0.09090909090909091,
+        "f1": 0.12121212121212123,
+        "tp": 2,
+        "fp": 9,
+        "fn": 20,
+        "support": 22,
+        "name": "Service Execution",
+        "current_id": "T1569.002",
+        "sentences": 22
+      },
+      "T1570": {
+        "precision": 0.5272727272727272,
+        "recall": 0.4915254237288136,
+        "f1": 0.5087719298245613,
+        "tp": 29,
+        "fp": 26,
+        "fn": 30,
+        "support": 59,
+        "name": "Lateral Tool Transfer",
+        "current_id": "T1570",
+        "sentences": 59
+      },
+      "T1573.001": {
+        "precision": 0.4225352112676056,
+        "recall": 0.5,
+        "f1": 0.4580152671755725,
+        "tp": 30,
+        "fp": 41,
+        "fn": 30,
+        "support": 60,
+        "name": "Symmetric Cryptography",
+        "current_id": "T1573.001",
+        "sentences": 60
+      },
+      "T1574.002": {
+        "precision": 0.782051282051282,
+        "recall": 0.8026315789473685,
+        "f1": 0.7922077922077922,
+        "tp": 61,
+        "fp": 17,
+        "fn": 15,
+        "support": 76,
+        "name": "DLL",
+        "current_id": "T1574.001",
+        "sentences": 76
+      }
+    }
+  }
+}
