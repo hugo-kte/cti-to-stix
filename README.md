@@ -167,7 +167,8 @@ flowchart LR
   `license` label before them; `version 1.2.3.4` is not an address. Each value then gets a
   status: `indicator`, `artifact` (Windows path, registry key), `vulnerability` (CVE),
   `reference` (Markdown link target, vendor or news site, or a live URL in a report that defangs
-  its indicators), `benign` (`github.com`, dynamic-DNS roots, public resolvers) or `internal`.
+  its indicators), `benign` (`github.com`, dynamic-DNS roots, public resolvers, digests of empty
+  input) or `internal`.
 * **Entities** ([`gazetteer.py`](src/gleaner/gazetteer.py), [`ner.py`](src/gleaner/ner.py)). The
   gazetteer matches ATT&CK names and aliases (plus `NetwireRAT`, `psexec.exe`, `Lazarus` for
   `Lazarus Group`) under a case-consistency rule, and with three things learned on the training

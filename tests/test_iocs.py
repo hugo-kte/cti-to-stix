@@ -130,6 +130,15 @@ def test_hex_strings_that_are_not_digests(text):
     assert not any(k[0] in ("md5", "sha1") for k in found(text))
 
 
+def test_digests_of_empty_input_are_not_exported():
+    empty = {kind: hashlib.new(kind, b"").hexdigest() for kind in ("md5", "sha1", "sha256")}
+    iocs = extract_iocs("Zero-byte dropper: " + ", ".join(empty.values()))
+    assert {(i.type, i.value): i.status for i in iocs} == {
+        (kind, digest): "benign" for kind, digest in empty.items()
+    }
+    assert not any(i.exported for i in iocs)
+
+
 def test_digest_in_url_path_is_not_a_sample_hash():
     url_with_hex = f"hxxps://cdn.example[.]com/{MD5}/app.js"
     assert ("md5", MD5) not in found(url_with_hex)

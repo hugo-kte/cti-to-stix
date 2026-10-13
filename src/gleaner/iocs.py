@@ -9,7 +9,8 @@ then gets a *status* that decides what it becomes in the STIX bundle:
 * ``reference``      citation: Markdown link target, URL on a security-vendor or news site, or a
                      non-defanged URL or e-mail address in a report that defangs its indicators
 * ``benign``         bare mention of a legitimate service, hosting or dynamic-DNS platform
-                     (``github.com``, ``duckdns.org``) or public resolver (``8.8.8.8``)
+                     (``github.com``, ``duckdns.org``) or public resolver (``8.8.8.8``), or the
+                     digest of empty input (a zero-byte file, ``d41d8cd9...``)
 * ``internal``       private, loopback, link-local or otherwise non-routable address
 
 Only the first three statuses are exported.
@@ -17,6 +18,7 @@ Only the first three statuses are exported.
 
 from __future__ import annotations
 
+import hashlib
 import ipaddress
 import re
 from dataclasses import dataclass
@@ -71,6 +73,10 @@ REFERENCE_DOMAINS = _words(
     trendmicro.com twitter.com urlscan.io us-cert.gov virustotal.com washingtonpost.com
     welivesecurity.com wikipedia.org x.com zdnet.com zscaler.com
     """
+)
+# Digests of empty input: they identify any zero-byte file, never a malicious sample.
+EMPTY_DIGESTS = frozenset(
+    hashlib.new(name, b"").hexdigest() for name in ("md5", "sha1", "sha256", "sha512")
 )
 # Analysis services whose URLs embed the digest of the sample they describe.
 SANDBOX_DOMAINS = frozenset(
@@ -429,7 +435,8 @@ def _find_hashes(text: str, urls: list[_Hit]) -> list[_Hit]:
         container = next((u for u in urls if u.start <= m.start() and m.end() <= u.end), None)
         if container and registrable_domain(_url_host(container.value)) not in SANDBOX_DOMAINS:
             continue  # a path component of a URL, not the digest of a sample
-        hits.append(_Hit(kind, lower, m.start(), m.end()))
+        status = "benign" if lower in EMPTY_DIGESTS else "indicator"
+        hits.append(_Hit(kind, lower, m.start(), m.end(), status))
     return hits
 
 
