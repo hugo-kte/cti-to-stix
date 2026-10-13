@@ -159,6 +159,18 @@ def test_span_scores_strict_and_lenient():
     assert round(strict["micro"]["precision"], 3) == round(1 / 3, 3)
 
 
+def test_lenient_recall_counts_gold_spans():
+    # one prediction covering two gold spans finds both; two predictions inside one gold span
+    # are both correct but find it once
+    gold = [{(0, 1, "TOOL"), (1, 2, "TOOL")}, {(0, 4, "GROUP")}]
+    pred = [{(0, 2, "TOOL")}, {(0, 1, "GROUP"), (2, 3, "GROUP")}]
+    lenient = span_scores(gold, pred, ["GROUP", "TOOL"], lenient=True)
+    tool, group = lenient["per_label"]["TOOL"], lenient["per_label"]["GROUP"]
+    assert (tool["precision"], tool["recall"], tool["support"]) == (1.0, 1.0, 2)
+    assert (group["precision"], group["recall"], group["support"]) == (1.0, 1.0, 1)
+    assert lenient["micro"]["support"] == 3 and lenient["micro"]["tp"] == 3
+
+
 def test_tokenizer_and_sentences():
     assert words("APT28 used cmd.exe, third-party tools and the victim's account.") == [
         "APT28", "used", "cmd.exe", ",", "third-party", "tools", "and", "the", "victim's",

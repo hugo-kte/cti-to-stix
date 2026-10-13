@@ -12,11 +12,23 @@ Span = tuple[int, int, str]
 THRESHOLDS = (0.02, 0.03, 0.05, 0.07, *(round(0.1 + 0.05 * i, 2) for i in range(13)))  # ... 0.7
 
 
-def prf(tp: int, fp: int, fn: int) -> dict[str, float | int]:
+def prf(tp: int, fp: int, fn: int, found: int | None = None) -> dict[str, float | int]:
+    """P/R/F1. ``found`` is the number of gold items matched when it differs from ``tp``, the
+    number of correct predictions (lenient span matching: one prediction may overlap two gold
+    spans, or two predictions one)."""
+    found = tp if found is None else found
     p = tp / (tp + fp) if tp + fp else 0.0
-    r = tp / (tp + fn) if tp + fn else 0.0
+    r = found / (found + fn) if found + fn else 0.0
     f = 2 * p * r / (p + r) if p + r else 0.0
-    return {"precision": p, "recall": r, "f1": f, "tp": tp, "fp": fp, "fn": fn, "support": tp + fn}
+    return {
+        "precision": p,
+        "recall": r,
+        "f1": f,
+        "tp": tp,
+        "fp": fp,
+        "fn": fn,
+        "support": found + fn,
+    }
 
 
 def span_scores(
@@ -25,11 +37,17 @@ def span_scores(
     labels: Iterable[str],
     lenient: bool = False,
 ) -> dict:
-    """Entity-level scores. Strict: same boundaries and label. Lenient: overlap, same label."""
+    """Entity-level scores.
+
+    Strict: a prediction is correct if a gold span has the same boundaries and label. Lenient:
+    a prediction is correct if it overlaps a gold span of the same label (precision), and a gold
+    span is found if a prediction of its label overlaps it (recall).
+    """
     labels = list(labels)
     tp: Counter[str] = Counter()
     fp: Counter[str] = Counter()
     fn: Counter[str] = Counter()
+    found: Counter[str] = Counter()  # lenient only: gold spans overlapped by a prediction
     for g_all, p_all in zip(gold, pred, strict=True):
         g = {s for s in g_all if s[2] in labels}
         p = {s for s in p_all if s[2] in labels}
@@ -37,14 +55,15 @@ def span_scores(
             for s in p:
                 (tp if any(_overlap(s, t) for t in g) else fp)[s[2]] += 1
             for s in g:
-                fn[s[2]] += not any(_overlap(s, t) for t in p)
+                (found if any(_overlap(s, t) for t in p) else fn)[s[2]] += 1
         else:
             for s in p:
                 (tp if s in g else fp)[s[2]] += 1
             for s in g - p:
                 fn[s[2]] += 1
-    per_label = {lab: prf(tp[lab], fp[lab], fn[lab]) for lab in labels}
-    micro = prf(sum(tp.values()), sum(fp.values()), sum(fn.values()))
+    matched = found if lenient else tp  # gold spans found (strict: one per correct prediction)
+    per_label = {lab: prf(tp[lab], fp[lab], fn[lab], matched[lab]) for lab in labels}
+    micro = prf(*(sum(counts[lab] for lab in labels) for counts in (tp, fp, fn, matched)))
     macro_f1 = float(np.mean([per_label[lab]["f1"] for lab in labels])) if labels else 0.0
     return {"per_label": per_label, "micro": micro, "macro_f1": macro_f1}
 

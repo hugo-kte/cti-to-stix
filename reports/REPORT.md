@@ -1,6 +1,6 @@
 # Gleaner evaluation report
 
-_Generated 2026-10-13T12:30:02+00:00 with Gleaner 0.1.0, MITRE ATT&CK 19.2. All numbers come from `metrics.json`._
+_Generated 2026-10-13T13:31:22+00:00 with Gleaner 0.1.0, MITRE ATT&CK 19.2. All numbers come from `metrics.json`._
 
 ## Indicators of compromise
 
@@ -41,10 +41,10 @@ Extraction over the 34 AnnoCTR test reports (17 of them defang at least one indi
 
 | System | Group | Malware | Tool | Technique (explicit) | Tactic | Micro P | Micro R | Micro F1 | Lenient micro F1 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| gazetteer, names only | 0.319 | 0.729 | 0.301 | 0.061 | 0.175 | 0.492 | 0.291 | **0.366** | 0.517 |
+| gazetteer, names only | 0.319 | 0.729 | 0.301 | 0.061 | 0.175 | 0.492 | 0.291 | **0.366** | 0.514 |
 | gazetteer + rules | 0.328 | 0.757 | 0.395 | 0.070 | 0.176 | 0.662 | 0.303 | **0.416** | 0.541 |
-| CRF | 0.448 | 0.639 | 0.175 | 0.493 | 0.726 | 0.768 | 0.448 | **0.566** | 0.649 |
-| CRF + gazetteer features | 0.571 | 0.687 | 0.303 | 0.497 | 0.732 | 0.782 | 0.494 | **0.606** | 0.699 |
+| CRF | 0.448 | 0.639 | 0.175 | 0.493 | 0.726 | 0.768 | 0.448 | **0.566** | 0.650 |
+| CRF + gazetteer features | 0.571 | 0.687 | 0.303 | 0.497 | 0.732 | 0.782 | 0.494 | **0.606** | 0.700 |
 | CRF ∪ gazetteer | 0.571 | 0.760 | 0.481 | 0.468 | 0.703 | 0.723 | 0.547 | **0.623** | 0.728 |
 | CRF + gazetteer features ∪ gazetteer | 0.580 | 0.762 | 0.475 | 0.469 | 0.703 | 0.736 | 0.543 | **0.625** | 0.732 |
 
