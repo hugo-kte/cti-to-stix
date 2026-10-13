@@ -45,7 +45,7 @@ def _iocs(m: dict[str, Any]) -> list[str]:
         return out
     a = i["audit"]
     out += [
-        f"### Manual audit ({a['labels']} labels)",
+        f"### Audit ({a['labels']} labels, one annotator: an AI agent)",
         "",
         "| Type | Exported | Audited | IOC | Benign | Invalid | Precision | 95% CI |",
         "|---|---:|---:|---:|---:|---:|---:|---|",

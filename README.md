@@ -16,7 +16,7 @@ AnnoCTR) with leakage-aware protocols, and the results below include what does n
 
 | Step | Evaluated on | Result |
 |---|---|---|
-| IOC extraction | 34 real vendor reports (AnnoCTR test split), 389 audit labels | precision **92.8%** on network indicators and digests (87.9% with host artifacts), estimated recall **94.2%** |
+| IOC extraction | 34 real vendor reports (AnnoCTR test split), 389 audit labels from one AI annotator | precision **92.8%** on network indicators and digests (87.9% with host artifacts), estimated recall **94.2%** |
 | Entities: group, malware, tool, technique, tactic | AnnoCTR test split, 1,234 gold mentions | micro-F1 **0.625** for CRF + gazetteer, vs. 0.416 for the ATT&CK gazetteer alone |
 | ATT&CK linking | AnnoCTR malware mentions the annotators linked to ATT&CK | **90.4%** resolved to the right ID, none to a wrong one |
 | Technique classification, 50 techniques | TRAM, nested document-grouped cross-validation | micro-F1 **0.557**, macro-F1 **0.481** (a random sentence split would report 0.591 / 0.546) |
@@ -194,15 +194,16 @@ flowchart LR
 Every component is evaluated on data that played no part in building it, and the test splits
 were used once, after the code, rules and hyper-parameters were frozen.
 
-* **IOCs.** None of the datasets annotates indicators, so the extractor was audited by hand on
-  the 34 AnnoCTR *test* reports (real vendor reports from Intel 471, Lab52, Proofpoint,
+* **IOCs.** None of the datasets annotates indicators, so the extractor was audited on the 34
+  AnnoCTR *test* reports (real vendor reports from Intel 471, Lab52, Proofpoint,
   QuoIntelligence, ZScaler and S2 Grupo); its rules were developed on the train and dev reports
-  only. The audit labels up to 40 exported values per type (`ioc`, `benign`, `invalid`), plus
-  random samples of the values found but not exported and of the candidates that deliberately
-  loose patterns match but the extractor ignores. Precision is stratified by type; recall is
-  estimated against those two pools, so an indicator that no loose pattern catches is not
-  counted. [`reports/ioc_audit.csv`](reports/ioc_audit.csv) stores each label against a
-  truncated SHA-256 of the value, and `make evaluate` recomputes every figure from it.
+  only. One annotator, an AI agent, labelled each sampled value in its context (`ioc`, `benign`,
+  `invalid`): up to 40 exported values per type, plus random samples of the values found but
+  not exported and of the candidates that deliberately loose patterns match but the extractor
+  ignores. Precision is stratified by type; recall is estimated against those two pools, so an
+  indicator that no loose pattern catches is not counted.
+  [`reports/ioc_audit.csv`](reports/ioc_audit.csv) stores each label against a truncated
+  SHA-256 of the value, and `make evaluate` recomputes every figure from it.
 * **Entities.** AnnoCTR's official document-level splits (70 / 16 / 34 reports). Gazetteer rules
   come from train; CRF `c1`/`c2` are chosen on dev (grid in
   [`reports/REPORT.md`](reports/REPORT.md)); the shipped models are refit on train+dev and
@@ -245,13 +246,14 @@ were used once, after the code, rules and hyper-parameters were frozen.
   accuracy drops on implicit descriptions. TRAM's labels also predate ATT&CK v19: two of its
   techniques were revoked since (`T1562.001` → `T1685`, `T1574.002` → `T1574.001`) and are
   mapped through the revocation chain.
-* **The IOC audit has one annotator.** Labels were assigned during development, with AI
-  assistance, from the surrounding text; they were not adjudicated by a second person. Known
-  failure modes found by the audit and left in place (fixing them after looking at the test
-  reports would bias the numbers): URLs glued together in table cells, certificate thumbprints
-  typed as file hashes, Markdown escapes after a slash (`/\_notes`), broken defangs such as
-  `example.]com`, and generic Windows paths (`C:\Windows\System32\cmd.exe`) exported as
-  artifacts. Bare file names are out of scope.
+* **The IOC audit has a single annotator, an AI agent.** It labelled each value from the
+  surrounding text during development; no second annotator and no human adjudication checked
+  the labels, so the audit figures inherit its mistakes. Known failure modes found by the audit
+  and left in place (fixing them after looking at the test reports would bias the numbers):
+  URLs glued together in table cells, certificate thumbprints typed as file hashes, Markdown
+  escapes after a slash (`/\_notes`), broken defangs such as `example.]com`, and generic
+  Windows paths (`C:\Windows\System32\cmd.exe`) exported as artifacts. Bare file names are out
+  of scope.
 * **Relationships are co-occurrence heuristics,** not extracted relations: a report naming two
   families and one C2 address in the same sentence links the address to both.
 * **No pretrained language model**, by design (nothing is downloaded but the three datasets). A

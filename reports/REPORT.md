@@ -14,7 +14,7 @@ Extraction over the 34 AnnoCTR test reports (17 of them defang at least one indi
 | benign | 4 |
 | vulnerability | 2 |
 
-### Manual audit (389 labels)
+### Audit (389 labels, one annotator: an AI agent)
 
 | Type | Exported | Audited | IOC | Benign | Invalid | Precision | 95% CI |
 |---|---:|---:|---:|---:|---:|---:|---|

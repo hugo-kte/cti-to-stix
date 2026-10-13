@@ -1,7 +1,9 @@
-"""Manual audit of IOC extraction on the AnnoCTR test reports.
+"""Audit of IOC extraction on the AnnoCTR test reports.
 
-There is no IOC-annotated corpus among the approved datasets, so precision and recall are
-estimated from a labelled sample of the 34 AnnoCTR test reports (real vendor reports):
+None of the datasets annotates indicators, so precision and recall are estimated from a
+labelled sample of the 34 AnnoCTR test reports (real vendor reports). The published labels
+come from a single annotator, an AI agent that read each value in its context
+(``gleaner audit-sample`` writes that context to ``runtime/``, which is not committed):
 
 * ``exported``    up to 40 exported values per type -> precision per type
 * ``withheld``    values found but not exported (references, benign, internal) -> missed IOCs

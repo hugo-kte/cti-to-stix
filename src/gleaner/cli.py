@@ -220,7 +220,7 @@ def audit_sample(
     out: Annotated[Path, typer.Option("--out", "-o")] = Path("runtime/ioc_audit_sample.csv"),
     seed: int = 0,
 ) -> None:
-    """Sample AnnoCTR test extractions (with context) for the manual IOC audit."""
+    """Sample AnnoCTR test extractions (with context) for the IOC audit."""
     from gleaner.audit import write_sample
 
     try:
