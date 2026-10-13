@@ -14,7 +14,9 @@ when it names exactly one malware family, the family ``uses`` the techniques, ``
 CVEs and every indicator ``indicates`` it. With several families, an indicator only
 indicates a family named in the same sentence.
 
-Identifiers are derived from the objects' content, so the same report gives the same bundle.
+Identifiers are derived from the objects' content, so the same report gives the same object
+identifiers (only the timestamps and the bundle id change). The source document is referenced by
+its file name only: a shared bundle should not reveal the analyst's directory layout.
 """
 
 from __future__ import annotations
@@ -242,7 +244,9 @@ def to_bundle(
         report_types=["threat-report"],
         object_refs=[o.id for o in objects] or [identity.id],
         external_references=[
-            stix2.ExternalReference(source_name="source-document", description=extraction.source)
+            stix2.ExternalReference(
+                source_name="source-document", description=PureWindowsPath(extraction.source).name
+            )
         ]
         if extraction.source
         else None,

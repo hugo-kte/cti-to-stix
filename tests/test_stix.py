@@ -111,6 +111,17 @@ def test_non_exported_values_stay_out(extraction, catalog: Catalog):
     assert "https://attack.mitre.org/" not in names  # reference link
 
 
+@pytest.mark.parametrize(
+    "source", ["/home/analyst/cases/acme/glass-heron.md", r"C:\Users\analyst\glass-heron.md"]
+)
+def test_bundle_names_the_source_file_without_its_directory(catalog: Catalog, gazetteer, source):
+    text = (ROOT / "examples" / "glass-heron.md").read_text(encoding="utf-8")
+    result = Extractor(catalog, gazetteer).extract(text, source)
+    objects = json.loads(to_bundle(result, catalog, now=NOW).serialize())["objects"]
+    report = next(o for o in objects if o["type"] == "report")
+    assert report["external_references"][0]["description"] == "glass-heron.md"
+
+
 def test_bundle_is_deterministic(extraction, catalog: Catalog):
     first = to_bundle(extraction, catalog, now=NOW).serialize()
     second = to_bundle(extraction, catalog, now=NOW).serialize()
