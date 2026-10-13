@@ -114,6 +114,7 @@ def test_hashes():
     types = {k[0] for k in found(text)}
     assert types == {"md5", "sha1", "sha256"}
     assert ("md5", MD5) in found(text)  # normalised to lower case
+    assert all(i.scope is None for i in extract_iocs(text))  # routing scope: network only
 
 
 @pytest.mark.parametrize(

@@ -151,7 +151,8 @@ def iocs(
     for ioc in extract_iocs(text):
         if show_all or ioc.exported:
             value = defang(ioc.value) if safe and ioc.type in NETWORK_TYPES else ioc.value
-            sys.stdout.write(f"{ioc.type}\t{value}\t{ioc.status}\t{ioc.scope}\t{ioc.count}\n")
+            scope = ioc.scope or "-"  # routing scope applies to network values only
+            sys.stdout.write(f"{ioc.type}\t{value}\t{ioc.status}\t{scope}\t{ioc.count}\n")
 
 
 @app.command()

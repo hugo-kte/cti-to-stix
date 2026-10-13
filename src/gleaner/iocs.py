@@ -223,7 +223,9 @@ class IOC:
     status: str
     offsets: tuple[int, ...]  # start offset of every occurrence in the source text
     defanged: bool = False
-    scope: str = "public"  # public | documentation | private | loopback | link_local | ...
+    # routing scope of a network value: public | documentation | private | loopback | ...;
+    # None for digests, CVE identifiers and host artifacts
+    scope: str | None = None
 
     @property
     def exported(self) -> bool:
@@ -241,7 +243,7 @@ class _Hit:
     start: int  # offsets in the refanged text
     end: int
     status: str = "indicator"
-    scope: str = "public"
+    scope: str | None = None  # network values only
 
 
 # --------------------------------------------------------------------------- validators

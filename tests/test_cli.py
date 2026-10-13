@@ -23,8 +23,11 @@ runner = CliRunner()
 def test_iocs_command():
     result = runner.invoke(app, ["iocs", str(EXAMPLE)])
     assert result.exit_code == 0, result.output
-    assert "ipv4-addr\t198[.]51[.]100[.]23\tindicator" in result.output
+    assert "ipv4-addr\t198[.]51[.]100[.]23\tindicator\tdocumentation\t2" in result.output
     assert "10[.]20[.]30[.]40" not in result.output  # internal address: not exported
+    # routing scope is shown for network values only: "-" for digests, paths, keys, CVEs
+    assert "file-path\tC:\\ProgramData\\Updates\\svcupdate.dll\tartifact\t-\t1" in result.output
+    assert "\tpublic\t" not in result.output
     assert (
         "10[.]20[.]30[.]40\tinternal" in runner.invoke(app, ["iocs", str(EXAMPLE), "--all"]).output
     )
